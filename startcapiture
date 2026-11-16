@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Prevent multiple instances on repeated logins
+if pgrep -x "jackd" > /dev/null || pgrep -f "hotkeys" > /dev/null; then
+    exit 0
+fi
+
+# Start listening for hardware buttons on GPIO 3 and 4
+/home/recorder/bin/hotkeys &
+
+# Create fake X / D-Bus session
+mkdir -p /home/recorder/bin
+echo "DISPLAY=:0" > "/home/recorder/bin/setsession"
+dbus-launch >> "/home/recorder/bin/setsession"
+chmod +x "/home/recorder/bin/setsession"
+
+# Wait up to 15 seconds for any USB audio device to appear in ALSA
+for i in {1..15}; do
+    if grep -q "USB-Audio" /proc/asound/cards; then
+        /home/recorder/bin/start_jack
+        break
+    fi
+    sleep 1
+done
+
+# Start LED status monitor
+/home/recorder/bin/steady &
+
+# Start Web Remote Control on port 8080 if not already running
+if ! pgrep -f "web_remote.py" > /dev/null; then
+    python3 /home/recorder/bin/web_remote.py >/tmp/web_remote.log 2>&1 &
+fi
+
