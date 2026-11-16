@@ -1,0 +1,20 @@
+#!/bin/bash
+while [ : ]
+do
+    BTN1=$(gpioget --chip gpiochip0 3)$(gpioget --chip gpiochip0 4)
+    sleep 0.5
+    BTN2=$(gpioget --chip gpiochip0 3)$(gpioget --chip gpiochip0 4)
+
+    if [ "$BTN1" != "$BTN2" ]; then continue; fi
+
+    if [ "$BTN1" = "10" ]; then
+        /home/recorder/bin/rec &
+    fi
+    if [ "$BTN1" = "01" ]; then
+        /home/recorder/bin/del_last
+    fi
+    if [ "$BTN1" = "11" ]; then
+        sudo poweroff
+    fi
+    sleep 0.5
+done
