@@ -1,0 +1,57 @@
+#!/bin/bash
+
+pkill -x jackd 2>/dev/null
+pkill -x alsa_in 2>/dev/null
+sleep 1
+
+if [ -f "/home/recorder/bin/setsession" ]; then
+    . "/home/recorder/bin/setsession"
+    export DISPLAY DBUS_SESSION_BUS_ADDRESS DBUS_SESSION_BUS_PID
+else
+    export DISPLAY=:0
+    eval $(dbus-launch --sh-syntax)
+fi
+
+# Sort USB audio cards by capture channel count (descending) so largest interface becomes master
+mapfile -t USB_CARDS < <(
+    for card in $(awk '/USB-Audio/ {print $1}' /proc/asound/cards); do
+        ch=$(awk '/Capture:/{c=1} c && /Channels:/{print $2; exit}' /proc/asound/card${card}/stream0 2>/dev/null)
+        echo "${ch:-0} $card"
+    done | sort -rn | awk '{print $2}'
+)
+
+if [ ${#USB_CARDS[@]} -eq 0 ]; then
+    echo "No USB audio devices found"
+    exit 1
+fi
+
+# Auto-detect valid ADAT signal on Behringer UMC1820 units and switch clock source
+for CARD in "${USB_CARDS[@]}"; do
+    if amixer -c "$CARD" controls 2>/dev/null | grep -q "UMC1820 Clock Selector Clock Source"; then
+        ADAT_VALID=$(amixer -c "$CARD" cget name='Optical In ADAT/SMUX Validity' 2>/dev/null | grep -o "values=on")
+        if [ "$ADAT_VALID" = "values=on" ]; then
+            amixer -c "$CARD" cset name='UMC1820 Clock Selector Clock Source' 2 >/dev/null
+        else
+            amixer -c "$CARD" cset name='UMC1820 Clock Selector Clock Source' 0 >/dev/null
+        fi
+    fi
+done
+
+# Start primary JACK server on the largest USB interface
+PRIMARY_CARD="${USB_CARDS}"
+RATE=48000
+jackd -dalsa -dhw:${PRIMARY_CARD} -r${RATE} -p2048 -n3 >/tmp/jackd.log 2>&1 &
+sleep 2
+
+if ! pgrep -x "jackd" > /dev/null; then
+    RATE=44100
+    jackd -dalsa -dhw:${PRIMARY_CARD} -r${RATE} -p2048 -n3 >/tmp/jackd.log 2>&1 &
+    sleep 2
+fi
+
+# Bind any additional USB interfaces via alsa_in
+for (( i=1; i<${#USB_CARDS[@]}; i++ )); do
+    CARD="${USB_CARDS[$i]}"
+    NUM=$((i + 1))
+    alsa_in -j "USB_${NUM}" -dhw:${CARD} -r${RATE} -p2048 -n3 >/tmp/alsa_in_${NUM}.log 2>&1 &
+done
