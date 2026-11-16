@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if pgrep -x "jack_capture" > /dev/null; then
+    pkill -SIGTERM jack_capture
+else
+    if [ ! -d "/media/usb0" ] || [ ! -w "/media/usb0" ]; then
+        echo "Fehler: USB-Stick unter /media/usb0 nicht bereit!"
+        exit 1
+    fi
+
+    PORTS_ARGS=$(python3 -c '
+import json, subprocess
+try:
+    cfg = json.load(open("/home/recorder/bin/channels.json"))
+    all_ports = subprocess.check_output(["jack_lsp"]).decode().splitlines()
+    selected = []
+    for p in all_ports:
+        if ":capture_" in p:
+            dev = p.split(":")
+            if cfg.get("devices", {}).get(dev, True) and cfg.get("ports", {}).get(p, True):
+                selected.extend(["-p", p])
+    print(" ".join(selected) if selected else "-p \"*:capture_*\"")
+except Exception:
+    print("-p \"*:capture_*\"")
+')
+
+    pkill -f "/home/recorder/bin/steady" 2>/dev/null
+    pkill -x gpioset 2>/dev/null
+    sleep 0.1
+
+    /home/recorder/bin/blink &
+    BLINK_PID=$!
+
+    FILE="/media/usb0/$(date +%Y%m%d_%H%M%S).wav"
+    eval "jack_capture -B 24 -fn \"$FILE\" -d 10800 $PORTS_ARGS"
+
+    kill $BLINK_PID 2>/dev/null
+    pkill -x gpioset 2>/dev/null
+    /home/recorder/bin/steady &
+fi
