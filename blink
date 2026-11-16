@@ -1,0 +1,2 @@
+#!/bin/bash
+gpioset --chip gpiochip0 --toggle 1s 18=0
