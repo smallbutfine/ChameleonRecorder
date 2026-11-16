@@ -1,0 +1,20 @@
+#!/bin/bash
+LAST_STATE=2
+while true; do
+    if pgrep -x "jackd" > /dev/null; then
+        CURRENT_STATE=1
+    else
+        CURRENT_STATE=0
+    fi
+    if [ $CURRENT_STATE -ne $LAST_STATE ]; then
+        pkill -f "gpioset --chip gpiochip0 18=" 2>/dev/null
+        sleep 0.1
+        if [ $CURRENT_STATE -eq 1 ]; then
+            gpioset --chip gpiochip0 18=1 &
+        else
+            gpioset --chip gpiochip0 18=0 &
+        fi
+        LAST_STATE=$CURRENT_STATE
+    fi
+    sleep 2
+done
