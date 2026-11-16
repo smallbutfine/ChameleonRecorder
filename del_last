@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cd /media/usb0 || exit 1
+
+ls *.wav &> /dev/null
+if [ $? = 0 ]; then
+    rm "$(ls -t *.wav | head -n 1)"
+
+    pkill -f "/home/recorder/bin/steady" 2>/dev/null
+    pkill -f "gpioset --chip gpiochip0 18=" 2>/dev/null
+    sleep 0.1
+
+    gpioset --chip gpiochip0 --hold-period 250ms 18=0
+    gpioset --chip gpiochip0 --hold-period 250ms 18=1
+    gpioset --chip gpiochip0 --hold-period 250ms 18=0
+
+    /home/recorder/bin/steady &
+fi
