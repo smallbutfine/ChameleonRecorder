@@ -17,6 +17,7 @@
       <a href="#hardware">Hardware</a>
       <a href="#web">Web Remote</a>
       <a href="#sync">Clock Sync</a>
+      <a href="#preview">Web Remote</a>
       <a href="#gpio">GPIO</a>
       <a href="#install">Install</a>
     </nav>
@@ -145,6 +146,55 @@
 
     <h3>Drift compensation</h3>
     <p>When multiple interfaces run independently (no word clock connection), their sample clocks drift slightly. JACK's `alsa_in` mechanism provides adaptive drift compensation — it periodically adjusts the resampling ratio to keep all channels in sync. For critical multi-unit setups, use a word clock or ADAT connection for sample-accurate sync.</p>
+  </div>
+</section>
+
+<section id="preview">
+  <div class="container">
+    <h2>Web Remote Preview</h2>
+    <p>This is what the ChameleonRecorder web interface looks like on your phone or tablet. The preview below is a faithful HTML mockup of the actual interface served by <code>web_remote.py</code> on port <code>:8080</code>.</p>
+    <div style="display:flex; justify-content:center; margin:30px 0;">
+      <div style="width:360px; background:#121212; border-radius:24px; padding:20px; box-shadow:0 8px 32px rgba(255,100,50,0.3); border:2px solid #333;">
+        <div style="background:#121212; border-radius:16px; overflow:hidden;">
+          <div style="background:#1a1a1a; padding:10px 15px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #333;">
+            <span style="color:#ff6432; font-weight:bold; font-size:14px;">ChameleonRecorder</span>
+            <span style="color:#4caf50; font-size:11px;">48kHz</span>
+          </div>
+          <div style="padding:15px;">
+            <div style="background:#1b5e20; color:#a5d6a7; border:1px solid #2e7d32; border-radius:10px; padding:14px; text-align:center; font-weight:bold; font-size:16px; margin-bottom:14px;">READY: USB Audio Device</div>
+            <div style="background:#d32f2f; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center; font-weight:bold;">Record</div>
+            <div style="background:#455a64; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center;">Stop</div>
+            <div style="background:#e65100; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center;">Delete Last Recording</div>
+            <div style="background:#37474f; color:white; padding:11px; margin:8px 0; font-size:15px; border-radius:12px; text-align:center;">Re-Scan USB Audio Device</div>
+            <p style="color:#90caf9; font-weight:bold; text-align:center; font-size:14px; margin:10px 0;">Ready</p>
+            <div style="background:#1e1e1e; padding:14px; border-radius:12px; margin-top:15px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid #333;">
+                <strong style="color:#ff6432;">Inputs &amp; Live Levels</strong>
+                <span style="font-size:13px; color:#aaa;">Live Meter</span>
+              </div>
+              <p style="font-size:13px; color:#aaa; margin:6px 0 12px 0;">8 of 8 channels armed for recording</p>
+              <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px;">
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 1</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:75%; background:#4caf50;"></div></div></div>
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 2</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:60%; background:#4caf50;"></div></div></div>
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 3</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:45%; background:#4caf50;"></div></div></div>
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 4</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:90%; background:#ffeb3b;"></div></div></div>
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 5</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:30%; background:#4caf50;"></div></div></div>
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 6</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:55%; background:#4caf50;"></div></div></div>
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 7</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:40%; background:#4caf50;"></div></div></div>
+                <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 8</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:65%; background:#4caf50;"></div></div></div>
+              </div>
+            </div>
+            <div style="background:#1e1e1e; padding:14px; border-radius:12px; margin-top:15px;">
+              <strong style="color:#ff6432;">Recordings (/media/usb0)</strong>
+              <div style="background:#2e7d32; color:white; padding:12px; margin:10px 0; font-size:17px; border-radius:12px; text-align:center; font-weight:bold;">Download All (.zip)</div>
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid #333;"><span style="flex:1; word-break:break-all; font-size:14px;">20261108_221625.wav<br><small style="color:#aaa;">1.2 GB</small></span><div style="display:flex; gap:6px;"><span style="background:#1976d2; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Download</span><span style="background:#c62828; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Delete</span></div></div>
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid #333;"><span style="flex:1; word-break:break-all; font-size:14px;">20261108_210000.wav<br><small style="color:#aaa;">980 MB</small></span><div style="display:flex; gap:6px;"><span style="background:#1976d2; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Download</span><span style="background:#c62828; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Delete</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="note"><strong>This is a visual mockup.</strong> The actual web remote is served by <code>web_remote.py</code> on port <code>:8080</code> and updates in real time. The channel count, file list, and level meters reflect the actual state of your connected audio interface and USB storage.</div>
   </div>
 </section>
 
