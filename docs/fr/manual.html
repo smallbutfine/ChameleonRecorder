@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChameleonRecorder — User Manual</title>
+<link rel="stylesheet" href="../style.css">
+  <style>
+.crossbar {
+  background: #0d1117;
+  border-bottom: 1px solid #30363d;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.85em;
+  letter-spacing: 0.5px;
+}
+.crossbar a {
+  color: #8b949e;
+  text-decoration: none;
+  padding: 4px 10px;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+.crossbar a:hover {
+  color: #58a6ff;
+}
+.crossbar-sep {
+  color: #30363d;
+  margin: 0 6px;
+}
+</style>
+</head>
+<body>
+<div class="crossbar">
+  <a href="https://smallbutfine.github.io/ChameleonTools/">ChameleonTools</a>
+  <span class="crossbar-sep">|</span>
+  <a href="https://smallbutfine.github.io/ChameleonDrummer/">Drummer</a>
+  <span class="crossbar-sep">|</span>
+  <a href="https://smallbutfine.github.io/TaraDSP/">TaraDSP</a>
+  <span class="crossbar-sep">|</span>
+  <a href="https://smallbutfine.github.io/stringselectorapp/">StringSelector</a>
+  <span class="crossbar-sep">|</span>
+  <a href="https://smallbutfine.github.io/ChameleonRecorder/">Recorder</a>
+</div>
+
+<header>
+  <div class="container">
+    <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
+    <p class="subtitle">User Manual</p>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="manual.html">Manuel</a>
+      <a href="concepts.html">Concepts</a>
+      <a href="docs.html">Documentation</a>
+      <a href="download.html">Télécharger</a>
+      <a href="de/index.html">DE</a>
+      <a href="es/index.html">ES</a>
+      <a href="fr/index.html">FR</a>
+      <a href="pt/index.html">PT</a>
+      <a href="ru/index.html">RU</a>
+      <a href="zh/index.html">ZH</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>What is ChameleonRecorder?</h2>
+    <p>ChameleonRecorder is a <strong>headless, plug-and-play multitrack WAV recorder</strong> that runs on a Raspberry Pi 4 (64-bit). It automatically detects any class-compliant USB audio interface or digital mixing console, records uncompressed 24-bit multitrack WAV files directly to a USB flash drive, and provides a mobile-friendly web remote control with live level meters.</p>
+    <p>No laptop. No DAW. No drivers. Just a Raspberry Pi, a USB audio interface, and a USB stick. Power on and record.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Universal USB Audio</h3>
+        <p>Automatically detects class-compliant USB audio interfaces (Behringer UMC1820, UMC204HD, XR18, X32, MOTU AVB, Focusrite, RME, Zoom) at 48 kHz with 44.1 kHz fallback.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Multi-Device Recording</h3>
+        <p>Record multiple USB interfaces simultaneously. The interface with the most channels becomes the JACK master; additional interfaces are bound via alsa_in with drift compensation.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Web Remote Control</h3>
+        <p>Full control from any phone, tablet, or laptop browser on port :8080. Per-device and per-channel arming, live peak meters, file management, and ZIP download.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fallback Wi-Fi Hotspot</h3>
+        <p>If no known Wi-Fi is found within 25 seconds of boot, ChameleonRecorder creates its own access point (SSID: ChameleonRecorder, Password: chameleon123) at http://10.42.0.1:8080.</p>
+      </div>
+      <div class="feature-card">
+        <h3>ADAT Clock Sync</h3>
+        <p>Automatically detects valid ADAT clock signals on Behringer UMC1820 interfaces and switches them to external ADAT clock sync for sample-accurate multi-unit recording.</p>
+      </div>
+      <div class="feature-card">
+        <h3>GPIO Controls</h3>
+        <p>Optional physical pushbuttons for Record/Stop and Delete Last, plus a status LED. Both buttons held = safe shutdown.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hardware">
+  <div class="container">
+    <h2>Hardware Setup</h2>
+    <table>
+      <thead><tr><th>Component</th><th>Requirement</th></tr></thead>
+      <tbody>
+        <tr><td>Computer</td><td>Raspberry Pi 4 Model B (64-bit), 2 GB RAM minimum (4 GB recommended)</td></tr>
+        <tr><td>Storage</td><td>microSD card (16 GB+) for OS, USB flash drive or SSD (exFAT or ext4) for recordings</td></tr>
+        <tr><td>Audio Interface</td><td>Any class-compliant USB audio interface or digital mixer (48 kHz)</td></tr>
+        <tr><td>Power</td><td>USB-C power supply (3A recommended)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Connecting storage</h3>
+    <p>Plug a USB flash drive or SSD formatted as <strong>exFAT</strong> or <strong>ext4</strong> into one of the blue USB 3.0 ports. It mounts automatically at <code>/media/usb0</code>. ext4 is recommended to avoid the 4 GB file size limit of FAT32.</p>
+
+    <h3>Connecting audio interfaces</h3>
+    <p>Connect your USB audio interface(s) to the Raspberry Pi and power them on. ChameleonRecorder automatically detects all USB audio devices on boot. The interface with the most channels becomes the JACK master; additional interfaces are bound via <code>alsa_in</code>.</p>
+
+    <h3>Multi-interface word clock / ADAT sync</h3>
+    <p>For sample-accurate recording with multiple units (e.g., 2x UMC1820 + 2x ADA8200):</p>
+    <ol>
+      <li>Set ADA8200 #1 to <strong>MASTER 48 kHz</strong> and connect its <code>WORD CLOCK OUT</code> (75ohm BNC) to ADA8200 #2 (<code>SLAVE WC IN</code>)</li>
+      <li>Connect <code>ADAT OUT</code> of ADA8200 #1 to <code>ADAT IN</code> of UMC1820 #1, and <code>ADAT OUT</code> of ADA8200 #2 to <code>ADAT IN</code> of UMC1820 #2</li>
+      <li>Set the front-panel <code>OPT I/O</code> button on both UMC1820 units to <strong>ADAT</strong></li>
+      <li>On boot (or when pressing <strong>Re-Scan USB Audio Device</strong>), the Pi automatically detects the valid ADAT signal and switches both to external ADAT clock sync</li>
+    </ol>
+  </div>
+</section>
+
+<section id="web">
+  <div class="container">
+    <h2>Web Remote Control</h2>
+    <p>The web remote is accessible from any browser on port <code>:8080</code>. It provides full control over recording without needing a screen, keyboard, or mouse connected to the Pi.</p>
+
+    <h3>Accessing the web remote</h3>
+    <table>
+      <thead><tr><th>Connection method</th><th>URL</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Fallback hotspot</td><td><code>http://10.42.0.1:8080</code></td><td>Connect to SSID <code>ChameleonRecorder</code> (Password: <code>chameleon123</code>)</td></tr>
+        <tr><td>Home/studio Wi-Fi</td><td><code>http://&lt;PI_IP&gt;:8080</code></td><td>Find the Pi's IP on your router, or use <code>http://DAW.local:8080</code></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Fonctionnalités</h3>
+    <table>
+      <thead><tr><th>Feature</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Record / Stop</td><td>Start or stop recording with a single tap</td></tr>
+        <tr><td>Per-device arming</td><td>Enable/disable individual USB interfaces to reduce file sizes</td></tr>
+        <tr><td>Per-channel arming</td><td>Enable/disable specific input channels without unplugging cables</td></tr>
+        <tr><td>Live peak meters</td><td>Real-time dBFS meters for every capture channel</td></tr>
+        <tr><td>Delete last take</td><td>Delete the most recent recording</td></tr>
+        <tr><td>File management</td><td>Delete individual files, download individual WAVs</td></tr>
+        <tr><td>ZIP download</td><td>Download all recordings bundled as a timestamped .zip archive</td></tr>
+        <tr><td>Re-scan USB audio</td><td>Re-detect USB audio interfaces (useful after reconnecting)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Recording format</h3>
+    <p>Recordings are saved as uncompressed <strong>24-bit WAV</strong> files at <strong>48 kHz</strong> (or 44.1 kHz if 48 kHz fails). Each file is named with a timestamp: <code>YYYYMMDD_HHMMSS.wav</code>. Files are saved directly to the USB flash drive at <code>/media/usb0/</code>.</p>
+
+    <div class="note">
+      <strong>Tip:</strong> Use a USB 3.0 flash drive or SSD for best performance. USB 2.0 drives may drop samples during multitrack recording due to bandwidth limitations.
+    </div>
+  </div>
+</section>
+
+<section id="sync">
+  <div class="container">
+    <h2>Clock Sync &amp; Multi-Device Recording</h2>
+    <p>ChameleonRecorder supports recording multiple USB audio interfaces simultaneously. The system automatically handles clock synchronization:</p>
+
+    <h3>How it works</h3>
+    <ol>
+      <li>On boot, <code>startcapiture</code> scans all USB audio cards via <code>/proc/asound/cards</code></li>
+      <li>Cards are sorted by capture channel count (descending) — the card with the most channels becomes the JACK master</li>
+      <li>The primary JACK server starts on the master card at 48 kHz (with 44.1 kHz fallback)</li>
+      <li>Additional interfaces are bound via <code>alsa_in</code> with adaptive drift compensation</li>
+      <li>For Behringer UMC1820: if a valid ADAT signal is detected on the optical input, the clock source is automatically switched to external ADAT</li>
+    </ol>
+
+    <h3>ADAT clock sync detection</h3>
+    <p>When a UMC1820 is detected, ChameleonRecorder checks the <code>Optical In ADAT/SMUX Validity</code> control. If the signal is valid, it sets the clock source to <code>2</code> (external ADAT). If not, it sets it to <code>0</code> (internal). This happens automatically on boot and when pressing <strong>Re-Scan USB Audio Device</strong>.</p>
+
+    <h3>Drift compensation</h3>
+    <p>When multiple interfaces run independently (no word clock connection), their sample clocks drift slightly. JACK's <code>alsa_in</code> mechanism provides adaptive drift compensation — it periodically adjusts the resampling ratio to keep all channels in sync. For critical multi-unit setups, use a word clock or ADAT connection for sample-accurate sync.</p>
+  </div>
+</section>
+
+<section id="gpio">
+  <div class="container">
+    <h2>GPIO Hardware Controls</h2>
+    <p>Optional physical controls can be connected to the Raspberry Pi 40-pin GPIO header (BCM numbering):</p>
+
+    <table>
+      <thead><tr><th>Component</th><th>GPIO Pin (BCM)</th><th>Physical Pin</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>Record / Stop button</td><td>GPIO 3</td><td>Pin 5 (to GND Pin 6)</td><td>Toggles recording Start / Stop</td></tr>
+        <tr><td>Delete Last button</td><td>GPIO 4</td><td>Pin 7 (to GND Pin 9)</td><td>Deletes the most recent .wav file</td></tr>
+        <tr><td>Both buttons held</td><td>GPIO 3 + 4</td><td>Pin 5 + Pin 7</td><td>Safely shuts down the Raspberry Pi</td></tr>
+        <tr><td>Status LED (+ resistor)</td><td>GPIO 18</td><td>Pin 12 (to GND Pin 14)</td><td>Solid ON: Audio ready. Blinking (1s): Recording. 3 quick blinks: Last take deleted.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <strong>LED resistor:</strong> Use a 330–470 ohm resistor in series with the LED to prevent GPIO damage.
+    </div>
+  </div>
+</section>
+
+<section id="format">
+  <div class="container">
+    <h2>Recording Format</h2>
+    <p>Recordings are saved as uncompressed <strong>24-bit WAV</strong> files at <strong>48 kHz</strong> (or 44.1 kHz if 48 kHz fails). Each file is named with a timestamp: <code>YYYYMMDD_HHMMSS.wav</code>. Files are saved directly to the USB flash drive at <code>/media/usb0/</code>.</p>
+
+    <div class="note">
+      <strong>Tip:</strong> Use a USB 3.0 flash drive or SSD for best performance. USB 2.0 drives may drop samples during multitrack recording due to bandwidth limitations.
+    </div>
+  </div>
+</section>
+
+<section id="files">
+  <div class="container">
+    <h2>File Management</h2>
+    <p>All recordings are stored on the USB flash drive at <code>/media/usb0/</code>. The web remote provides full file management:</p>
+
+    <table>
+      <thead><tr><th>Action</th><th>How to do it</th></tr></thead>
+      <tbody>
+        <tr><td>Delete last take</td><td>Press <strong>Delete Last Recording</strong> on the web remote (or GPIO button)</td></tr>
+        <tr><td>Delete individual file</td><td>Click <strong>Delete</strong> next to the file in the Recordings list</td></tr>
+        <tr><td>Download individual WAV</td><td>Click <strong>Télécharger</strong> next to the file</td></tr>
+        <tr><td>Download all as ZIP</td><td>Click <strong>Download All (.zip)</strong> — bundles all WAVs into a timestamped archive</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warning">
+      <strong>Warning:</strong> Deleting files is permanent. There is no undo. Download important recordings before deleting.
+    </div>
+  </div>
+</section>
+
+<section id="ssh">
+  <div class="container">
+    <h2>SSH Access</h2>
+    <p>You can access the Raspberry Pi via SSH for advanced configuration and troubleshooting.</p>
+
+    <table>
+      <thead><tr><th>Setting</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Username</td><td><code>recorder</code></td></tr>
+        <tr><td>Hostname</td><td><code>DAW</code> (<code>DAW.local</code>)</td></tr>
+        <tr><td>Web Remote Port</td><td><code>8080</code></td></tr>
+        <tr><td>Scripts Directory</td><td><code>/home/recorder/bin/</code></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Scripts reference</h3>
+    <table>
+      <thead><tr><th>Script</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>startcapiture</code></td><td>Main startup script — starts JACK, binds interfaces, launches web remote</td></tr>
+        <tr><td><code>start_jack</code></td><td>Starts the JACK audio server</td></tr>
+        <tr><td><code>rec</code></td><td>Record/Stop toggle — starts or stops <code>jack_capture</code></td></tr>
+        <tr><td><code>del_last</code></td><td>Deletes the most recent recording</td></tr>
+        <tr><td><code>web_remote.py</code></td><td>Web remote control server (port 8080)</td></tr>
+        <tr><td><code>jack_meter.py</code></td><td>Live peak level meter daemon</td></tr>
+        <tr><td><code>hotkeys</code></td><td>GPIO button event handler</td></tr>
+        <tr><td><code>steady</code></td><td>Sets status LED to solid ON</td></tr>
+        <tr><td><code>blink</code></td><td>Blinks status LED (recording indicator)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="troubleshooting">
+  <div class="container">
+    <h2>Troubleshooting</h2>
+
+    <h3>No audio detected</h3>
+    <ul>
+      <li>Check that your USB audio interface is connected and powered on</li>
+      <li>Verify the interface is class-compliant (no drivers needed)</li>
+      <li>Press <strong>Re-Scan USB Audio Device</strong> on the web remote</li>
+      <li>SSH into the Pi and run <code>cat /proc/asound/cards</code> to see if the device is detected</li>
+      <li>Try a different USB port (prefer blue USB 3.0 ports)</li>
+    </ul>
+
+    <h3>USB storage not mounting</h3>
+    <ul>
+      <li>Ensure the USB drive is formatted as <strong>exFAT</strong> or <strong>ext4</strong> (not FAT32 or NTFS)</li>
+      <li>Check that the drive is plugged into a blue USB 3.0 port</li>
+      <li>SSH into the Pi and run <code>lsblk</code> to see if the drive is detected</li>
+      <li>Check <code>dmesg | tail</code> for mount errors</li>
+      <li>Try a different USB drive or reformat it</li>
+    </ul>
+
+    <h3>Wi-Fi hotspot not appearing</h3>
+    <ul>
+      <li>Wait at least 25 seconds after boot — the hotspot starts after a 25-second delay</li>
+      <li>If the Pi is connected to a known Wi-Fi network, it will NOT create a hotspot (this is by design)</li>
+      <li>Check that the Wi-Fi country code is set correctly (defaults to DE if unset)</li>
+      <li>SSH into the Pi and check <code>systemctl status wifi-fallback.service</code></li>
+      <li>Manually start the hotspot: <code>sudo nmcli device wifi hotspot ifname wlan0 con-name ChameleonHotspot ssid "ChameleonRecorder" password "chameleon123"</code></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>ChameleonRecorder — Released under the MIT License.</p>
+    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub Repository</a></p>
+  </div>
+</footer>
+</body>
+</html>
