@@ -23,6 +23,30 @@
 ---
 
 ## Quick Start & Installation
+## Installation
+
+### Option 1: Raspberry Pi Imager (Recommended)
+1. Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+2. Copy and paste this link into your browser address bar to launch **Raspberry Pi Imager** with **Chameleon Recorder** loaded:
+
+```text
+rpi-imager://open?repo=https://github.com/smallbutfine/ChameleonRecorder/releases/latest/download/os_list.json
+```
+
+3. Select **Chameleon Recorder**, choose your SD card, and click **Write**.
+
+### Option 2: Manual Download
+1. Download `ChameleonRecorder.img.xz` from the [Latest Release](https://github.com/smallbutfine/ChameleonRecorder/releases/latest).
+2. Open **Raspberry Pi Imager** -> **Choose OS** -> **Use custom**, select `ChameleonRecorder.img.xz`, choose your SD card, and click **Write**.
+
+---
+
+## First Boot & Default Credentials
+
+* **Wi-Fi Hotspot SSID:** `ChameleonRecorder` *(starts automatically on boot)*
+* **Username:** `recorder`
+* **Password:** *(none / empty)*
+* **SSH:** Enabled (`ssh recorder@daw.local`)
 
 ### 1. Flash the Image via Raspberry Pi Imager
 1. Download the latest **`daw-image.img.xz`** from the [Releases](../../releases) page (or use the custom repository URL in Raspberry Pi Imager).
