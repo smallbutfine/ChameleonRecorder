@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChameleonRecorder — Audio Recording Concepts</title>
+<title>ChameleonRecorder — Conceptos de Grabación de Audio</title>
 <link rel="stylesheet" href="../style.css">
   <style>
 .crossbar {
@@ -47,433 +47,414 @@
 <header>
   <div class="container">
     <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
-    <p class="subtitle">Audio Recording Concepts</p>
+    <p class="subtitle">Conceptos de Grabación de Audio</p>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="manual.html">Manual</a>
       <a href="concepts.html">Conceptos</a>
       <a href="docs.html">Documentación</a>
       <a href="download.html">Descargar</a>
-      <a href="de/index.html">DE</a>
-      <a href="es/index.html">ES</a>
-      <a href="fr/index.html">FR</a>
-      <a href="pt/index.html">PT</a>
-      <a href="ru/index.html">RU</a>
-      <a href="zh/index.html">ZH</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/de/">DE</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/es/">ES</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/fr/">FR</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/pt/">PT</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/ru/">RU</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/zh/">ZH</a>
     </nav>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>Audio Recording Concepts — In Plain Language</h2>
-    <p>This page explains the ideas behind ChameleonRecorder in terms a live sound engineer, rehearsal studio owner, or musician can understand. No programming knowledge required.</p>
+    <h2>Conceptos de Grabación de Audio — En Lenguaje Sencillo</h2>
+    <p>Esta página explica las ideas detrás de ChameleonRecorder en términos que un ingeniero de sonido en vivo, un dueño de sala de ensayo o un músico pueden entender. No se requiere conocimiento de programación.</p>
   </div>
 </section>
 
-<!-- 1. What is Multitrack Recording? -->
 <section>
   <div class="container">
-    <h2>1. What Is Multitrack Recording?</h2>
-    <p>Multitrack recording means capturing every input channel as a <strong>separate WAV file</strong>. If you have 16 microphones on a drum kit, you get 16 individual WAV files — one for kick, one for snare, one for each tom, overheads, room mics, and so on.</p>
+    <h2>1. ¿Qué es la Grabación Multitrack?</h2>
+    <p>La grabación multitrack significa capturar cada canal de entrada como un <strong>archivo WAV separado</strong>. Si tienes 16 micrófonos en una batería, obtienes 16 archivos WAV individuales — uno para el bombo, uno para la caja, uno para cada tom, overheads, micrófonos de sala, etc.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Why Separate Files Matter</h3>
-        <p>Each channel is its own file. You can adjust the level, EQ, compression, and effects on each microphone independently during mixing. If everything were recorded as a single stereo mix, you could never fix a buried snare or a boomy kick without re-recording.</p>
+        <h3>Por Qué Importan los Archivos Separados</h3>
+        <p>Cada canal es su propio archivo. Puedes ajustar el nivel, EQ, compresión y efectos de cada micrófono independientemente durante la mezcla. Si todo se grabara como una sola mezcla estéreo, nunca podrías arreglar una caja enterrada o un bombo retumbante sin regrabar.</p>
       </div>
       <div class="feature-card">
-        <h3>What You Get</h3>
-        <p>One WAV file per input channel, all starting at the same instant. Drop them into any DAW (Reaper, Pro Tools, Logic, Ardour, etc.) and they line up perfectly — every track is sample-synced from the first sample.</p>
+        <h3>Lo Que Obtienes</h3>
+        <p>Un archivo WAV por canal de entrada, todos empezando en el mismo instante. Arrástralos a cualquier DAW (Reaper, Pro Tools, Logic, Ardour, etc.) y se alinean perfectamente — cada pista está sincronizada por muestra desde la primera muestra.</p>
       </div>
     </div>
 
-    <blockquote>Think of it like this: a stereo recording is a photograph of your mix. A multitrack recording is the raw ingredients — every instrument on its own plate, ready for the chef to season however they want.</blockquote>
+    <blockquote>Piénsalo así: una grabación estéreo es una fotografía de tu mezcla. Una grabación multitrack son los ingredientes crudos — cada instrumento en su propio plato, listo para que el chef lo sazone como quiera.</blockquote>
 
     <div class="note">
-      <strong>Key point:</strong> ChameleonRecorder records every armed input channel to its own WAV file. You choose which channels to record from the web remote. Unused channels can be left out to save disk space.
+      <strong>Punto clave:</strong> ChameleonRecorder graba cada canal de entrada armado en su propio archivo WAV. Eliges qué canales grabar desde el control remoto web. Los canales no usados pueden omitirse para ahorrar espacio en disco.
     </div>
   </div>
 </section>
 
-<!-- 2. Why a Dedicated Recorder? -->
 <section>
   <div class="container">
-    <h2>2. Why a Dedicated Recorder?</h2>
-    <p>A dedicated recorder like ChameleonRecorder replaces the laptop-and-DAW setup with a purpose-built appliance. Here's why that matters:</p>
+    <h2>2. ¿Por Qué un Grabador Dedicado?</h2>
+    <p>Un grabador dedicado como ChameleonRecorder reemplaza el setup de portátil-y-DAW con un aparato de propósito específico. Por qué importa:</p>
 
     <table>
       <thead>
-        <tr><th>Problem with a Laptop + DAW</th><th>How ChameleonRecorder Solves It</th></tr>
+        <tr><th>Problema con Portátil + DAW</th><th>Cómo ChameleonRecorder lo Resuelve</th></tr>
       </thead>
       <tbody>
-        <tr><td>Laptop can crash, freeze, or run out of battery mid-take</td><td>Headless Linux appliance — no desktop, no screensaver, no background updates</td></tr>
-        <tr><td>Driver conflicts, OS updates, and DAW license checks cause dropouts</td><td>No drivers to install, no OS to update, no license to check — it just works</td></tr>
-        <tr><td>High latency from the OS audio stack and DAW plugins</td><td>JACK Audio Server with low-latency ALSA backend — direct hardware path</td></tr>
-        <tr><td>Setup time: open laptop, launch DAW, configure inputs, arm tracks</td><td>Boot and record — the Pi auto-detects your interface and starts recording in seconds</td></tr>
-        <tr><td>Laptop fan noise, heat, and footprint in a live rack</td><td>Raspberry Pi 4 — silent, tiny, sips power, fits in a rack drawer</td></tr>
+        <tr><td>El portátil puede colgarse, congelarse o quedarse sin batería a mitad de toma</td><td>Appliance Linux headless — sin escritorio, sin salvapantallas, sin actualizaciones en segundo plano</td></tr>
+        <tr><td>Conflictos de drivers, actualizaciones del SO y verificaciones de licencia DAW causan caídas</td><td>Sin drivers que instalar, sin SO que actualizar, sin licencia que verificar — simplemente funciona</td></tr>
+        <tr><td>Alta latencia del stack de audio del SO y plugins DAW</td><td>JACK Audio Server con backend ALSA de baja latencia — ruta directa al hardware</td></tr>
+        <tr><td>Tiempo de configuración: abrir portátil, lanzar DAW, configurar entradas, armar pistas</td><td>Arrancar y grabar — la Pi detecta tu interfaz automáticamente y empieza a grabar en segundos</td></tr>
+        <tr><td>Ruido de ventilador, calor y huella del portátil en un rack en vivo</td><td>Raspberry Pi 4 — silenciosa, diminuta, consume poca energía, cabe en un cajón de rack</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Bottom line:</strong> A dedicated recorder is like a rack-mounted hardware recorder (think Zoom F8 or Sound Devices MixPre) — but open, affordable, and infinitely configurable. No laptop to babysit.
+      <strong>Conclusión:</strong> Un grabador dedicado es como un grabador de hardware montado en rack (piensa en Zoom F8 o Sound Devices MixPre) — pero abierto, asequible e infinitamente configurable. Sin portátil que cuidar.
     </div>
   </div>
 </section>
 
-<!-- 3. USB Audio Interfaces -->
 <section>
   <div class="container">
-    <h2>3. USB Audio Interfaces</h2>
-    <p>ChameleonRecorder works with USB audio interfaces — the boxes that turn microphones and instruments into digital audio. But not all USB interfaces are the same.</p>
+    <h2>3. Interfaces de Audio USB</h2>
+    <p>ChameleonRecorder funciona con interfaces de audio USB — las cajas que convierten micrófonos e instrumentos en audio digital. Pero no todas las interfaces USB son iguales.</p>
 
-    <h3>Class-Compliant vs. Proprietary</h3>
+    <h3>Clase-Conforme vs. Propietario</h3>
     <table>
       <thead>
-        <tr><th>Type</th><th>What It Means</th><th>Examples</th></tr>
+        <tr><th>Tipo</th><th>Qué Significa</th><th>Ejemplos</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Class-Compliant</strong></td>
-          <td>Follows the USB Audio Class standard. Works with any computer or device without installing drivers. Plug it in and it works — like a USB keyboard or mouse.</td>
-          <td>Behringer UMC1820, UMC204HD, XR18, X32, MOTU AVB series, Focusrite Scarlett (most models), RME Babyface, Zoom F-series</td>
+          <td><strong>Clase-Conforme</strong></td>
+          <td>Sigue el estándar USB Audio Class. Funciona con cualquier ordenador o dispositivo sin instalar drivers. Enchúfalo y funciona — como un teclado o ratón USB.</td>
+          <td>Behringer UMC1820, UMC204HD, XR18, X32, serie MOTU AVB, Focusrite Scarlett (la mayoría de modelos), RME Babyface, serie Zoom F</td>
         </tr>
         <tr>
-          <td><strong>Proprietary</strong></td>
-          <td>Requires a specific driver from the manufacturer. Only works with that driver on specific operating systems. Will NOT work with ChameleonRecorder.</td>
-          <td>Some older M-Audio, some Presonus, some Lexicon interfaces</td>
+          <td><strong>Propietario</strong></td>
+          <td>Requiere un driver específico del fabricante. Solo funciona con ese driver en sistemas operativos específicos. NO funcionará con ChameleonRecorder.</td>
+          <td>Algunas M-Audio antiguas, algunas Presonus, algunas interfaces Lexicon</td>
         </tr>
       </tbody>
     </table>
 
     <div class="warning">
-      <strong>Important:</strong> ChameleonRecorder only supports class-compliant USB audio interfaces. If your interface requires a driver download from the manufacturer's website, it will not work. Check the manufacturer's specs for "USB Audio Class Compliant" or "class compliant."
+      <strong>Importante:</strong> ChameleonRecorder solo soporta interfaces de audio USB clase-conformes. Si tu interfaz requiere una descarga de driver desde la web del fabricante, no funcionará. Comprueba las especificaciones del fabricante buscando "USB Audio Class Compliant" o "class compliant".
     </div>
 
-    <h3>Channel Counts</h3>
-    <p>USB audio interfaces come in various channel counts. The number of inputs determines how many microphones or instruments you can record simultaneously:</p>
+    <h3>Recuentos de Canales</h3>
+    <p>Las interfaces de audio USB vienen en varios recuentos de canales. El número de entradas determina cuántos micrófonos o instrumentos puedes grabar simultáneamente:</p>
     <table>
       <thead>
-        <tr><th>Interface</th><th>Inputs</th><th>Typical Use</th></tr>
+        <tr><th>Interfaz</th><th>Entradas</th><th>Uso Típico</th></tr>
       </thead>
       <tbody>
-        <tr><td>Behringer UMC204HD</td><td>4 inputs</td><td>Small rehearsal, podcast, singer-songwriter</td></tr>
-        <tr><td>Behringer UMC1820</td><td>20 inputs (8 analog + 8 ADAT + 2 S/PDIF + 2 combo)</td><td>Full band, drum kit, live multitrack</td></tr>
-        <tr><td>Behringer XR18</td><td>18 inputs (16 remote preamps + USB)</td><td>Live sound with digital mixer, full band</td></tr>
-        <tr><td>Behringer X32</td><td>32 inputs (via USB card)</td><td>Large venue, festival, theatre</td></tr>
-        <tr><td>MOTU 8pre-es</td><td>8 analog + 8 ADAT</td><td>Studio, expandable via ADAT</td></tr>
-        <tr><td>Focusrite Scarlett 18i20</td><td>8 analog + 8 ADAT</td><td>Studio, project studio</td></tr>
+        <tr><td>Behringer UMC204HD</td><td>4 entradas</td><td>Ensayo pequeño, podcast, cantautor</td></tr>
+        <tr><td>Behringer UMC1820</td><td>20 entradas (8 analógicas + 8 ADAT + 2 S/PDIF + 2 combo)</td><td>Banda completa, batería, multitrack en vivo</td></tr>
+        <tr><td>Behringer XR18</td><td>18 entradas (16 preamps remotos + USB)</td><td>Sonido en vivo con mezclador digital, banda completa</td></tr>
+        <tr><td>Behringer X32</td><td>32 entradas (vía tarjeta USB)</td><td>Sala grande, festival, teatro</td></tr>
+        <tr><td>MOTU 8pre-es</td><td>8 analógicas + 8 ADAT</td><td>Estudio, expandible vía ADAT</td></tr>
+        <tr><td>Focusrite Scarlett 18i20</td><td>8 analógicas + 8 ADAT</td><td>Estudio, estudio de proyecto</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Tip:</strong> You can connect multiple USB interfaces to ChameleonRecorder simultaneously. The interface with the most channels becomes the master clock. Additional interfaces are automatically synced with drift compensation. For sample-accurate sync across multiple units, use ADAT lightpipe or word clock (see Section 4).
+      <strong>Consejo:</strong> Puedes conectar múltiples interfaces USB a ChameleonRecorder simultáneamente. La interfaz con más canales se convierte en el reloj maestro. Las interfaces adicionales se sincronizan automáticamente con compensación de deriva. Para sync sample-perfecta entre múltiples unidades, usa ADAT óptico o word clock (ver Sección 4).
     </div>
   </div>
 </section>
 
-<!-- 4. JACK Audio Server -->
 <section>
   <div class="container">
-    <h2>4. JACK Audio Server</h2>
-    <p>JACK (JACK Audio Connection Kit) is the audio routing engine that ChameleonRecorder uses to move audio from your USB interface to the recording software. Think of it as the nervous system that connects everything together.</p>
+    <h2>4. Servidor de Audio JACK</h2>
+    <p>JACK (JACK Audio Connection Kit) es el motor de enrutamiento de audio que ChameleonRecorder usa para mover audio desde tu interfaz USB al software de grabación. Piénsalo como el sistema nervioso que conecta todo.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>What JACK Does</h3>
-        <p>JACK takes the digital audio stream from your USB interface and routes it to the recording application (jack_capture). It handles all the timing, buffering, and channel routing so that every sample arrives at the right place at the right time.</p>
+        <h3>Qué Hace JACK</h3>
+        <p>JACK toma el flujo de audio digital de tu interfaz USB y lo enruta a la aplicación de grabación (jack_capture). Maneja todo el timing, buffering y enrutamiento de canales para que cada muestra llegue al lugar correcto en el momento correcto.</p>
       </div>
       <div class="feature-card">
-        <h3>Why Low Latency Matters</h3>
-        <p>Latency is the delay between sound going in and the system processing it. JACK achieves much lower latency than a typical computer's audio stack because it bypasses the operating system's audio mixer and talks directly to the hardware. This means no lag, no dropouts, and reliable recording even under heavy load.</p>
+        <h3>Por Qué Importa la Baja Latencia</h3>
+        <p>La latencia es el retardo entre el sonido que entra y el sistema procesándolo. JACK logra una latencia mucho menor que el stack de audio típico de un ordenador porque evita el mezclador de audio del sistema operativo y habla directamente con el hardware. Esto significa sin lag, sin caídas y grabación fiable incluso bajo carga pesada.</p>
       </div>
     </div>
 
-    <h3>Master / Slave Concept</h3>
-    <p>When you use multiple USB interfaces, one of them must be the timing reference — the "master" clock. All other interfaces become "slaves" and follow the master's timing. ChameleonRecorder automatically picks the interface with the most channels as the master.</p>
+    <h3>Concepto Maestro / Esclavo</h3>
+    <p>Cuando usas múltiples interfaces USB, una debe ser la referencia de timing — el reloj "maestro". Todas las demás interfaces se convierten en "esclavas" y siguen el timing del maestro. ChameleonRecorder elige automáticamente la interfaz con más canales como maestro.</p>
 
     <table>
       <thead>
-        <tr><th>Role</th><th>Interface</th><th>What It Does</th></tr>
+        <tr><th>Rol</th><th>Interfaz</th><th>Qué Hace</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Master</strong></td><td>Interface with most channels (e.g., UMC1820)</td><td>Sets the sample rate and clock. All other interfaces sync to it.</td></tr>
-        <tr><td><strong>Slave</strong></td><td>Additional interfaces (e.g., second UMC1820, ADA8200)</td><td>Follows the master's clock via ADAT or drift compensation.</td></tr>
+        <tr><td><strong>Maestro</strong></td><td>Interfaz con más canales (p. ej. UMC1820)</td><td>Establece la frecuencia de muestreo y el reloj. Todas las demás interfaces se sincronizan con él.</td></tr>
+        <tr><td><strong>Esclavo</strong></td><td>Interfaces adicionales (p. ej. segundo UMC1820, ADA8200)</td><td>Sigue el reloj maestro vía ADAT o compensación de deriva.</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>How ChameleonRecorder uses JACK:</strong> On boot, the system scans all USB audio cards, picks the one with the most channels as the JACK master, starts the JACK server at 48 kHz, and binds additional interfaces via <code>alsa_in</code> with adaptive drift compensation. The <code>jack_capture</code> application then records all channels to individual WAV files.
+      <strong>Cómo ChameleonRecorder usa JACK:</strong> Al arrancar, el sistema escanea todas las tarjetas de audio USB, elige la de más canales como maestro JACK, inicia el servidor JACK a 48 kHz y vincula interfaces adicionales vía <code>alsa_in</code> con compensación de deriva adaptativa. La aplicación <code>jack_capture</code> graba entonces todos los canales en archivos WAV individuales.
     </div>
   </div>
 </section>
 
-<!-- 5. Clock Sync -->
 <section>
   <div class="container">
-    <h2>5. Clock Sync — Keeping Everything in Time</h2>
-    <p>When you record with multiple audio interfaces, each one has its own internal clock. Even if they start at the same time, they will slowly drift apart — just like two watches that are a few seconds different after a month. This drift causes phase problems and timing errors in your multitrack.</p>
+    <h2>5. Sync de Reloj — Manteniendo Todo en Tiempo</h2>
+    <p>Cuando grabas con múltiples interfaces de audio, cada una tiene su propio reloj interno. Incluso si empiezan al mismo tiempo, se desviarán lentamente — como dos relojes que difieren unos segundos tras un mes. Esta deriva causa problemas de fase y errores de timing en tu multitrack.</p>
 
-    <h3>Why Interfaces Drift</h3>
-    <p>Every digital audio device has a crystal oscillator that determines its sample rate. No two crystals are exactly the same — one might run at 48,000 Hz and another at 48,003 Hz. Over a 10-minute recording, that tiny difference adds up to several samples of drift, which means your tracks slowly shift out of sync.</p>
+    <h3>Por Qué las Interfaces Derivan</h3>
+    <p>Cada dispositivo de audio digital tiene un oscilador de cristal que determina su frecuencia de muestreo. No hay dos cristales exactamente iguales — uno puede correr a 48,000 Hz y otro a 48,003 Hz. En una grabación de 10 minutos, esa diminuta diferencia se acumula a varios samples de deriva, lo que significa que tus pistas se desincronizan lentamente.</p>
 
-    <h3>Solutions for Clock Sync</h3>
+    <h3>Soluciones para Sync de Reloj</h3>
     <table>
       <thead>
-        <tr><th>Method</th><th>How It Works</th><th>Accuracy</th></tr>
+        <tr><th>Método</th><th>Cómo Funciona</th><th>Precisión</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>ADAT Lightpipe</strong></td>
-          <td>A single optical cable carries both audio and clock signal from one device to another. The receiving device locks to the sending device's clock. Sample-accurate.</td>
-          <td>Sample-accurate (0 samples drift)</td>
+          <td><strong>ADAT Óptico</strong></td>
+          <td>Un solo cable óptico transporta tanto el audio como la señal de reloj de un dispositivo a otro. El dispositivo receptor se bloquea al reloj del emisor. Sample-perfecto.</td>
+          <td>Sample-perfecto (0 muestras de deriva)</td>
         </tr>
         <tr>
           <td><strong>Word Clock (BNC)</strong></td>
-          <td>A dedicated coax cable carries only the clock signal between devices. Each device locks to the word clock generator. Sample-accurate.</td>
-          <td>Sample-accurate (0 samples drift)</td>
+          <td>Un cable coaxial dedicado transporta solo la señal de reloj entre dispositivos. Cada dispositivo se bloquea al generador de word clock. Sample-perfecto.</td>
+          <td>Sample-perfecto (0 muestras de deriva)</td>
         </tr>
         <tr>
-          <td><strong>Drift Compensation</strong></td>
-          <td>When no hardware sync is available, JACK's <code>alsa_in</code> continuously measures the drift between interfaces and adjusts the resampling ratio to compensate. Not sample-accurate, but good enough for most rehearsal and live recording situations.</td>
-          <td>Approximate (a few samples of drift)</td>
+          <td><strong>Compensación de Deriva</strong></td>
+          <td>Cuando no hay sync de hardware disponible, el <code>alsa_in</code> de JACK mide continuamente la deriva entre interfaces y ajusta la relación de remuestreo para compensar. No es sample-perfecto, pero es suficientemente bueno para la mayoría de situaciones de ensayo y grabación en vivo.</td>
+          <td>Aproximado (algunas muestras de deriva)</td>
         </tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>ChameleonRecorder and ADAT:</strong> When a Behringer UMC1820 is detected with a valid ADAT signal on its optical input, ChameleonRecorder automatically switches it to external ADAT clock sync. This gives you sample-accurate recording across multiple units without any manual configuration.
+      <strong>ChameleonRecorder y ADAT:</strong> Cuando se detecta un Behringer UMC1820 con una señal ADAT válida en su entrada óptica, ChameleonRecorder lo cambia automáticamente a sync de reloj ADAT externo. Esto te da grabación sample-perfecta entre múltiples unidades sin configuración manual.
     </div>
 
-    <blockquote>For critical studio work where every sample counts, always use ADAT or word clock. For rehearsal and live demos, drift compensation is usually transparent — you won't hear the difference.</blockquote>
+    <blockquote>Para trabajo de estudio crítico donde cada muestra cuenta, usa siempre ADAT o word clock. Para ensayos y demos en vivo, la compensación de deriva suele ser transparente — no oirás la diferencia.</blockquote>
   </div>
 </section>
 
-<!-- 6. Recording Format -->
 <section>
   <div class="container">
-    <h2>6. Recording Format — 24-bit / 48 kHz WAV</h2>
-    <p>ChameleonRecorder records uncompressed WAV files at <strong>24-bit resolution</strong> and <strong>48 kHz sample rate</strong>. Here's what that means and why it matters:</p>
+    <h2>6. Formato de Grabación — WAV 24-bit / 48 kHz</h2>
+    <p>ChameleonRecorder graba archivos WAV sin compresión con <strong>resolución de 24 bits</strong> y <strong>frecuencia de muestreo de 48 kHz</strong>. Qué significa y por qué importa:</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>24-Bit — Dynamic Range</h3>
-        <p>Bit depth determines how much dynamic range your recording can capture. 24-bit gives you 144 dB of theoretical dynamic range — far more than any microphone or preamp can actually deliver. This means you can record quietly and still have plenty of headroom. In practice, 24-bit means you never have to worry about noise floor or quantization distortion, even at very low levels.</p>
+        <h3>24-Bit — Rango Dinámico</h3>
+        <p>La profundidad de bits determina cuánto rango dinámico puede capturar tu grabación. 24 bits te dan 144 dB de rango dinámico teórico — mucho más de lo que cualquier micrófono o preamp puede realmente entregar. Esto significa que puedes grabar bajo y aún tener mucho margen. En la práctica, 24 bits significa que nunca tienes que preocuparte por el piso de ruido o la distorsión de cuantización, incluso a niveles muy bajos.</p>
       </div>
       <div class="feature-card">
-        <h3>48 kHz — The Video Standard</h3>
-        <p>48 kHz is the standard sample rate for video production, film, and television. If your recording will ever be synced to video, 48 kHz is the correct choice. It also captures the full audible frequency range (up to 24 kHz) with plenty of margin. 44.1 kHz is used for CD audio, but 48 kHz is the professional standard for multitrack recording.</p>
+        <h3>48 kHz — El Estándar de Vídeo</h3>
+        <p>48 kHz es la frecuencia de muestreo estándar para producción de vídeo, cine y televisión. Si tu grabación se sincronizará alguna vez con vídeo, 48 kHz es la elección correcta. También captura el rango de frecuencia audible completo (hasta 24 kHz) con mucho margen. 44.1 kHz se usa para audio CD, pero 48 kHz es el estándar profesional para grabación multitrack.</p>
       </div>
     </div>
 
-    <h3>File Sizes</h3>
-    <p>Uncompressed WAV files are large. Here's roughly how much space you need per minute of recording:</p>
+    <h3>Tamaños de Archivo</h3>
+    <p>Los archivos WAV sin compresión son grandes. Cuánto espacio necesitas aproximadamente por minuto de grabación:</p>
     <table>
       <thead>
-        <tr><th>Channels</th><th>Per Minute</th><th>Per Hour</th><th>Example</th></tr>
+        <tr><th>Canales</th><th>Por Minuto</th><th>Por Hora</th><th>Ejemplo</th></tr>
       </thead>
       <tbody>
-        <tr><td>2 (stereo)</td><td>~33 MB</td><td>~2 GB</td><td>Acoustic guitar + vocal</td></tr>
-        <tr><td>8</td><td>~132 MB</td><td>~8 GB</td><td>Full drum kit</td></tr>
-        <tr><td>16</td><td>~264 MB</td><td>~16 GB</td><td>Full band with drum kit</td></tr>
-        <tr><td>32</td><td>~528 MB</td><td>~32 GB</td><td>Large ensemble, orchestra</td></tr>
+        <tr><td>2 (estéreo)</td><td>~33 MB</td><td>~2 GB</td><td>Guitarra acústica + voz</td></tr>
+        <tr><td>8</td><td>~132 MB</td><td>~8 GB</td><td>Batería completa</td></tr>
+        <tr><td>16</td><td>~264 MB</td><td>~16 GB</td><td>Banda completa con batería</td></tr>
+        <tr><td>32</td><td>~528 MB</td><td>~32 GB</td><td>Ensamble grande, orquesta</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Storage tip:</strong> A 64 GB USB 3.0 flash drive holds about 4 hours of 16-track recording. For longer sessions, use a larger drive or an SSD. Always use USB 3.0 (blue ports) — USB 2.0 can drop samples during multitrack recording.
+      <strong>Consejo de almacenamiento:</strong> Una memoria USB 3.0 de 64 GB almacena unas 4 horas de grabación de 16 pistas. Para sesiones más largas, usa un disco más grande o un SSD. Usa siempre USB 3.0 (puertos azules) — USB 2.0 puede perder muestras durante la grabación multitrack.
     </div>
 
     <div class="warning">
-      <strong>24-bit vs 16-bit:</strong> 16-bit (CD quality) gives you 96 dB of dynamic range. That sounds like a lot, but in practice, 24-bit gives you about 48 dB more headroom above the noise floor. This means you can set your gain conservatively and never worry about clipping or noise. Always record in 24-bit.
+      <strong>24-bit vs 16-bit:</strong> 16 bits (calidad CD) te dan 96 dB de rango dinámico. Suena a mucho, pero en la práctica, 24 bits te dan unos 48 dB más de margen sobre el piso de ruido. Esto significa que puedes configurar tu ganancia de forma conservadora y nunca preocuparte por el recorte o el ruido. Graba siempre en 24 bits.
     </div>
   </div>
 </section>
 
-<!-- 7. The Fallback Hotspot -->
 <section>
   <div class="container">
-    <h2>7. The Fallback Wi-Fi Hotspot</h2>
-    <p>ChameleonRecorder includes a built-in Wi-Fi hotspot so you can control it from your phone or tablet even when there's no Wi-Fi router available. This is essential for stage use, rehearsal studios, and remote recording locations.</p>
+    <h2>7. El Hotspot Wi-Fi de Respaldo</h2>
+    <p>ChameleonRecorder incluye un hotspot Wi-Fi incorporado para que puedas controlarlo desde tu teléfono o tablet incluso cuando no hay router Wi-Fi disponible. Esto es esencial para uso en escenario, salas de ensayo y ubicaciones de grabación remotas.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Why It Matters</h3>
-        <p>Most venues don't have Wi-Fi, or the Wi-Fi is unreliable. The fallback hotspot means ChameleonRecorder is completely self-contained — it creates its own network and serves the web remote from itself. No router, no internet, no IT department required.</p>
+        <h3>Por Qué Importa</h3>
+        <p>La mayoría de las salas no tienen Wi-Fi, o el Wi-Fi es poco fiable. El hotspot de respaldo significa que ChameleonRecorder es completamente autónomo — crea su propia red y sirve el control remoto web desde sí mismo. Sin router, sin internet, sin departamento de TI.</p>
       </div>
       <div class="feature-card">
-        <h3>How It Works</h3>
-        <p>On boot, ChameleonRecorder looks for a known Wi-Fi network for 25 seconds. If it doesn't find one, it creates its own access point with SSID <code>ChameleonRecorder</code> and password <code>chameleon123</code>. Connect your phone to this network, then open <code>http://10.42.0.1:8080</code> in any browser.</p>
+        <h3>Cómo Funciona</h3>
+        <p>Al arrancar, ChameleonRecorder busca una red Wi-Fi conocida durante 25 segundos. Si no encuentra ninguna, crea su propio punto de acceso con SSID <code>ChameleonRecorder</code> y contraseña <code>chameleon123</code>. Conecta tu teléfono a esta red y abre <code>http://10.42.0.1:8080</code> en cualquier navegador.</p>
       </div>
     </div>
 
     <table>
       <thead>
-        <tr><th>Detail</th><th>Value</th></tr>
+        <tr><th>Detalle</th><th>Valor</th></tr>
       </thead>
       <tbody>
-        <tr><td>Network name (SSID)</td><td><code>ChameleonRecorder</code></td></tr>
-        <tr><td>Password</td><td><code>chameleon123</code></td></tr>
-        <tr><td>Web remote URL</td><td><code>http://10.42.0.1:8080</code></td></tr>
-        <tr><td>Trigger</td><td>No known Wi-Fi found within 25 seconds of boot</td></tr>
+        <tr><td>Nombre de red (SSID)</td><td><code>ChameleonRecorder</code></td></tr>
+        <tr><td>Contraseña</td><td><code>chameleon123</code></td></tr>
+        <tr><td>URL del control remoto web</td><td><code>http://10.42.0.1:8080</code></td></tr>
+        <tr><td>Disparador</td><td>No se encuentra Wi-Fi conocido en 25 segundos tras el arranque</td></tr>
       </tbody>
     </table>
 
-    <h3>Security Considerations</h3>
+    <h3>Consideraciones de Seguridad</h3>
     <ul>
-      <li><strong>Network isolation:</strong> The hotspot is a standalone network — devices connected to it cannot reach the internet or your other networks.</li>
-      <li><strong>Password protection:</strong> The default password is <code>chameleon123</code>. Change it in the configuration if you're in a shared space.</li>
-      <li><strong>No internet access:</strong> The hotspot does not route traffic to the internet. It only serves the web remote control page.</li>
-      <li><strong>Temporary:</strong> The hotspot only activates when no known Wi-Fi is found. Once you connect to a known network, the hotspot shuts down automatically.</li>
+      <li><strong>Aislamiento de red:</strong> El hotspot es una red independiente — los dispositivos conectados no pueden alcanzar internet ni tus otras redes.</li>
+      <li><strong>Protección por contraseña:</strong> La contraseña por defecto es <code>chameleon123</code>. Cámbiala en la configuración si estás en un espacio compartido.</li>
+      <li><strong>Sin acceso a internet:</strong> El hotspot no enruta tráfico a internet. Solo sirve la página de control remoto web.</li>
+      <li><strong>Temporal:</strong> El hotspot solo se activa cuando no se encuentra Wi-Fi conocido. Una vez te conectas a una red conocida, el hotspot se apaga automáticamente.</li>
     </ul>
 
     <div class="note">
-      <strong>Pro tip:</strong> If you use ChameleonRecorder at a venue with unreliable Wi-Fi, the fallback hotspot is your safety net. You can always control the recorder from your phone, no matter what.
+      <strong>Consejo pro:</strong> Si usas ChameleonRecorder en una sala con Wi-Fi poco fiable, el hotspot de respaldo es tu red de seguridad. Siempre puedes controlar el grabador desde tu teléfono, pase lo que pase.
     </div>
   </div>
 </section>
 
-<!-- 8. GPIO Controls -->
 <section>
   <div class="container">
-    <h2>8. GPIO Controls — Physical Buttons and LED Status</h2>
-    <p>The Raspberry Pi has general-purpose input/output (GPIO) pins that ChameleonRecorder uses for physical controls. This means you can record, stop, and delete takes without needing a phone, tablet, or computer.</p>
+    <h2>8. Controles GPIO — Botones Físicos y Estado LED</h2>
+    <p>La Raspberry Pi tiene pines de entrada/salida de propósito general (GPIO) que ChameleonRecorder usa para controles físicos. Esto significa que puedes grabar, parar y borrar tomas sin necesitar teléfono, tablet u ordenador.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Why Physical Buttons Matter</h3>
-        <p>In a studio or on stage, fumbling with a phone app is slow and unreliable. A physical button you can press without looking is faster, more reliable, and works even when your phone is dead or in another room. It's the difference between a hardware recorder and an app.</p>
+        <h3>Por Qué Importan los Botones Físicos</h3>
+        <p>En un estudio o en el escenario, manipular una app de teléfono es lento y poco fiable. Un botón físico que puedes pulsar sin mirar es más rápido, más fiable y funciona incluso cuando tu teléfono está muerto o en otra sala. Es la diferencia entre un grabador de hardware y una app.</p>
       </div>
       <div class="feature-card">
-        <h3>LED Status Indicator</h3>
-        <p>A status LED gives you instant visual feedback: solid green means ready, blinking red means recording, and off means powered down. You can glance at the Pi from across the room and know its state without unlocking your phone.</p>
+        <h3>Indicador de Estado LED</h3>
+        <p>Un LED de estado te da retroalimentación visual instantánea: verde fijo significa listo, rojo parpadeando significa grabando, y apagado significa apagado. Puedes mirar la Pi desde el otro lado de la sala y conocer su estado sin desbloquear el teléfono.</p>
       </div>
     </div>
 
     <table>
       <thead>
-        <tr><th>Control</th><th>Action</th><th>When to Use</th></tr>
+        <tr><th>Control</th><th>Acción</th><th>Cuándo Usar</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Record / Stop button</strong></td><td>Starts or stops recording</td><td>Quick takes, live recording, when your phone isn't handy</td></tr>
-        <tr><td><strong>Delete Last button</strong></td><td>Deletes the most recent recording</td><td>When a take is ruined and you want to re-record immediately</td></tr>
-        <tr><td><strong>Both buttons held</strong></td><td>Safe shutdown of the Raspberry Pi</td><td>End of session — safely powers off without corrupting files</td></tr>
-        <tr><td><strong>Status LED (green)</strong></td><td>Solid = ready, Blinking = recording</td><td>Glanceable status from across the room</td></tr>
+        <tr><td><strong>Botón Grabar / Parar</strong></td><td>Inicia o detiene la grabación</td><td>Tomas rápidas, grabación en vivo, cuando no tienes el teléfono a mano</td></tr>
+        <tr><td><strong>Botón Borrar Última</strong></td><td>Borra la grabación más reciente</td><td>Cuando una toma está arruinada y quieres regrabar inmediatamente</td></tr>
+        <tr><td><strong>Ambos botones mantenidos</strong></td><td>Apagado seguro de la Raspberry Pi</td><td>Fin de sesión — apaga de forma segura sin corromper archivos</td></tr>
+        <tr><td><strong>LED de estado (verde)</strong></td><td>Fijo = listo, Parpadeando = grabando</td><td>Estado visible desde el otro lado de la sala</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Setup:</strong> GPIO controls are optional. If you don't connect buttons, ChameleonRecorder works exactly the same — you just use the web remote instead. The GPIO pins are there for convenience, not requirement.
+      <strong>Configuración:</strong> Los controles GPIO son opcionales. Si no conectas botones, ChameleonRecorder funciona exactamente igual — solo usas el control remoto web en su lugar. Los pines GPIO están para conveniencia, no como requisito.
     </div>
   </div>
 </section>
 
-<!-- Recording Pipeline Diagram -->
 <section>
   <div class="container">
-    <h2>The Recording Pipeline — How It All Fits Together</h2>
-    <p>Here's a visual overview of how audio flows from your microphones to a WAV file on your USB stick:</p>
+    <h2>El Pipeline de Grabación — Cómo Encaja Todo</h2>
+    <p>Aquí hay un resumen visual de cómo el audio fluye desde tus micrófonos a un archivo WAV en tu memoria USB:</p>
 
     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0; margin: 30px 0; font-family: 'Segoe UI', sans-serif;">
 
-      <!-- Audio Interface -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 140px; max-width: 180px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">🎤</div>
-        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">Audio Interface</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">USB Mic / Line Inputs</div>
+        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">Interfaz de Audio</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Entradas USB Mic / Line</div>
         <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">(UMC1820, XR18, etc.)</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- USB -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 100px; max-width: 140px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">🔌</div>
         <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">USB</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Class-Compliant</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">Audio Stream</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Clase-Conforme</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">Flujo de Audio</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- JACK -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 120px; max-width: 160px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">⚙️</div>
-        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">JACK Audio Server</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Low-Latency Routing</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">Master / Slave Sync</div>
+        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">Servidor de Audio JACK</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Enrutamiento de Baja Latencia</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">Sync Maestro / Esclavo</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- jack_capture -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 120px; max-width: 160px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">💿</div>
         <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">jack_capture</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Records Each Channel</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Graba Cada Canal</div>
         <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">24-bit / 48 kHz</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- WAV File -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 120px; max-width: 160px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">📁</div>
-        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">WAV Files</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">One Per Channel</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">On USB Stick</div>
+        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">Archivos WAV</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Uno por Canal</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">En Memoria USB</div>
       </div>
 
     </div>
 
     <div class="note">
-      <strong>Reading the diagram:</strong> Your microphones plug into the audio interface. The interface sends digital audio over USB to the Raspberry Pi. JACK receives it, keeps everything in sync, and passes it to jack_capture, which writes each channel to its own WAV file on the USB flash drive. The whole chain is automatic — you just press record.
+      <strong>Leer el diagrama:</strong> Tus micrófonos se enchufan a la interfaz de audio. La interfaz envía audio digital por USB a la Raspberry Pi. JACK lo recibe, mantiene todo sincronizado y lo pasa a jack_capture, que escribe cada canal en su propio archivo WAV en la memoria USB. Toda la cadena es automática — solo pulsas grabar.
     </div>
 
-    <h3>Step by Step</h3>
+    <h3>Paso a Paso</h3>
     <ol>
-      <li><strong>Microphone → Audio Interface:</strong> Your mics or instruments connect to the interface's preamps. The interface converts analog sound to digital audio.</li>
-      <li><strong>Audio Interface → USB:</strong> The digital audio travels over USB to the Raspberry Pi. Because the interface is class-compliant, no driver is needed — the Pi recognizes it immediately.</li>
-      <li><strong>USB → JACK:</strong> JACK takes the incoming audio and routes it. If you have multiple interfaces, JACK keeps them all in sync using ADAT, word clock, or drift compensation.</li>
-      <li><strong>JACK → jack_capture:</strong> The jack_capture application receives every channel from JACK and writes each one to a separate WAV file. It runs at 24-bit / 48 kHz.</li>
-      <li><strong>WAV → USB Stick:</strong> The WAV files are saved directly to the USB flash drive at <code>/media/usb0/</code>. Each file is named with a timestamp so you know exactly when it was recorded.</li>
+      <li><strong>Micrófono → Interfaz de Audio:</strong> Tus micros o instrumentos se conectan a los preamps de la interfaz. La interfaz convierte el sonido analógico en audio digital.</li>
+      <li><strong>Interfaz de Audio → USB:</strong> El audio digital viaja por USB a la Raspberry Pi. Como la interfaz es clase-conforme, no se necesita driver — la Pi la reconoce inmediatamente.</li>
+      <li><strong>USB → JACK:</strong> JACK toma el audio entrante y lo enruta. Si tienes múltiples interfaces, JACK las mantiene todas sincronizadas usando ADAT, word clock o compensación de deriva.</li>
+      <li><strong>JACK → jack_capture:</strong> La aplicación jack_capture recibe cada canal de JACK y escribe cada uno en un archivo WAV separado. Corre a 24-bit / 48 kHz.</li>
+      <li><strong>WAV → Memoria USB:</strong> Los archivos WAV se guardan directamente en la memoria USB en <code>/media/usb0/</code>. Cada archivo se nombra con una marca de tiempo para que sepas exactamente cuándo se grabó.</li>
     </ol>
   </div>
 </section>
 
-<!-- Summary -->
 <section>
   <div class="container">
-    <h2>Summary</h2>
-    <p>ChameleonRecorder is a purpose-built multitrack recorder that replaces the laptop-and-DAW setup with a reliable, self-contained appliance. It records every input channel as a separate 24-bit/48 kHz WAV file, handles clock sync automatically, and gives you control from any phone, tablet, or physical button.</p>
+    <h2>Resumen</h2>
+    <p>ChameleonRecorder es un grabador multitrack de propósito específico que reemplaza el setup de portátil-y-DAW con un appliance fiable y autónomo. Graba cada canal de entrada como un archivo WAV separado de 24-bit/48 kHz, maneja el sync de reloj automáticamente y te da control desde cualquier teléfono, tablet o botón físico.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>For Live Sound Engineers</h3>
-        <p>Record every input on your console as a separate track. No laptop, no DAW, no driver issues. Boot and record. Use the fallback hotspot when there's no Wi-Fi. GPIO buttons for quick control.</p>
+        <h3>Para Ingenieros de Sonido en Vivo</h3>
+        <p>Graba cada entrada de tu consola como una pista separada. Sin portátil, sin DAW, sin problemas de drivers. Arranca y graba. Usa el hotspot de respaldo cuando no hay Wi-Fi. Botones GPIO para control rápido.</p>
       </div>
       <div class="feature-card">
-        <h3>For Rehearsal Studios</h3>
-        <p>Give every band a multitrack recording of their rehearsal. 24-bit WAV files they can take home and mix. No studio time, no engineer needed. Just plug in and press record.</p>
+        <h3>Para Salas de Ensayo</h3>
+        <p>Dale a cada banda una grabación multitrack de su ensayo. Archivos WAV de 24 bits que pueden llevar a casa y mezclar. Sin tiempo de estudio, sin ingeniero. Solo enchufa y pulsa grabar.</p>
       </div>
       <div class="feature-card">
-        <h3>For Musicians</h3>
-        <p>Record your band, your drum kit, or your full ensemble. Every channel is a separate file, ready for mixing. No complicated setup — if you can plug in a USB cable, you can record.</p>
+        <h3>Para Músicos</h3>
+        <p>Graba tu banda, tu batería o tu ensamble completo. Cada canal es un archivo separado, listo para mezclar. Sin configuración complicada — si puedes enchufar un cable USB, puedes grabar.</p>
       </div>
     </div>
 
-    <blockquote>ChameleonRecorder: Plug in. Power on. Press record. Every channel, every take, straight to USB.</blockquote>
+    <blockquote>ChameleonRecorder: Conecta. Enciende. Pulsa grabar. Cada canal, cada toma, directo al USB.</blockquote>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>ChameleonRecorder — Headless Multitrack WAV Recorder OS for Raspberry Pi 4.</p>
-    <p>Home: <a href="index.html">index.html</a> · Manual: <a href="manual.html">manual.html</a> · Docs: <a href="docs.html">docs.html</a> · Download: <a href="download.html">download.html</a></p>
+    <p>ChameleonRecorder — SO Grabador Multitrack WAV Headless para Raspberry Pi 4.</p>
+    <p>Inicio: <a href="index.html">index.html</a> · Manual: <a href="manual.html">manual.html</a> · Documentación: <a href="docs.html">docs.html</a> · Descargar: <a href="download.html">download.html</a></p>
   </div>
 </footer>
 

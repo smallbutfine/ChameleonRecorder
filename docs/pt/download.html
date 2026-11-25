@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChameleonRecorder — Download</title>
+<title>ChameleonRecorder — Baixar</title>
 <link rel="stylesheet" href="../style.css">
   <style>
 .crossbar {
@@ -46,102 +46,102 @@
 <header>
   <div class="container">
     <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
-    <p class="subtitle">Download & Installation</p>
+    <p class="subtitle">Download e Instalação</p>
     <nav>
       <a href="index.html">Início</a>
       <a href="manual.html">Manual</a>
       <a href="concepts.html">Conceitos</a>
       <a href="docs.html">Documentação</a>
       <a href="download.html">Baixar</a>
-      <a href="de/index.html">DE</a>
-      <a href="es/index.html">ES</a>
-      <a href="fr/index.html">FR</a>
-      <a href="pt/index.html">PT</a>
-      <a href="ru/index.html">RU</a>
-      <a href="zh/index.html">ZH</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/de/">DE</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/es/">ES</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/fr/">FR</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/pt/">PT</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/ru/">RU</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/zh/">ZH</a>
     </nav>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>Baixar</h2>
-    <p>Download the latest ChameleonRecorder OS image from the GitHub Releases page:</p>
+    <h2>Download</h2>
+    <p>Baixe a imagem mais recente do SO ChameleonRecorder na página do GitHub Releases:</p>
 
     <table>
-      <thead><tr><th>File</th><th>Description</th><th>Size</th></tr></thead>
+      <thead><tr><th>Arquivo</th><th>Descrição</th><th>Tamanho</th></tr></thead>
       <tbody>
-        <tr><td><code>daw-image.img.xz</code></td><td>64-bit Raspberry Pi OS image with ChameleonRecorder pre-installed</td><td>~1.5 GB (compressed)</td></tr>
+        <tr><td><code>daw-image.img.xz</code></td><td>Imagem do SO Raspberry Pi de 64 bits com o ChameleonRecorder pré-instalado</td><td>~1.5 GB (comprimido)</td></tr>
       </tbody>
     </table>
 
-    <p><a href="https://github.com/smallbutfine/ChameleonRecorder/releases/latest" class="btn">Download from Releases</a></p>
+    <p><a href="https://github.com/smallbutfine/ChameleonRecorder/releases/latest" class="btn">Baixar dos Releases</a></p>
 
     <div class="note">
-      <strong>Note:</strong> You do not need to extract the <code>.xz</code> archive — Raspberry Pi Imager handles it directly.
+      <strong>Nota:</strong> Você não precisa extrair o arquivo <code>.xz</code> — o Raspberry Pi Imager lida com isso diretamente.
     </div>
   </div>
 </section>
 
 <section id="flash">
   <div class="container">
-    <h2>How to Flash with Raspberry Pi Imager</h2>
+    <h2>Como Flashar com o Raspberry Pi Imager</h2>
     <ol>
-      <li><strong>Download the image:</strong> Download the latest <code>daw-image.img.xz</code> from the <a href="https://github.com/smallbutfine/ChameleonRecorder/releases">Releases</a> page</li>
-      <li><strong>Open Raspberry Pi Imager:</strong> Download and launch the official <a href="https://rptl.io/raspberry-pi-imager">Raspberry Pi Imager</a> on your Windows, macOS, or Linux computer</li>
-      <li><strong>Choose Device:</strong> Click <strong>Choose Device</strong> and select <strong>Raspberry Pi 4</strong></li>
-      <li><strong>Choose OS:</strong> Click <strong>Choose OS</strong>, scroll down to the bottom, select <strong>Use custom</strong>, and pick the downloaded <code>daw-image.img.xz</code> file</li>
-      <li><strong>Choose Storage:</strong> Insert your microSD card (16 GB or larger) and select it under <strong>Choose Storage</strong></li>
-      <li><strong>Optional OS Customisation:</strong> Click <strong>Next</strong> and choose <strong>Edit Settings</strong> if you want to pre-configure your home/studio Wi-Fi credentials, set your Wi-Fi country code, or add an SSH password/key for the <code>recorder</code> user. If you skip this step (click <strong>No</strong>), the Pi will automatically start its standalone <code>ChameleonRecorder</code> Wi-Fi hotspot on first boot</li>
-      <li><strong>Write the Image:</strong> Click <strong>Yes</strong> to confirm and wait for Raspberry Pi Imager to finish writing and verifying the SD card</li>
-      <li><strong>Boot &amp; Record:</strong> Insert the microSD card into your Raspberry Pi 4B, connect your USB flash drive and USB audio interface(s), and power it on</li>
+      <li><strong>Baixar a imagem:</strong> Baixe o último <code>daw-image.img.xz</code> da página de <a href="https://github.com/smallbutfine/ChameleonRecorder/releases">Releases</a></li>
+      <li><strong>Abrir o Raspberry Pi Imager:</strong> Baixe e inicie o oficial <a href="https://rptl.io/raspberry-pi-imager">Raspberry Pi Imager</a> no seu computador Windows, macOS ou Linux</li>
+      <li><strong>Escolher o Dispositivo:</strong> Clique em <strong>Choose Device</strong> e selecione <strong>Raspberry Pi 4</strong></li>
+      <li><strong>Escolher o SO:</strong> Clique em <strong>Choose OS</strong>, role até o final, selecione <strong>Use custom</strong> e escolha o arquivo <code>daw-image.img.xz</code> baixado</li>
+      <li><strong>Escolher o Armazenamento:</strong> Insira seu cartão microSD (16 GB ou maior) e selecione-o em <strong>Choose Storage</strong></li>
+      <li><strong>OS Customisation opcional:</strong> Clique em <strong>Next</strong> e escolha <strong>Edit Settings</strong> se quiser pré-configurar suas credenciais Wi-Fi de casa/estúdio, definir o código do país Wi-Fi, ou adicionar uma senha/chave SSH para o usuário <code>recorder</code>. Se pular esta etapa (clique em <strong>No</strong>), o Pi iniciará automaticamente seu hotspot Wi-Fi <code>ChameleonRecorder</code> standalone na primeira inicialização</li>
+      <li><strong>Gravar a Imagem:</strong> Clique em <strong>Yes</strong> para confirmar e aguarde o Raspberry Pi Imager terminar de gravar e verificar o cartão SD</li>
+      <li><strong>Iniciar e Gravar:</strong> Insira o cartão microSD no seu Raspberry Pi 4B, conecte seu pen drive e interface(s) de áudio USB, e ligue-o</li>
     </ol>
   </div>
 </section>
 
 <section id="firstboot">
   <div class="container">
-    <h2>First Boot</h2>
+    <h2>Primeira Inicialização</h2>
     <ol>
-      <li>Insert the microSD card into the Raspberry Pi 4B</li>
-      <li>Connect a USB flash drive (exFAT or ext4) to a blue USB 3.0 port</li>
-      <li>Connect your USB audio interface(s)</li>
-      <li>Power on the Pi</li>
-      <li>Wait ~25 seconds — if no known Wi-Fi is found, the <code>ChameleonRecorder</code> hotspot appears</li>
-      <li>Connect to the hotspot and open <code>http://10.42.0.1:8080</code></li>
+      <li>Insira o cartão microSD no Raspberry Pi 4B</li>
+      <li>Conecte um pen drive (exFAT ou ext4) em uma porta USB 3.0 azul</li>
+      <li>Conecte sua(s) interface(s) de áudio USB</li>
+      <li>Ligue o Pi</li>
+      <li>Espere ~25 segundos — se nenhum Wi-Fi conhecido for encontrado, o hotspot <code>ChameleonRecorder</code> aparece</li>
+      <li>Conecte ao hotspot e abra <code>http://10.42.0.1:8080</code></li>
     </ol>
   </div>
 </section>
 
 <section id="wifi">
   <div class="container">
-    <h2>Fallback Hotspot vs. Home Wi-Fi</h2>
-    <p>ChameleonRecorder supports two connection modes:</p>
+    <h2>Hotspot de Fallback vs. Wi-Fi de Casa</h2>
+    <p>O ChameleonRecorder suporta dois modos de conexão:</p>
 
     <table>
-      <thead><tr><th>Mode</th><th>When it activates</th><th>URL</th></tr></thead>
+      <thead><tr><th>Modo</th><th>Quando ativa</th><th>URL</th></tr></thead>
       <tbody>
-        <tr><td><strong>Home / Studio Wi-Fi</strong></td><td>If you pre-configured Wi-Fi in Raspberry Pi Imager, or if the Pi has previously connected to a known network</td><td><code>http://&lt;PI_IP&gt;:8080</code> or <code>http://DAW.local:8080</code></td></tr>
-        <tr><td><strong>Fallback Hotspot</strong></td><td>If no known Wi-Fi is found within 25 seconds of boot</td><td><code>http://10.42.0.1:8080</code> (SSID: <code>ChameleonRecorder</code>, Password: <code>chameleon123</code>)</td></tr>
+        <tr><td><strong>Wi-Fi de Casa / Estúdio</strong></td><td>Se você pré-configurou o Wi-Fi no Raspberry Pi Imager, ou se o Pi já se conectou a uma rede conhecida</td><td><code>http://&lt;PI_IP&gt;:8080</code> ou <code>http://DAW.local:8080</code></td></tr>
+        <tr><td><strong>Hotspot de Fallback</strong></td><td>Se nenhum Wi-Fi conhecido for encontrado em 25 segundos após a inicialização</td><td><code>http://10.42.0.1:8080</code> (SSID: <code>ChameleonRecorder</code>, Senha: <code>chameleon123</code>)</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Tip:</strong> The fallback hotspot is perfect for stage and rehearsal use — no router needed. Just connect your phone or laptop directly to the Pi's Wi-Fi.
+      <strong>Dica:</strong> O hotspot de fallback é perfeito para uso em palco e ensaio — sem necessidade de roteador. Apenas conecte seu celular ou laptop diretamente ao Wi-Fi do Pi.
     </div>
   </div>
 </section>
 
 <section id="requirements">
   <div class="container">
-    <h2>System Requirements</h2>
+    <h2>Requisitos do Sistema</h2>
     <table>
-      <thead><tr><th>Component</th><th>Requirement</th></tr></thead>
+      <thead><tr><th>Componente</th><th>Requisito</th></tr></thead>
       <tbody>
-        <tr><td>Computer</td><td>Raspberry Pi 4 Model B (64-bit), 2 GB RAM minimum (4 GB recommended)</td></tr>
-        <tr><td>Storage</td><td>microSD card (16 GB+) for OS, USB flash drive or SSD (exFAT or ext4) for recordings</td></tr>
-        <tr><td>Audio Interface</td><td>Any class-compliant USB audio interface or digital mixer (48 kHz)</td></tr>
-        <tr><td>Power</td><td>USB-C power supply (3A recommended)</td></tr>
+        <tr><td>Computador</td><td>Raspberry Pi 4 Model B (64 bits), 2 GB RAM mínimo (4 GB recomendado)</td></tr>
+        <tr><td>Armazenamento</td><td>Cartão microSD (16 GB+) para o SO, pen drive ou SSD (exFAT ou ext4) para gravações</td></tr>
+        <tr><td>Interface de Áudio</td><td>Qualquer interface de áudio USB compatível com a classe ou mixer digital (48 kHz)</td></tr>
+        <tr><td>Alimentação</td><td>Fonte de alimentação USB-C (3A recomendado)</td></tr>
       </tbody>
     </table>
   </div>
@@ -149,28 +149,28 @@
 
 <section id="ssh">
   <div class="container">
-    <h2>SSH Access</h2>
-    <p>You can access the Raspberry Pi via SSH for advanced configuration and troubleshooting.</p>
+    <h2>Acesso SSH</h2>
+    <p>Você pode acessar o Raspberry Pi via SSH para configuração avançada e solução de problemas.</p>
 
     <table>
-      <thead><tr><th>Setting</th><th>Value</th></tr></thead>
+      <thead><tr><th>Configuração</th><th>Valor</th></tr></thead>
       <tbody>
-        <tr><td>Username</td><td><code>recorder</code></td></tr>
+        <tr><td>Usuário</td><td><code>recorder</code></td></tr>
         <tr><td>Hostname</td><td><code>DAW</code> (<code>DAW.local</code>)</td></tr>
-        <tr><td>Web Remote Port</td><td><code>8080</code></td></tr>
-        <tr><td>Scripts Directory</td><td><code>/home/recorder/bin/</code></td></tr>
+        <tr><td>Porta do Controle Web</td><td><code>8080</code></td></tr>
+        <tr><td>Diretório de Scripts</td><td><code>/home/recorder/bin/</code></td></tr>
       </tbody>
     </table>
 
-    <p>Example SSH command:</p>
+    <p>Exemplo de comando SSH:</p>
     <pre>ssh recorder@DAW.local</pre>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>ChameleonRecorder — Released under the MIT License.</p>
-    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub Repository</a></p>
+    <p>ChameleonRecorder — Lançado sob a Licença MIT.</p>
+    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">Repositório GitHub</a></p>
   </div>
 </footer>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChameleonRecorder - Headless Multitrack WAV Recorder OS</title>
+<title>ChameleonRecorder - SO Grabador Multitrack WAV Headless</title>
 <link rel="stylesheet" href="../style.css">
   <style>
 .crossbar {
@@ -45,9 +45,9 @@
 
 <header>
   <div class="container">
-    <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
-    <p class="subtitle">Headless Multitrack WAV Recorder OS for Raspberry Pi 4</p>
-    <p class="tagline">Plug in. Power on. Press record. Every channel, every take, straight to USB.</p>
+    <h1><img src="../chameleon.jpg" alt="Camaleón" style="width:48px; height:48px; border-radius:50%; vertical-align:middle; margin-right:10px; border:2px solid #30363d;" />CHAMELEON<span class="accent">RECORDER</span></h1>
+    <p class="subtitle">SO Grabador Multitrack WAV Headless para Raspberry Pi 4</p>
+    <p class="tagline">Conecta. Enciende. Pulsa grabar. Cada canal, cada toma, directo al USB.</p>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="manual.html">Manual</a>
@@ -56,53 +56,50 @@
       <a href="download.html">Descargar</a>
       <a href="#features">Características</a>
       <a href="#hardware">Hardware</a>
-      <a href="#web">Web Remote</a>
-      <a href="#sync">Clock Sync</a>
-      <a href="#preview">Web Remote</a>
+      <a href="#web">Control Web</a>
+      <a href="#sync">Sync de Reloj</a>
       <a href="#gpio">GPIO</a>
-      <a href="concepts.html">Conceptos</a>
-      <a href="docs.html">Documentación</a>
-      <a href="#install">Install</a>
-      <a href="de/index.html">DE</a>
-      <a href="es/index.html">ES</a>
-      <a href="fr/index.html">FR</a>
-      <a href="pt/index.html">PT</a>
-      <a href="ru/index.html">RU</a>
-      <a href="zh/index.html">ZH</a>
+      <a href="#install">Instalación</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/de/">DE</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/es/">ES</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/fr/">FR</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/pt/">PT</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/ru/">RU</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/zh/">ZH</a>
     </nav>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>What is ChameleonRecorder?</h2>
-    <p>ChameleonRecorder is a <strong>headless, plug-and-play multitrack WAV recorder</strong> that runs on a Raspberry Pi 4 (64-bit). It automatically detects any class-compliant USB audio interface or digital mixing console, records uncompressed 24-bit multitrack WAV files directly to a USB flash drive, and provides a mobile-friendly web remote control with live level meters.</p>
-    <p>No laptop. No DAW. No drivers. Just a Raspberry Pi, a USB audio interface, and a USB stick. Power on and record.</p>
+    <h2>¿Qué es ChameleonRecorder?</h2>
+    <p>ChameleonRecorder es un <strong>grabador multitrack WAV headless y plug-and-play</strong> que funciona en una Raspberry Pi 4 (64 bits). Detecta automáticamente cualquier interfaz de audio USB clase-conforme o consola de mezcla digital, graba archivos WAV multitrack sin compresión de 24 bits directamente en una memoria USB, y proporciona un control remoto web apto para móviles con medidores de nivel en vivo.</p>
+    <p>Sin portátil. Sin DAW. Sin controladores. Solo una Raspberry Pi, una interfaz de audio USB y una memoria USB. Enciende y graba.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Universal USB Audio</h3>
-        <p>Automatically detects class-compliant USB audio interfaces (Behringer UMC1820, UMC204HD, XR18, X32, MOTU AVB, Focusrite, RME, Zoom) at 48 kHz with 44.1 kHz fallback.</p>
+        <h3>Audio USB Universal</h3>
+        <p>Detecta automáticamente interfaces de audio USB clase-conformes (Behringer UMC1820, UMC204HD, XR18, X32, MOTU AVB, Focusrite, RME, Zoom) a 48 kHz con alternativa de 44.1 kHz.</p>
       </div>
       <div class="feature-card">
-        <h3>Multi-Device Recording</h3>
-        <p>Record multiple USB interfaces simultaneously. The interface with the most channels becomes the JACK master; additional interfaces are bound via alsa_in with drift compensation.</p>
+        <h3>Grabación Multi-Dispositivo</h3>
+        <p>Graba múltiples interfaces USB simultáneamente. La interfaz con más canales se convierte en el maestro JACK; las interfaces adicionales se vinculan mediante alsa_in con compensación de deriva.</p>
       </div>
       <div class="feature-card">
-        <h3>Web Remote Control</h3>
-        <p>Full control from any phone, tablet, or laptop browser on port :8080. Per-device and per-channel arming, live peak meters, file management, and ZIP download.</p>
+        <h3>Control Remoto Web</h3>
+        <p>Control completo desde cualquier navegador de teléfono, tablet o portátil en el puerto :8080. Armado por dispositivo y por canal, medidores de pico en vivo, gestión de archivos y descarga ZIP.</p>
       </div>
       <div class="feature-card">
-        <h3>Fallback Wi-Fi Hotspot</h3>
-        <p>If no known Wi-Fi is found within 25 seconds of boot, ChameleonRecorder creates its own access point (SSID: ChameleonRecorder, Password: chameleon123) at http://10.42.0.1:8080.</p>
+        <h3>Punto de Acceso Wi-Fi de Respaldo</h3>
+        <p>Si no se encuentra ningún Wi-Fi conocido en los 25 segundos posteriores al arranque, ChameleonRecorder crea su propio punto de acceso (SSID: ChameleonRecorder, Contraseña: chameleon123) en http://10.42.0.1:8080.</p>
       </div>
       <div class="feature-card">
-        <h3>ADAT Clock Sync</h3>
-        <p>Automatically detects valid ADAT clock signals on Behringer UMC1820 interfaces and switches them to external ADAT clock sync for sample-accurate multi-unit recording.</p>
+        <h3>Sync de Reloj ADAT</h3>
+        <p>Detecta automáticamente señales de reloj ADAT válidas en interfaces Behringer UMC1820 y las cambia a sync de reloj ADAT externo para grabación multi-unidad sample-perfecta.</p>
       </div>
       <div class="feature-card">
-        <h3>GPIO Controls</h3>
-        <p>Optional physical pushbuttons for Record/Stop and Delete Last, plus a status LED. Both buttons held = safe shutdown.</p>
+        <h3>Controles GPIO</h3>
+        <p>Pulsadores físicos opcionales para Grabar/Parar y Borrar Última, más un LED de estado. Ambos pulsadores mantenidos = apagado seguro.</p>
       </div>
     </div>
   </div>
@@ -110,98 +107,98 @@
 
 <section id="hardware">
   <div class="container">
-    <h2>Hardware Setup</h2>
+    <h2>Configuración de Hardware</h2>
     <table>
-      <thead><tr><th>Component</th><th>Requirement</th></tr></thead>
+      <thead><tr><th>Componente</th><th>Requisito</th></tr></thead>
       <tbody>
-        <tr><td>Computer</td><td>Raspberry Pi 4 Model B (64-bit), 2 GB RAM minimum (4 GB recommended)</td></tr>
-        <tr><td>Storage</td><td>microSD card (16 GB+) for OS, USB flash drive or SSD (exFAT or ext4) for recordings</td></tr>
-        <tr><td>Audio Interface</td><td>Any class-compliant USB audio interface or digital mixer (48 kHz)</td></tr>
-        <tr><td>Power</td><td>USB-C power supply (3A recommended)</td></tr>
+        <tr><td>Ordenador</td><td>Raspberry Pi 4 Model B (64 bits), 2 GB RAM mínimo (4 GB recomendado)</td></tr>
+        <tr><td>Almacenamiento</td><td>Tarjeta microSD (16 GB+) para el SO, memoria USB o SSD (exFAT o ext4) para grabaciones</td></tr>
+        <tr><td>Interfaz de Audio</td><td>Cualquier interfaz de audio USB clase-conforme o mezclador digital (48 kHz)</td></tr>
+        <tr><td>Alimentación</td><td>Fuente de alimentación USB-C (3A recomendado)</td></tr>
       </tbody>
     </table>
 
-    <h3>Connecting storage</h3>
-    <p>Plug a USB flash drive or SSD formatted as <strong>exFAT</strong> or <strong>ext4</strong> into one of the blue USB 3.0 ports. It mounts automatically at <code>/media/usb0</code>. ext4 is recommended to avoid the 4 GB file size limit of FAT32.</p>
+    <h3>Conectar el almacenamiento</h3>
+    <p>Conecta una memoria USB o SSD formateada como <strong>exFAT</strong> o <strong>ext4</strong> en uno de los puertos USB 3.0 azules. Se monta automáticamente en <code>/media/usb0</code>. Se recomienda ext4 para evitar el límite de tamaño de archivo de 4 GB de FAT32.</p>
 
-    <h3>Connecting audio interfaces</h3>
-    <p>Connect your USB audio interface(s) to the Raspberry Pi and power them on. ChameleonRecorder automatically detects all USB audio devices on boot. The interface with the most channels becomes the JACK master; additional interfaces are bound via <code>alsa_in</code>.</p>
+    <h3>Conectar interfaces de audio</h3>
+    <p>Conecta tu(s) interfaz(es) de audio USB a la Raspberry Pi y enciéndelas. ChameleonRecorder detecta automáticamente todos los dispositivos de audio USB al arrancar. La interfaz con más canales se convierte en el maestro JACK; las interfaces adicionales se vinculan mediante <code>alsa_in</code>.</p>
 
-    <h3>Multi-interface word clock / ADAT sync</h3>
-    <p>For sample-accurate recording with multiple units (e.g., 2x UMC1820 + 2x ADA8200):</p>
+    <h3>Word clock multi-interfaz / sync ADAT</h3>
+    <p>Para grabación sample-perfecta con múltiples unidades (p. ej. 2x UMC1820 + 2x ADA8200):</p>
     <ol>
-      <li>Set ADA8200 #1 to <strong>MASTER 48 kHz</strong> and connect its <code>WORD CLOCK OUT</code> (75ohm BNC) to ADA8200 #2 (<code>SLAVE WC IN</code>)</li>
-      <li>Connect <code>ADAT OUT</code> of ADA8200 #1 to <code>ADAT IN</code> of UMC1820 #1, and <code>ADAT OUT</code> of ADA8200 #2 to <code>ADAT IN</code> of UMC1820 #2</li>
-      <li>Set the front-panel <code>OPT I/O</code> button on both UMC1820 units to <strong>ADAT</strong></li>
-      <li>On boot (or when pressing <strong>Re-Scan USB Audio Device</strong>), the Pi automatically detects the valid ADAT signal and switches both to external ADAT clock sync</li>
+      <li>Configura ADA8200 #1 en <strong>MASTER 48 kHz</strong> y conecta su <code>WORD CLOCK OUT</code> (BNC 75ohm) a ADA8200 #2 (<code>SLAVE WC IN</code>)</li>
+      <li>Conecta <code>ADAT OUT</code> de ADA8200 #1 a <code>ADAT IN</code> de UMC1820 #1, y <code>ADAT OUT</code> de ADA8200 #2 a <code>ADAT IN</code> de UMC1820 #2</li>
+      <li>Configura el botón del panel frontal <code>OPT I/O</code> en ambas unidades UMC1820 en <strong>ADAT</strong></li>
+      <li>Al arrancar (o al pulsar <strong>Re-Scan USB Audio Device</strong>), la Pi detecta automáticamente la señal ADAT válida y cambia ambas a sync de reloj ADAT externo</li>
     </ol>
   </div>
 </section>
 
 <section id="web">
   <div class="container">
-    <h2>Web Remote Control</h2>
-    <p>The web remote is accessible from any browser on port <code>:8080</code>. It provides full control over recording without needing a screen, keyboard, or mouse connected to the Pi.</p>
+    <h2>Control Remoto Web</h2>
+    <p>El control remoto web es accesible desde cualquier navegador en el puerto <code>:8080</code>. Proporciona control completo sobre la grabación sin necesidad de conectar pantalla, teclado o ratón a la Pi.</p>
 
-    <h3>Accessing the web remote</h3>
+    <h3>Acceder al control remoto web</h3>
     <table>
-      <thead><tr><th>Connection method</th><th>URL</th><th>Notes</th></tr></thead>
+      <thead><tr><th>Método de conexión</th><th>URL</th><th>Notas</th></tr></thead>
       <tbody>
-        <tr><td>Fallback hotspot</td><td><code>http://10.42.0.1:8080</code></td><td>Connect to SSID <code>ChameleonRecorder</code> (Password: <code>chameleon123</code>)</td></tr>
-        <tr><td>Home/studio Wi-Fi</td><td><code>http://&lt;PI_IP&gt;:8080</code></td><td>Find the Pi's IP on your router, or use <code>http://DAW.local:8080</code></td></tr>
+        <tr><td>Punto de acceso de respaldo</td><td><code>http://10.42.0.1:8080</code></td><td>Conecta a SSID <code>ChameleonRecorder</code> (Contraseña: <code>chameleon123</code>)</td></tr>
+        <tr><td>Wi-Fi de casa/estudio</td><td><code>http://&lt;PI_IP&gt;:8080</code></td><td>Encuentra la IP de la Pi en tu router, o usa <code>http://DAW.local:8080</code></td></tr>
       </tbody>
     </table>
 
     <h3>Características</h3>
     <table>
-      <thead><tr><th>Feature</th><th>Description</th></tr></thead>
+      <thead><tr><th>Característica</th><th>Descripción</th></tr></thead>
       <tbody>
-        <tr><td>Record / Stop</td><td>Start or stop recording with a single tap</td></tr>
-        <tr><td>Per-device arming</td><td>Enable/disable individual USB interfaces to reduce file sizes</td></tr>
-        <tr><td>Per-channel arming</td><td>Enable/disable specific input channels without unplugging cables</td></tr>
-        <tr><td>Live peak meters</td><td>Real-time dBFS meters for every capture channel</td></tr>
-        <tr><td>Delete last take</td><td>Delete the most recent recording</td></tr>
-        <tr><td>File management</td><td>Delete individual files, download individual WAVs</td></tr>
-        <tr><td>ZIP download</td><td>Download all recordings bundled as a timestamped .zip archive</td></tr>
-        <tr><td>Re-scan USB audio</td><td>Re-detect USB audio interfaces (useful after reconnecting)</td></tr>
+        <tr><td>Grabar / Parar</td><td>Inicia o detiene la grabación con un solo toque</td></tr>
+        <tr><td>Armado por dispositivo</td><td>Activar/desactivar interfaces USB individuales para reducir tamaños de archivo</td></tr>
+        <tr><td>Armado por canal</td><td>Activar/desactivar canales de entrada específicos sin desconectar cables</td></tr>
+        <tr><td>Medidores de pico en vivo</td><td>Medidores dBFS en tiempo real para cada canal de captura</td></tr>
+        <tr><td>Borrar última toma</td><td>Borrar la grabación más reciente</td></tr>
+        <tr><td>Gestión de archivos</td><td>Borrar archivos individuales, descargar WAVs individuales</td></tr>
+        <tr><td>Descarga ZIP</td><td>Descargar todas las grabaciones empaquetadas en un archivo .zip con marca de tiempo</td></tr>
+        <tr><td>Re-escanear audio USB</td><td>Re-detectar interfaces de audio USB (útil tras reconectar)</td></tr>
       </tbody>
     </table>
 
-    <h3>Recording format</h3>
-    <p>Recordings are saved as uncompressed <strong>24-bit WAV</strong> files at <strong>48 kHz</strong> (or 44.1 kHz if 48 kHz fails). Each file is named with a timestamp: <code>YYYYMMDD_HHMMSS.wav</code>. Files are saved directly to the USB flash drive at <code>/media/usb0/</code>.</p>
+    <h3>Formato de grabación</h3>
+    <p>Las grabaciones se guardan como archivos <strong>WAV de 24 bits</strong> sin compresión a <strong>48 kHz</strong> (o 44.1 kHz si 48 kHz falla). Cada archivo se nombra con una marca de tiempo: <code>YYYYMMDD_HHMMSS.wav</code>. Los archivos se guardan directamente en la memoria USB en <code>/media/usb0/</code>.</p>
 
     <div class="note">
-      <strong>Tip:</strong> Use a USB 3.0 flash drive or SSD for best performance. USB 2.0 drives may drop samples during multitrack recording due to bandwidth limitations.
+      <strong>Consejo:</strong> Usa una memoria USB 3.0 o SSD para el mejor rendimiento. Las unidades USB 2.0 pueden perder muestras durante la grabación multitrack debido a limitaciones de ancho de banda.
     </div>
   </div>
 </section>
 
 <section id="sync">
   <div class="container">
-    <h2>Clock Sync & Multi-Device Recording</h2>
-    <p>ChameleonRecorder supports recording multiple USB audio interfaces simultaneously. The system automatically handles clock synchronization:</p>
+    <h2>Sync de Reloj y Grabación Multi-Dispositivo</h2>
+    <p>ChameleonRecorder soporta la grabación de múltiples interfaces de audio USB simultáneamente. El sistema maneja automáticamente la sincronización de reloj:</p>
 
-    <h3>How it works</h3>
+    <h3>Cómo funciona</h3>
     <ol>
-      <li>On boot, <code>startcapiture</code> scans all USB audio cards via <code>/proc/asound/cards</code></li>
-      <li>Cards are sorted by capture channel count (descending) — the card with the most channels becomes the JACK master</li>
-      <li>The primary JACK server starts on the master card at 48 kHz (with 44.1 kHz fallback)</li>
-      <li>Additional interfaces are bound via <code>alsa_in</code> with adaptive drift compensation</li>
-      <li>For Behringer UMC1820: if a valid ADAT signal is detected on the optical input, the clock source is automatically switched to external ADAT</li>
+      <li>Al arrancar, <code>startcapiture</code> escanea todas las tarjetas de audio USB mediante <code>/proc/asound/cards</code></li>
+      <li>Las tarjetas se ordenan por número de canales de captura (descendente) — la tarjeta con más canales se convierte en el maestro JACK</li>
+      <li>El servidor JACK primario arranca en la tarjeta maestra a 48 kHz (con alternativa de 44.1 kHz)</li>
+      <li>Las interfaces adicionales se vinculan mediante <code>alsa_in</code> con compensación de deriva adaptativa</li>
+      <li>Para Behringer UMC1820: si se detecta una señal ADAT válida en la entrada óptica, la fuente de reloj se cambia automáticamente a ADAT externo</li>
     </ol>
 
-    <h3>ADAT clock sync detection</h3>
-    <p>When a UMC1820 is detected, ChameleonRecorder checks the <code>Optical In ADAT/SMUX Validity</code> control. If the signal is valid, it sets the clock source to <code>2</code> (external ADAT). If not, it sets it to <code>0</code> (internal). This happens automatically on boot and when pressing <strong>Re-Scan USB Audio Device</strong>.</p>
+    <h3>Detección de sync de reloj ADAT</h3>
+    <p>Cuando se detecta un UMC1820, ChameleonRecorder comprueba el control <code>Optical In ADAT/SMUX Validity</code>. Si la señal es válida, establece la fuente de reloj en <code>2</code> (ADAT externo). Si no, la establece en <code>0</code> (interno). Esto ocurre automáticamente al arrancar y al pulsar <strong>Re-Scan USB Audio Device</strong>.</p>
 
-    <h3>Drift compensation</h3>
-    <p>When multiple interfaces run independently (no word clock connection), their sample clocks drift slightly. JACK's `alsa_in` mechanism provides adaptive drift compensation — it periodically adjusts the resampling ratio to keep all channels in sync. For critical multi-unit setups, use a word clock or ADAT connection for sample-accurate sync.</p>
+    <h3>Compensación de deriva</h3>
+    <p>Cuando múltiples interfaces funcionan independientemente (sin conexión de word clock), sus relojes de muestra se desvían ligeramente. El mecanismo <code>alsa_in</code> de JACK proporciona compensación de deriva adaptativa — ajusta periódicamente la relación de remuestreo para mantener todos los canales sincronizados. Para configuraciones multi-unidad críticas, usa una conexión de word clock o ADAT para sync sample-perfecta.</p>
   </div>
 </section>
 
 <section id="preview">
   <div class="container">
-    <h2>Web Remote Preview</h2>
-    <p>This is what the ChameleonRecorder web interface looks like on your phone or tablet. The preview below is a faithful HTML mockup of the actual interface served by <code>web_remote.py</code> on port <code>:8080</code>.</p>
+    <h2>Vista Previa del Control Remoto Web</h2>
+    <p>Así es como se ve la interfaz web de ChameleonRecorder en tu teléfono o tablet. La vista previa de abajo es un mockup HTML fiel de la interfaz real servida por <code>web_remote.py</code> en el puerto <code>:8080</code>.</p>
     <div style="display:flex; justify-content:center; margin:30px 0;">
       <div style="width:360px; background:#121212; border-radius:24px; padding:20px; box-shadow:0 8px 32px rgba(255,100,50,0.3); border:2px solid #333;">
         <div style="background:#121212; border-radius:16px; overflow:hidden;">
@@ -210,18 +207,18 @@
             <span style="color:#4caf50; font-size:11px;">48kHz</span>
           </div>
           <div style="padding:15px;">
-            <div style="background:#1b5e20; color:#a5d6a7; border:1px solid #2e7d32; border-radius:10px; padding:14px; text-align:center; font-weight:bold; font-size:16px; margin-bottom:14px;">READY: USB Audio Device</div>
-            <div style="background:#d32f2f; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center; font-weight:bold;">Record</div>
-            <div style="background:#455a64; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center;">Stop</div>
-            <div style="background:#e65100; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center;">Delete Last Recording</div>
-            <div style="background:#37474f; color:white; padding:11px; margin:8px 0; font-size:15px; border-radius:12px; text-align:center;">Re-Scan USB Audio Device</div>
-            <p style="color:#90caf9; font-weight:bold; text-align:center; font-size:14px; margin:10px 0;">Ready</p>
+            <div style="background:#1b5e20; color:#a5d6a7; border:1px solid #2e7d32; border-radius:10px; padding:14px; text-align:center; font-weight:bold; font-size:16px; margin-bottom:14px;">LISTO: Dispositivo de Audio USB</div>
+            <div style="background:#d32f2f; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center; font-weight:bold;">Grabar</div>
+    <div style="background:#455a64; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center;">Parar</div>
+            <div style="background:#e65100; color:white; padding:16px; margin:8px 0; font-size:19px; border-radius:12px; text-align:center;">Borrar Última Grabación</div>
+            <div style="background:#37474f; color:white; padding:11px; margin:8px 0; font-size:15px; border-radius:12px; text-align:center;">Re-escanear Dispositivo de Audio USB</div>
+            <p style="color:#90caf9; font-weight:bold; text-align:center; font-size:14px; margin:10px 0;">Listo</p>
             <div style="background:#1e1e1e; padding:14px; border-radius:12px; margin-top:15px;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid #333;">
-                <strong style="color:#ff6432;">Inputs &amp; Live Levels</strong>
-                <span style="font-size:13px; color:#aaa;">Live Meter</span>
+                <strong style="color:#ff6432;">Entradas y Niveles en Vivo</strong>
+                <span style="font-size:13px; color:#aaa;">Medidor en vivo</span>
               </div>
-              <p style="font-size:13px; color:#aaa; margin:6px 0 12px 0;">8 of 8 channels armed for recording</p>
+              <p style="font-size:13px; color:#aaa; margin:6px 0 12px 0;">8 de 8 canales armados para grabar</p>
               <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px;">
                 <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 1</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:75%; background:#4caf50;"></div></div></div>
                 <div style="background:#262626; border:2px solid #4caf50; border-radius:8px; padding:6px 4px; text-align:center;"><div style="font-size:13px; font-weight:bold; margin-bottom:4px;">CH 2</div><div style="width:100%; height:8px; background:#111; border-radius:4px; overflow:hidden;"><div style="height:100%; width:60%; background:#4caf50;"></div></div></div>
@@ -234,36 +231,36 @@
               </div>
             </div>
             <div style="background:#1e1e1e; padding:14px; border-radius:12px; margin-top:15px;">
-              <strong style="color:#ff6432;">Recordings (/media/usb0)</strong>
-              <div style="background:#2e7d32; color:white; padding:12px; margin:10px 0; font-size:17px; border-radius:12px; text-align:center; font-weight:bold;">Download All (.zip)</div>
-              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid #333;"><span style="flex:1; word-break:break-all; font-size:14px;">20261108_221625.wav<br><small style="color:#aaa;">1.2 GB</small></span><div style="display:flex; gap:6px;"><span style="background:#1976d2; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Descargar</span><span style="background:#c62828; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Delete</span></div></div>
-              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid #333;"><span style="flex:1; word-break:break-all; font-size:14px;">20261108_210000.wav<br><small style="color:#aaa;">980 MB</small></span><div style="display:flex; gap:6px;"><span style="background:#1976d2; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Descargar</span><span style="background:#c62828; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Delete</span></div></div>
+              <strong style="color:#ff6432;">Grabaciones (/media/usb0)</strong>
+              <div style="background:#2e7d32; color:white; padding:12px; margin:10px 0; font-size:17px; border-radius:12px; text-align:center; font-weight:bold;">Descargar Todo (.zip)</div>
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid #333;"><span style="flex:1; word-break:break-all; font-size:14px;">20261108_221625.wav<br><small style="color:#aaa;">1.2 GB</small></span><div style="display:flex; gap:6px;"><span style="background:#1976d2; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Descargar</span><span style="background:#c62828; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Borrar</span></div></div>
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 0; border-bottom:1px solid #333;"><span style="flex:1; word-break:break-all; font-size:14px;">20261108_210000.wav<br><small style="color:#aaa;">980 MB</small></span><div style="display:flex; gap:6px;"><span style="background:#1976d2; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Descargar</span><span style="background:#c62828; color:white; padding:8px 12px; border-radius:8px; font-size:14px;">Borrar</span></div></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="note"><strong>This is a visual mockup.</strong> The actual web remote is served by <code>web_remote.py</code> on port <code>:8080</code> and updates in real time. The channel count, file list, and level meters reflect the actual state of your connected audio interface and USB storage.</div>
+    <div class="note"><strong>Este es un mockup visual.</strong> El control remoto web real es servido por <code>web_remote.py</code> en el puerto <code>:8080</code> y se actualiza en tiempo real. El número de canales, la lista de archivos y los medidores de nivel reflejan el estado real de tu interfaz de audio conectada y el almacenamiento USB.</div>
   </div>
 </section>
 
 <section id="gpio">
   <div class="container">
-    <h2>GPIO Hardware Controls</h2>
-    <p>Optional physical controls can be connected to the Raspberry Pi 40-pin GPIO header (BCM numbering):</p>
+    <h2>Controles de Hardware GPIO</h2>
+    <p>Se pueden conectar controles físicos opcionales al header GPIO de 40 pines de la Raspberry Pi (numeración BCM):</p>
 
     <table>
-      <thead><tr><th>Component</th><th>GPIO Pin (BCM)</th><th>Physical Pin</th><th>Function</th></tr></thead>
+      <thead><tr><th>Componente</th><th>Pin GPIO (BCM)</th><th>Pin Físico</th><th>Función</th></tr></thead>
       <tbody>
-        <tr><td>Record / Stop button</td><td>GPIO 3</td><td>Pin 5 (to GND Pin 6)</td><td>Toggles recording Start / Stop</td></tr>
-        <tr><td>Delete Last button</td><td>GPIO 4</td><td>Pin 7 (to GND Pin 9)</td><td>Deletes the most recent .wav file</td></tr>
-        <tr><td>Both buttons held</td><td>GPIO 3 + 4</td><td>Pin 5 + Pin 7</td><td>Safely shuts down the Raspberry Pi</td></tr>
-        <tr><td>Status LED (+ resistor)</td><td>GPIO 18</td><td>Pin 12 (to GND Pin 14)</td><td>Solid ON: Audio ready. Blinking (1s): Recording. 3 quick blinks: Last take deleted.</td></tr>
+        <tr><td>Pulsador Grabar / Parar</td><td>GPIO 3</td><td>Pin 5 (a GND Pin 6)</td><td>Alterna Inicio / Parada de grabación</td></tr>
+        <tr><td>Pulsador Borrar Última</td><td>GPIO 4</td><td>Pin 7 (a GND Pin 9)</td><td>Borra el archivo .wav más reciente</td></tr>
+        <tr><td>Ambos pulsadores mantenidos</td><td>GPIO 3 + 4</td><td>Pin 5 + Pin 7</td><td>Apaga la Raspberry Pi de forma segura</td></tr>
+        <tr><td>LED de estado (+ resistencia)</td><td>GPIO 18</td><td>Pin 12 (a GND Pin 14)</td><td>Fijo ON: Audio listo. Parpadeando (1s): Grabando. 3 parpadeos rápidos: Última toma borrada.</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>LED resistor:</strong> Use a 330–470 ohm resistor in series with the LED to prevent GPIO damage.
+      <strong>Resistencia del LED:</strong> Usa una resistencia de 330–470 ohm en serie con el LED para prevenir daños al GPIO.
     </div>
   </div>
 </section>
@@ -272,50 +269,50 @@
   <div class="container">
     <h2>Instalación</h2>
 
-      <h3>Flash the OS image</h3>
+      <h3>Flashear la imagen del SO</h3>
     <ol>
-      <li>Download the latest <code>daw-image.img.xz</code> from the <a href="https://github.com/smallbutfine/ChameleonRecorder/releases">Releases</a> page</li>
-      <li>Open <a href="https://rptl.io/raspberry-pi-imager">Raspberry Pi Imager</a></li>
-      <li>Select <strong>Raspberry Pi 4</strong> as the device</li>
-      <li>Click <strong>Choose OS</strong> → <strong>Use custom</strong> → select the downloaded <code>.img.xz</code></li>
-      <li>Insert a microSD card (16 GB+) and click <strong>Write</strong></li>
-      <li>*(Optional)* In OS Customisation settings, pre-configure your Wi-Fi network and country code. If skipped, the Pi boots into standalone hotspot mode.</li>
+      <li>Descarga el último <code>daw-image.img.xz</code> de la página de <a href="https://github.com/smallbutfine/ChameleonRecorder/releases">Releases</a></li>
+      <li>Abre <a href="https://rptl.io/raspberry-pi-imager">Raspberry Pi Imager</a></li>
+      <li>Selecciona <strong>Raspberry Pi 4</strong> como dispositivo</li>
+      <li>Haz clic en <strong>Choose OS</strong> → <strong>Use custom</strong> → selecciona el <code>.img.xz</code> descargado</li>
+      <li>Inserta una tarjeta microSD (16 GB+) y haz clic en <strong>Write</strong></li>
+      <li>*(Opcional)* En los ajustes de OS Customisation, pre-configura tu red Wi-Fi y código de país. Si se omite, la Pi arranca en modo hotspot independiente.</li>
     </ol>
 
-    <h3>First boot</h3>
+    <h3>Primer arranque</h3>
     <ol>
-      <li>Insert the microSD card into the Raspberry Pi 4B</li>
-      <li>Connect a USB flash drive (exFAT or ext4) to a blue USB 3.0 port</li>
-      <li>Connect your USB audio interface(s)</li>
-      <li>Power on the Pi</li>
-      <li>Wait ~25 seconds — if no known Wi-Fi is found, the <code>ChameleonRecorder</code> hotspot appears</li>
-      <li>Connect to the hotspot and open <code>http://10.42.0.1:8080</code></li>
+      <li>Inserta la tarjeta microSD en la Raspberry Pi 4B</li>
+      <li>Conecta una memoria USB (exFAT o ext4) en un puerto USB 3.0 azul</li>
+      <li>Conecta tu(s) interfaz(es) de audio USB</li>
+      <li>Enciende la Pi</li>
+      <li>Espera ~25 segundos — si no se encuentra Wi-Fi conocido, aparece el hotspot <code>ChameleonRecorder</code></li>
+      <li>Conecta al hotspot y abre <code>http://10.42.0.1:8080</code></li>
     </ol>
 
-    <h3>SSH access</h3>
+    <h3>Acceso SSH</h3>
     <table>
-      <thead><tr><th>Setting</th><th>Value</th></tr></thead>
+      <thead><tr><th>Ajuste</th><th>Valor</th></tr></thead>
       <tbody>
-        <tr><td>Username</td><td><code>recorder</code></td></tr>
+        <tr><td>Usuario</td><td><code>recorder</code></td></tr>
         <tr><td>Hostname</td><td><code>DAW</code> (<code>DAW.local</code>)</td></tr>
-        <tr><td>Web Remote Port</td><td><code>8080</code></td></tr>
-        <tr><td>Scripts Directory</td><td><code>/home/recorder/bin/</code></td></tr>
+        <tr><td>Puerto del Control Web</td><td><code>8080</code></td></tr>
+        <tr><td>Directorio de Scripts</td><td><code>/home/recorder/bin/</code></td></tr>
       </tbody>
     </table>
 
     <h3>Scripts</h3>
     <table>
-      <thead><tr><th>Script</th><th>Purpose</th></tr></thead>
+      <thead><tr><th>Script</th><th>Propósito</th></tr></thead>
       <tbody>
-        <tr><td><code>startcapiture</code></td><td>Main startup script — starts JACK, binds interfaces, launches web remote</td></tr>
-        <tr><td><code>start_jack</code></td><td>Starts the JACK audio server</td></tr>
-        <tr><td><code>rec</code></td><td>Record/Stop toggle — starts or stops <code>jack_capture</code></td></tr>
-        <tr><td><code>del_last</code></td><td>Deletes the most recent recording</td></tr>
-        <tr><td><code>web_remote.py</code></td><td>Web remote control server (port 8080)</td></tr>
-        <tr><td><code>jack_meter.py</code></td><td>Live peak level meter daemon</td></tr>
-        <tr><td><code>hotkeys</code></td><td>GPIO button event handler</td></tr>
-        <tr><td><code>steady</code></td><td>Sets status LED to solid ON</td></tr>
-        <tr><td><code>blink</code></td><td>Blinks status LED (recording indicator)</td></tr>
+        <tr><td><code>startcapiture</code></td><td>Script de inicio principal — inicia JACK, vincula interfaces, lanza el control web</td></tr>
+        <tr><td><code>start_jack</code></td><td>Inicia el servidor de audio JACK</td></tr>
+        <tr><td><code>rec</code></td><td>Alternador Grabar/Parar — inicia o detiene <code>jack_capture</code></td></tr>
+        <tr><td><code>del_last</code></td><td>Borra la grabación más reciente</td></tr>
+        <tr><td><code>web_remote.py</code></td><td>Servidor de control remoto web (puerto 8080)</td></tr>
+        <tr><td><code>jack_meter.py</code></td><td>Daemon medidor de nivel de pico en vivo</td></tr>
+        <tr><td><code>hotkeys</code></td><td>Manejador de eventos de pulsadores GPIO</td></tr>
+        <tr><td><code>steady</code></td><td>Establece el LED de estado en fijo ON</td></tr>
+        <tr><td><code>blink</code></td><td>Hace parpadear el LED de estado (indicador de grabación)</td></tr>
       </tbody>
     </table>
   </div>
@@ -323,8 +320,8 @@
 
 <footer>
   <div class="container">
-    <p>ChameleonRecorder — Released under the MIT License.</p>
-    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub Repository</a></p>
+    <p>ChameleonRecorder — Publicado bajo la Licencia MIT.</p>
+    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">Repositorio GitHub</a></p>
   </div>
 </footer>
 </body>

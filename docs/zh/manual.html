@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChameleonRecorder — User Manual</title>
+<title>ChameleonRecorder — 用户手册</title>
 <link rel="stylesheet" href="../style.css">
   <style>
 .crossbar {
@@ -46,53 +46,53 @@
 <header>
   <div class="container">
     <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
-    <p class="subtitle">User Manual</p>
+    <p class="subtitle">用户手册</p>
     <nav>
       <a href="index.html">首页</a>
       <a href="manual.html">手册</a>
       <a href="concepts.html">概念</a>
       <a href="docs.html">文档</a>
       <a href="download.html">下载</a>
-      <a href="de/index.html">DE</a>
-      <a href="es/index.html">ES</a>
-      <a href="fr/index.html">FR</a>
-      <a href="pt/index.html">PT</a>
-      <a href="ru/index.html">RU</a>
-      <a href="zh/index.html">ZH</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/de/">DE</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/es/">ES</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/fr/">FR</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/pt/">PT</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/ru/">RU</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/zh/">ZH</a>
     </nav>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>What is ChameleonRecorder?</h2>
-    <p>ChameleonRecorder is a <strong>headless, plug-and-play multitrack WAV recorder</strong> that runs on a Raspberry Pi 4 (64-bit). It automatically detects any class-compliant USB audio interface or digital mixing console, records uncompressed 24-bit multitrack WAV files directly to a USB flash drive, and provides a mobile-friendly web remote control with live level meters.</p>
-    <p>No laptop. No DAW. No drivers. Just a Raspberry Pi, a USB audio interface, and a USB stick. Power on and record.</p>
+    <h2>什么是 ChameleonRecorder？</h2>
+    <p>ChameleonRecorder 是一款<strong>无头、即插即用的多轨 WAV 录音器</strong>，运行在 Raspberry Pi 4（64 位）上。它会自动检测任何类兼容的 USB 音频接口或数字调音台，将未压缩的 24 位多轨 WAV 文件直接录制到 USB 闪存盘，并提供带实时电平表的移动友好网页遥控。</p>
+    <p>无需笔记本电脑。无需 DAW。无需驱动。只需一个 Raspberry Pi、一个 USB 音频接口和一个 U 盘。开机即录。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Universal USB Audio</h3>
-        <p>Automatically detects class-compliant USB audio interfaces (Behringer UMC1820, UMC204HD, XR18, X32, MOTU AVB, Focusrite, RME, Zoom) at 48 kHz with 44.1 kHz fallback.</p>
+        <h3>通用 USB 音频</h3>
+        <p>自动检测类兼容的 USB 音频接口（Behringer UMC1820、UMC204HD、XR18、X32、MOTU AVB、Focusrite、RME、Zoom），48 kHz，44.1 kHz 回退。</p>
       </div>
       <div class="feature-card">
-        <h3>Multi-Device Recording</h3>
-        <p>Record multiple USB interfaces simultaneously. The interface with the most channels becomes the JACK master; additional interfaces are bound via alsa_in with drift compensation.</p>
+        <h3>多设备录音</h3>
+        <p>同时录制多个 USB 接口。通道最多的接口成为 JACK 主设备；其他接口通过 alsa_in 绑定并进行漂移补偿。</p>
       </div>
       <div class="feature-card">
-        <h3>Web Remote Control</h3>
-        <p>Full control from any phone, tablet, or laptop browser on port :8080. Per-device and per-channel arming, live peak meters, file management, and ZIP download.</p>
+        <h3>网页遥控</h3>
+        <p>从任何手机、平板或笔记本浏览器通过 :8080 端口完全控制。按设备和按通道 armed，实时峰值表，文件管理和 ZIP 下载。</p>
       </div>
       <div class="feature-card">
-        <h3>Fallback Wi-Fi Hotspot</h3>
-        <p>If no known Wi-Fi is found within 25 seconds of boot, ChameleonRecorder creates its own access point (SSID: ChameleonRecorder, Password: chameleon123) at http://10.42.0.1:8080.</p>
+        <h3>备用 Wi-Fi 热点</h3>
+        <p>如果启动后 25 秒内未找到已知 Wi-Fi，ChameleonRecorder 会创建自己的接入点（SSID：ChameleonRecorder，密码：chameleon123），地址 http://10.42.0.1:8080。</p>
       </div>
       <div class="feature-card">
-        <h3>ADAT Clock Sync</h3>
-        <p>Automatically detects valid ADAT clock signals on Behringer UMC1820 interfaces and switches them to external ADAT clock sync for sample-accurate multi-unit recording.</p>
+        <h3>ADAT 时钟同步</h3>
+        <p>自动检测 Behringer UMC1820 接口上有效的 ADAT 时钟信号，并将其切换为外部 ADAT 时钟同步，实现采样精确的多单元录音。</p>
       </div>
       <div class="feature-card">
-        <h3>GPIO Controls</h3>
-        <p>Optional physical pushbuttons for Record/Stop and Delete Last, plus a status LED. Both buttons held = safe shutdown.</p>
+        <h3>GPIO 控制</h3>
+        <p>可选的物理按钮用于录音/停止和删除上一个，外加一个状态 LED。同时按住两个按钮 = 安全关机。</p>
       </div>
     </div>
   </div>
@@ -100,175 +100,175 @@
 
 <section id="hardware">
   <div class="container">
-    <h2>Hardware Setup</h2>
+    <h2>硬件设置</h2>
     <table>
-      <thead><tr><th>Component</th><th>Requirement</th></tr></thead>
+      <thead><tr><th>组件</th><th>要求</th></tr></thead>
       <tbody>
-        <tr><td>Computer</td><td>Raspberry Pi 4 Model B (64-bit), 2 GB RAM minimum (4 GB recommended)</td></tr>
-        <tr><td>Storage</td><td>microSD card (16 GB+) for OS, USB flash drive or SSD (exFAT or ext4) for recordings</td></tr>
-        <tr><td>Audio Interface</td><td>Any class-compliant USB audio interface or digital mixer (48 kHz)</td></tr>
-        <tr><td>Power</td><td>USB-C power supply (3A recommended)</td></tr>
+        <tr><td>计算机</td><td>Raspberry Pi 4 Model B（64 位），最低 2 GB 内存（推荐 4 GB）</td></tr>
+        <tr><td>存储</td><td>microSD 卡（16 GB+）用于操作系统，USB 闪存盘或 SSD（exFAT 或 ext4）用于录音</td></tr>
+        <tr><td>音频接口</td><td>任何类兼容的 USB 音频接口或数字调音台（48 kHz）</td></tr>
+        <tr><td>电源</td><td>USB-C 电源（推荐 3A）</td></tr>
       </tbody>
     </table>
 
-    <h3>Connecting storage</h3>
-    <p>Plug a USB flash drive or SSD formatted as <strong>exFAT</strong> or <strong>ext4</strong> into one of the blue USB 3.0 ports. It mounts automatically at <code>/media/usb0</code>. ext4 is recommended to avoid the 4 GB file size limit of FAT32.</p>
+    <h3>连接存储</h3>
+    <p>将格式化为 <strong>exFAT</strong> 或 <strong>ext4</strong> 的 USB 闪存盘或 SSD 插入蓝色 USB 3.0 端口之一。它会自动挂载到 <code>/media/usb0</code>。建议使用 ext4 以避免 FAT32 的 4 GB 文件大小限制。</p>
 
-    <h3>Connecting audio interfaces</h3>
-    <p>Connect your USB audio interface(s) to the Raspberry Pi and power them on. ChameleonRecorder automatically detects all USB audio devices on boot. The interface with the most channels becomes the JACK master; additional interfaces are bound via <code>alsa_in</code>.</p>
+    <h3>连接音频接口</h3>
+    <p>将你的 USB 音频接口连接到 Raspberry Pi 并开机。ChameleonRecorder 启动时自动检测所有 USB 音频设备。通道最多的接口成为 JACK 主设备；其他接口通过 <code>alsa_in</code> 绑定。</p>
 
-    <h3>Multi-interface word clock / ADAT sync</h3>
-    <p>For sample-accurate recording with multiple units (e.g., 2x UMC1820 + 2x ADA8200):</p>
+    <h3>多接口字时钟 / ADAT 同步</h3>
+    <p>使用多个单元进行采样精确录音（例如 2x UMC1820 + 2x ADA8200）：</p>
     <ol>
-      <li>Set ADA8200 #1 to <strong>MASTER 48 kHz</strong> and connect its <code>WORD CLOCK OUT</code> (75ohm BNC) to ADA8200 #2 (<code>SLAVE WC IN</code>)</li>
-      <li>Connect <code>ADAT OUT</code> of ADA8200 #1 to <code>ADAT IN</code> of UMC1820 #1, and <code>ADAT OUT</code> of ADA8200 #2 to <code>ADAT IN</code> of UMC1820 #2</li>
-      <li>Set the front-panel <code>OPT I/O</code> button on both UMC1820 units to <strong>ADAT</strong></li>
-      <li>On boot (or when pressing <strong>Re-Scan USB Audio Device</strong>), the Pi automatically detects the valid ADAT signal and switches both to external ADAT clock sync</li>
+      <li>将 ADA8200 #1 设为 <strong>MASTER 48 kHz</strong>，并将其 <code>WORD CLOCK OUT</code>（75ohm BNC）连接到 ADA8200 #2（<code>SLAVE WC IN</code>）</li>
+      <li>将 ADA8200 #1 的 <code>ADAT OUT</code> 连接到 UMC1820 #1 的 <code>ADAT IN</code>，将 ADA8200 #2 的 <code>ADAT OUT</code> 连接到 UMC1820 #2 的 <code>ADAT IN</code></li>
+      <li>将两个 UMC1820 单元前面板的 <code>OPT I/O</code> 按钮设为 <strong>ADAT</strong></li>
+      <li>启动时（或按下 <strong>Re-Scan USB Audio Device</strong>），Pi 会自动检测有效的 ADAT 信号并将两者切换为外部 ADAT 时钟同步</li>
     </ol>
   </div>
 </section>
 
 <section id="web">
   <div class="container">
-    <h2>Web Remote Control</h2>
-    <p>The web remote is accessible from any browser on port <code>:8080</code>. It provides full control over recording without needing a screen, keyboard, or mouse connected to the Pi.</p>
+    <h2>网页遥控</h2>
+    <p>网页遥控可从任何浏览器通过 <code>:8080</code> 端口访问。无需在 Pi 上连接屏幕、键盘或鼠标即可完全控制录音。</p>
 
-    <h3>Accessing the web remote</h3>
+    <h3>访问网页遥控</h3>
     <table>
-      <thead><tr><th>Connection method</th><th>URL</th><th>Notes</th></tr></thead>
+      <thead><tr><th>连接方式</th><th>URL</th><th>备注</th></tr></thead>
       <tbody>
-        <tr><td>Fallback hotspot</td><td><code>http://10.42.0.1:8080</code></td><td>Connect to SSID <code>ChameleonRecorder</code> (Password: <code>chameleon123</code>)</td></tr>
-        <tr><td>Home/studio Wi-Fi</td><td><code>http://&lt;PI_IP&gt;:8080</code></td><td>Find the Pi's IP on your router, or use <code>http://DAW.local:8080</code></td></tr>
+        <tr><td>备用热点</td><td><code>http://10.42.0.1:8080</code></td><td>连接到 SSID <code>ChameleonRecorder</code>（密码：<code>chameleon123</code>）</td></tr>
+        <tr><td>家庭/工作室 Wi-Fi</td><td><code>http://&lt;PI_IP&gt;:8080</code></td><td>在你的路由器上找到 Pi 的 IP，或使用 <code>http://DAW.local:8080</code></td></tr>
       </tbody>
     </table>
 
     <h3>功能</h3>
     <table>
-      <thead><tr><th>Feature</th><th>Description</th></tr></thead>
+      <thead><tr><th>功能</th><th>说明</th></tr></thead>
       <tbody>
-        <tr><td>Record / Stop</td><td>Start or stop recording with a single tap</td></tr>
-        <tr><td>Per-device arming</td><td>Enable/disable individual USB interfaces to reduce file sizes</td></tr>
-        <tr><td>Per-channel arming</td><td>Enable/disable specific input channels without unplugging cables</td></tr>
-        <tr><td>Live peak meters</td><td>Real-time dBFS meters for every capture channel</td></tr>
-        <tr><td>Delete last take</td><td>Delete the most recent recording</td></tr>
-        <tr><td>File management</td><td>Delete individual files, download individual WAVs</td></tr>
-        <tr><td>ZIP download</td><td>Download all recordings bundled as a timestamped .zip archive</td></tr>
-        <tr><td>Re-scan USB audio</td><td>Re-detect USB audio interfaces (useful after reconnecting)</td></tr>
+        <tr><td>录音 / 停止</td><td>单击即可开始或停止录音</td></tr>
+        <tr><td>按设备 armed</td><td>启用/禁用单个 USB 接口以减小文件大小</td></tr>
+        <tr><td>按通道 armed</td><td>启用/禁用特定输入通道而无需拔线</td></tr>
+        <tr><td>实时峰值表</td><td>每个采集通道的实时 dBFS 表</td></tr>
+        <tr><td>删除上次录音</td><td>删除最近的录音</td></tr>
+        <tr><td>文件管理</td><td>删除单个文件，下载单个 WAV</td></tr>
+        <tr><td>ZIP 下载</td><td>将所有录音打包为带时间戳的 .zip 压缩包下载</td></tr>
+        <tr><td>重新扫描 USB 音频</td><td>重新检测 USB 音频接口（重新连接后有用）</td></tr>
       </tbody>
     </table>
 
-    <h3>Recording format</h3>
-    <p>Recordings are saved as uncompressed <strong>24-bit WAV</strong> files at <strong>48 kHz</strong> (or 44.1 kHz if 48 kHz fails). Each file is named with a timestamp: <code>YYYYMMDD_HHMMSS.wav</code>. Files are saved directly to the USB flash drive at <code>/media/usb0/</code>.</p>
+    <h3>录音格式</h3>
+    <p>录音保存为未压缩的 <strong>24 位 WAV</strong> 文件，<strong>48 kHz</strong>（如果 48 kHz 失败则为 44.1 kHz）。每个文件以时间戳命名：<code>YYYYMMDD_HHMMSS.wav</code>。文件直接保存到 U 盘的 <code>/media/usb0/</code>。</p>
 
     <div class="note">
-      <strong>Tip:</strong> Use a USB 3.0 flash drive or SSD for best performance. USB 2.0 drives may drop samples during multitrack recording due to bandwidth limitations.
+      <strong>提示：</strong>使用 USB 3.0 闪存盘或 SSD 以获得最佳性能。USB 2.0 驱动器可能因带宽限制在多轨录音期间丢失采样。
     </div>
   </div>
 </section>
 
 <section id="sync">
   <div class="container">
-    <h2>Clock Sync &amp; Multi-Device Recording</h2>
-    <p>ChameleonRecorder supports recording multiple USB audio interfaces simultaneously. The system automatically handles clock synchronization:</p>
+    <h2>时钟同步与多设备录音</h2>
+    <p>ChameleonRecorder 支持同时录制多个 USB 音频接口。系统自动处理时钟同步：</p>
 
-    <h3>How it works</h3>
+    <h3>工作原理</h3>
     <ol>
-      <li>On boot, <code>startcapiture</code> scans all USB audio cards via <code>/proc/asound/cards</code></li>
-      <li>Cards are sorted by capture channel count (descending) — the card with the most channels becomes the JACK master</li>
-      <li>The primary JACK server starts on the master card at 48 kHz (with 44.1 kHz fallback)</li>
-      <li>Additional interfaces are bound via <code>alsa_in</code> with adaptive drift compensation</li>
-      <li>For Behringer UMC1820: if a valid ADAT signal is detected on the optical input, the clock source is automatically switched to external ADAT</li>
+      <li>启动时，<code>startcapiture</code> 通过 <code>/proc/asound/cards</code> 扫描所有 USB 音频卡</li>
+      <li>卡按采集通道数排序（降序）— 通道最多的卡成为 JACK 主设备</li>
+      <li>主 JACK 服务器在主卡上以 48 kHz 启动（44.1 kHz 回退）</li>
+      <li>其他接口通过 <code>alsa_in</code> 绑定并进行自适应漂移补偿</li>
+      <li>对于 Behringer UMC1820：如果在光输入上检测到有效 ADAT 信号，时钟源会自动切换为外部 ADAT</li>
     </ol>
 
-    <h3>ADAT clock sync detection</h3>
-    <p>When a UMC1820 is detected, ChameleonRecorder checks the <code>Optical In ADAT/SMUX Validity</code> control. If the signal is valid, it sets the clock source to <code>2</code> (external ADAT). If not, it sets it to <code>0</code> (internal). This happens automatically on boot and when pressing <strong>Re-Scan USB Audio Device</strong>.</p>
+    <h3>ADAT 时钟同步检测</h3>
+    <p>检测到 UMC1820 时，ChameleonRecorder 检查 <code>Optical In ADAT/SMUX Validity</code> 控件。如果信号有效，将时钟源设为 <code>2</code>（外部 ADAT）。否则设为 <code>0</code>（内部）。这在启动时和按下 <strong>Re-Scan USB Audio Device</strong> 时自动发生。</p>
 
-    <h3>Drift compensation</h3>
-    <p>When multiple interfaces run independently (no word clock connection), their sample clocks drift slightly. JACK's <code>alsa_in</code> mechanism provides adaptive drift compensation — it periodically adjusts the resampling ratio to keep all channels in sync. For critical multi-unit setups, use a word clock or ADAT connection for sample-accurate sync.</p>
+    <h3>漂移补偿</h3>
+    <p>当多个接口独立运行（无字时钟连接）时，它们的采样时钟会轻微漂移。JACK 的 <code>alsa_in</code> 机制提供自适应漂移补偿 — 它定期调整重采样比率以保持所有通道同步。对于关键的多单元设置，使用字时钟或 ADAT 连接以实现采样精确同步。</p>
   </div>
 </section>
 
 <section id="gpio">
   <div class="container">
-    <h2>GPIO Hardware Controls</h2>
-    <p>Optional physical controls can be connected to the Raspberry Pi 40-pin GPIO header (BCM numbering):</p>
+    <h2>GPIO 硬件控制</h2>
+    <p>可选的物理控制可连接到 Raspberry Pi 的 40 针 GPIO 排针（BCM 编号）：</p>
 
     <table>
-      <thead><tr><th>Component</th><th>GPIO Pin (BCM)</th><th>Physical Pin</th><th>Function</th></tr></thead>
+      <thead><tr><th>组件</th><th>GPIO 引脚（BCM）</th><th>物理引脚</th><th>功能</th></tr></thead>
       <tbody>
-        <tr><td>Record / Stop button</td><td>GPIO 3</td><td>Pin 5 (to GND Pin 6)</td><td>Toggles recording Start / Stop</td></tr>
-        <tr><td>Delete Last button</td><td>GPIO 4</td><td>Pin 7 (to GND Pin 9)</td><td>Deletes the most recent .wav file</td></tr>
-        <tr><td>Both buttons held</td><td>GPIO 3 + 4</td><td>Pin 5 + Pin 7</td><td>Safely shuts down the Raspberry Pi</td></tr>
-        <tr><td>Status LED (+ resistor)</td><td>GPIO 18</td><td>Pin 12 (to GND Pin 14)</td><td>Solid ON: Audio ready. Blinking (1s): Recording. 3 quick blinks: Last take deleted.</td></tr>
+        <tr><td>录音 / 停止按钮</td><td>GPIO 3</td><td>引脚 5（到 GND 引脚 6）</td><td>切换录音开始 / 停止</td></tr>
+        <tr><td>删除上一个按钮</td><td>GPIO 4</td><td>引脚 7（到 GND 引脚 9）</td><td>删除最近的 .wav 文件</td></tr>
+        <tr><td>同时按住两个按钮</td><td>GPIO 3 + 4</td><td>引脚 5 + 引脚 7</td><td>安全关闭 Raspberry Pi</td></tr>
+        <tr><td>状态 LED（+ 电阻）</td><td>GPIO 18</td><td>引脚 12（到 GND 引脚 14）</td><td>常亮：音频就绪。闪烁（1秒）：录音。快速闪 3 次：上次录音已删除。</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>LED resistor:</strong> Use a 330–470 ohm resistor in series with the LED to prevent GPIO damage.
+      <strong>LED 电阻：</strong>在 LED 上串联一个 330–470 欧姆的电阻以防止 GPIO 损坏。
     </div>
   </div>
 </section>
 
 <section id="format">
   <div class="container">
-    <h2>Recording Format</h2>
-    <p>Recordings are saved as uncompressed <strong>24-bit WAV</strong> files at <strong>48 kHz</strong> (or 44.1 kHz if 48 kHz fails). Each file is named with a timestamp: <code>YYYYMMDD_HHMMSS.wav</code>. Files are saved directly to the USB flash drive at <code>/media/usb0/</code>.</p>
+    <h2>录音格式</h2>
+    <p>录音保存为未压缩的 <strong>24 位 WAV</strong> 文件，<strong>48 kHz</strong>（如果 48 kHz 失败则为 44.1 kHz）。每个文件以时间戳命名：<code>YYYYMMDD_HHMMSS.wav</code>。文件直接保存到 U 盘的 <code>/media/usb0/</code>。</p>
 
     <div class="note">
-      <strong>Tip:</strong> Use a USB 3.0 flash drive or SSD for best performance. USB 2.0 drives may drop samples during multitrack recording due to bandwidth limitations.
+      <strong>提示：</strong>使用 USB 3.0 闪存盘或 SSD 以获得最佳性能。USB 2.0 驱动器可能因带宽限制在多轨录音期间丢失采样。
     </div>
   </div>
 </section>
 
 <section id="files">
   <div class="container">
-    <h2>File Management</h2>
-    <p>All recordings are stored on the USB flash drive at <code>/media/usb0/</code>. The web remote provides full file management:</p>
+    <h2>文件管理</h2>
+    <p>所有录音存储在 U 盘的 <code>/media/usb0/</code>。网页遥控提供完整的文件管理：</p>
 
     <table>
-      <thead><tr><th>Action</th><th>How to do it</th></tr></thead>
+      <thead><tr><th>操作</th><th>如何操作</th></tr></thead>
       <tbody>
-        <tr><td>Delete last take</td><td>Press <strong>Delete Last Recording</strong> on the web remote (or GPIO button)</td></tr>
-        <tr><td>Delete individual file</td><td>Click <strong>Delete</strong> next to the file in the Recordings list</td></tr>
-        <tr><td>Download individual WAV</td><td>Click <strong>下载</strong> next to the file</td></tr>
-        <tr><td>Download all as ZIP</td><td>Click <strong>Download All (.zip)</strong> — bundles all WAVs into a timestamped archive</td></tr>
+        <tr><td>删除上次录音</td><td>在网页遥控上按 <strong>Delete Last Recording</strong>（或 GPIO 按钮）</td></tr>
+        <tr><td>删除单个文件</td><td>点击录音列表中文件旁的 <strong>Delete</strong></td></tr>
+        <tr><td>下载单个 WAV</td><td>点击文件旁的 <strong>Download</strong></td></tr>
+        <tr><td>全部下载为 ZIP</td><td>点击 <strong>Download All (.zip)</strong> — 将所有 WAV 打包为带时间戳的压缩包</td></tr>
       </tbody>
     </table>
 
     <div class="warning">
-      <strong>Warning:</strong> Deleting files is permanent. There is no undo. Download important recordings before deleting.
+      <strong>警告：</strong>删除文件是永久性的。没有撤销。删除前请下载重要录音。
     </div>
   </div>
 </section>
 
 <section id="ssh">
   <div class="container">
-    <h2>SSH Access</h2>
-    <p>You can access the Raspberry Pi via SSH for advanced configuration and troubleshooting.</p>
+    <h2>SSH 访问</h2>
+    <p>你可以通过 SSH 访问 Raspberry Pi 进行高级配置和故障排除。</p>
 
     <table>
-      <thead><tr><th>Setting</th><th>Value</th></tr></thead>
+      <thead><tr><th>设置</th><th>值</th></tr></thead>
       <tbody>
-        <tr><td>Username</td><td><code>recorder</code></td></tr>
-        <tr><td>Hostname</td><td><code>DAW</code> (<code>DAW.local</code>)</td></tr>
-        <tr><td>Web Remote Port</td><td><code>8080</code></td></tr>
-        <tr><td>Scripts Directory</td><td><code>/home/recorder/bin/</code></td></tr>
+        <tr><td>用户名</td><td><code>recorder</code></td></tr>
+        <tr><td>主机名</td><td><code>DAW</code>（<code>DAW.local</code>）</td></tr>
+        <tr><td>网页遥控端口</td><td><code>8080</code></td></tr>
+        <tr><td>脚本目录</td><td><code>/home/recorder/bin/</code></td></tr>
       </tbody>
     </table>
 
-    <h3>Scripts reference</h3>
+    <h3>脚本参考</h3>
     <table>
-      <thead><tr><th>Script</th><th>Purpose</th></tr></thead>
+      <thead><tr><th>脚本</th><th>用途</th></tr></thead>
       <tbody>
-        <tr><td><code>startcapiture</code></td><td>Main startup script — starts JACK, binds interfaces, launches web remote</td></tr>
-        <tr><td><code>start_jack</code></td><td>Starts the JACK audio server</td></tr>
-        <tr><td><code>rec</code></td><td>Record/Stop toggle — starts or stops <code>jack_capture</code></td></tr>
-        <tr><td><code>del_last</code></td><td>Deletes the most recent recording</td></tr>
-        <tr><td><code>web_remote.py</code></td><td>Web remote control server (port 8080)</td></tr>
-        <tr><td><code>jack_meter.py</code></td><td>Live peak level meter daemon</td></tr>
-        <tr><td><code>hotkeys</code></td><td>GPIO button event handler</td></tr>
-        <tr><td><code>steady</code></td><td>Sets status LED to solid ON</td></tr>
-        <tr><td><code>blink</code></td><td>Blinks status LED (recording indicator)</td></tr>
+        <tr><td><code>startcapiture</code></td><td>主启动脚本 — 启动 JACK，绑定接口，启动网页遥控</td></tr>
+        <tr><td><code>start_jack</code></td><td>启动 JACK 音频服务器</td></tr>
+        <tr><td><code>rec</code></td><td>录音/停止切换 — 启动或停止 <code>jack_capture</code></td></tr>
+        <tr><td><code>del_last</code></td><td>删除最近的录音</td></tr>
+        <tr><td><code>web_remote.py</code></td><td>网页遥控服务器（端口 8080）</td></tr>
+        <tr><td><code>jack_meter.py</code></td><td>实时峰值电平表守护进程</td></tr>
+        <tr><td><code>hotkeys</code></td><td>GPIO 按钮事件处理器</td></tr>
+        <tr><td><code>steady</code></td><td>将状态 LED 设为常亮</td></tr>
+        <tr><td><code>blink</code></td><td>使状态 LED 闪烁（录音指示）</td></tr>
       </tbody>
     </table>
   </div>
@@ -276,41 +276,41 @@
 
 <section id="troubleshooting">
   <div class="container">
-    <h2>Troubleshooting</h2>
+    <h2>故障排除</h2>
 
-    <h3>No audio detected</h3>
+    <h3>未检测到音频</h3>
     <ul>
-      <li>Check that your USB audio interface is connected and powered on</li>
-      <li>Verify the interface is class-compliant (no drivers needed)</li>
-      <li>Press <strong>Re-Scan USB Audio Device</strong> on the web remote</li>
-      <li>SSH into the Pi and run <code>cat /proc/asound/cards</code> to see if the device is detected</li>
-      <li>Try a different USB port (prefer blue USB 3.0 ports)</li>
+      <li>检查你的 USB 音频接口是否已连接并开机</li>
+      <li>验证接口是否类兼容（无需驱动）</li>
+      <li>在网页遥控上按 <strong>Re-Scan USB Audio Device</strong></li>
+      <li>通过 SSH 进入 Pi 并运行 <code>cat /proc/asound/cards</code> 查看是否检测到设备</li>
+      <li>尝试不同的 USB 端口（优先蓝色 USB 3.0 端口）</li>
     </ul>
 
-    <h3>USB storage not mounting</h3>
+    <h3>USB 存储未挂载</h3>
     <ul>
-      <li>Ensure the USB drive is formatted as <strong>exFAT</strong> or <strong>ext4</strong> (not FAT32 or NTFS)</li>
-      <li>Check that the drive is plugged into a blue USB 3.0 port</li>
-      <li>SSH into the Pi and run <code>lsblk</code> to see if the drive is detected</li>
-      <li>Check <code>dmesg | tail</code> for mount errors</li>
-      <li>Try a different USB drive or reformat it</li>
+      <li>确保 USB 驱动器格式化为 <strong>exFAT</strong> 或 <strong>ext4</strong>（不是 FAT32 或 NTFS）</li>
+      <li>检查驱动器是否插入蓝色 USB 3.0 端口</li>
+      <li>通过 SSH 进入 Pi 并运行 <code>lsblk</code> 查看是否检测到驱动器</li>
+      <li>检查 <code>dmesg | tail</code> 的挂载错误</li>
+      <li>尝试另一个 USB 驱动器或重新格式化</li>
     </ul>
 
-    <h3>Wi-Fi hotspot not appearing</h3>
+    <h3>Wi-Fi 热点未出现</h3>
     <ul>
-      <li>Wait at least 25 seconds after boot — the hotspot starts after a 25-second delay</li>
-      <li>If the Pi is connected to a known Wi-Fi network, it will NOT create a hotspot (this is by design)</li>
-      <li>Check that the Wi-Fi country code is set correctly (defaults to DE if unset)</li>
-      <li>SSH into the Pi and check <code>systemctl status wifi-fallback.service</code></li>
-      <li>Manually start the hotspot: <code>sudo nmcli device wifi hotspot ifname wlan0 con-name ChameleonHotspot ssid "ChameleonRecorder" password "chameleon123"</code></li>
+      <li>启动后等待至少 25 秒 — 热点在 25 秒延迟后启动</li>
+      <li>如果 Pi 已连接到已知 Wi-Fi 网络，它将不会创建热点（这是设计使然）</li>
+      <li>检查 Wi-Fi 国家代码是否正确设置（如果未设置，默认为 DE）</li>
+      <li>通过 SSH 进入 Pi 并检查 <code>systemctl status wifi-fallback.service</code></li>
+      <li>手动启动热点：<code>sudo nmcli device wifi hotspot ifname wlan0 con-name ChameleonHotspot ssid "ChameleonRecorder" password "chameleon123"</code></li>
     </ul>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>ChameleonRecorder — Released under the MIT License.</p>
-    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub Repository</a></p>
+    <p>ChameleonRecorder — 根据 MIT 许可证发布。</p>
+    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub 仓库</a></p>
   </div>
 </footer>
 </body>

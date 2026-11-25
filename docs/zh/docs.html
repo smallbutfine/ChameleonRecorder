@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChameleonRecorder — Documentation</title>
+<title>ChameleonRecorder — 文档</title>
 <link rel="stylesheet" href="../style.css">
   <style>
 .crossbar {
@@ -46,37 +46,37 @@
 <header>
   <div class="container">
     <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
-    <p class="subtitle">Documentation Hub</p>
+    <p class="subtitle">文档中心</p>
     <nav>
       <a href="index.html">首页</a>
       <a href="manual.html">手册</a>
       <a href="concepts.html">概念</a>
       <a href="docs.html">文档</a>
       <a href="download.html">下载</a>
-      <a href="de/index.html">DE</a>
-      <a href="es/index.html">ES</a>
-      <a href="fr/index.html">FR</a>
-      <a href="pt/index.html">PT</a>
-      <a href="ru/index.html">RU</a>
-      <a href="zh/index.html">ZH</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/de/">DE</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/es/">ES</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/fr/">FR</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/pt/">PT</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/ru/">RU</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/zh/">ZH</a>
     </nav>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>Documentation Hub</h2>
-    <p>Welcome to the ChameleonRecorder documentation. Choose a topic below to get started.</p>
+    <h2>文档中心</h2>
+    <p>欢迎使用 ChameleonRecorder 文档。在下方选择一个主题开始。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>User Manual</h3>
-        <p>Complete user manual covering hardware setup, web remote control, clock sync, GPIO controls, recording format, file management, SSH access, and troubleshooting.</p>
-        <p><a href="manual.html" class="btn">Read Manual</a></p>
+        <h3>用户手册</h3>
+        <p>完整的用户手册，涵盖硬件设置、网页遥控、时钟同步、GPIO 控制、录音格式、文件管理、SSH 访问和故障排除。</p>
+        <p><a href="manual.html" class="btn">阅读手册</a></p>
       </div>
       <div class="feature-card">
-        <h3>Download &amp; Installation</h3>
-        <p>Download the OS image, flash it with Raspberry Pi Imager, and get your ChameleonRecorder up and running.</p>
+        <h3>下载与安装</h3>
+        <p>下载操作系统镜像，用 Raspberry Pi Imager 刷写，并启动你的 ChameleonRecorder。</p>
         <p><a href="download.html" class="btn">下载</a></p>
       </div>
     </div>
@@ -85,21 +85,21 @@
 
 <section id="scripts">
   <div class="container">
-    <h2>Scripts Reference</h2>
-    <p>All scripts are located in <code>/home/recorder/bin/</code> on the Raspberry Pi.</p>
+    <h2>脚本参考</h2>
+    <p>所有脚本位于 Raspberry Pi 上的 <code>/home/recorder/bin/</code>。</p>
 
     <table>
-      <thead><tr><th>Script</th><th>Purpose</th></tr></thead>
+      <thead><tr><th>脚本</th><th>用途</th></tr></thead>
       <tbody>
-        <tr><td><code>startcapiture</code></td><td>Main startup script — starts JACK, binds interfaces, launches web remote</td></tr>
-        <tr><td><code>start_jack</code></td><td>Starts the JACK audio server, auto-detects USB audio cards, handles ADAT clock sync</td></tr>
-        <tr><td><code>rec</code></td><td>Record/Stop toggle — starts or stops <code>jack_capture</code></td></tr>
-        <tr><td><code>del_last</code></td><td>Deletes the most recent recording</td></tr>
-        <tr><td><code>web_remote.py</code></td><td>Web remote control server (port 8080)</td></tr>
-        <tr><td><code>jack_meter.py</code></td><td>Live peak level meter daemon</td></tr>
-        <tr><td><code>hotkeys</code></td><td>GPIO button event handler</td></tr>
-        <tr><td><code>steady</code></td><td>Sets status LED to solid ON</td></tr>
-        <tr><td><code>blink</code></td><td>Blinks status LED (recording indicator)</td></tr>
+        <tr><td><code>startcapiture</code></td><td>主启动脚本 — 启动 JACK，绑定接口，启动网页遥控</td></tr>
+        <tr><td><code>start_jack</code></td><td>启动 JACK 音频服务器，自动检测 USB 音频卡，处理 ADAT 时钟同步</td></tr>
+        <tr><td><code>rec</code></td><td>录音/停止切换 — 启动或停止 <code>jack_capture</code></td></tr>
+        <tr><td><code>del_last</code></td><td>删除最近的录音</td></tr>
+        <tr><td><code>web_remote.py</code></td><td>网页遥控服务器（端口 8080）</td></tr>
+        <tr><td><code>jack_meter.py</code></td><td>实时峰值电平表守护进程</td></tr>
+        <tr><td><code>hotkeys</code></td><td>GPIO 按钮事件处理器</td></tr>
+        <tr><td><code>steady</code></td><td>将状态 LED 设为常亮</td></tr>
+        <tr><td><code>blink</code></td><td>使状态 LED 闪烁（录音指示）</td></tr>
       </tbody>
     </table>
   </div>
@@ -107,12 +107,12 @@
 
 <section id="config">
   <div class="container">
-    <h2>Configuration Files</h2>
+    <h2>配置文件</h2>
 
     <h3>channels.json</h3>
-    <p>Located at <code>/home/recorder/bin/channels.json</code>. Stores per-device and per-channel arming settings for the web remote.</p>
+    <p>位于 <code>/home/recorder/bin/channels.json</code>。存储网页遥控的按设备和按通道 armed 设置。</p>
 
-    <h4>Format</h4>
+    <h4>格式</h4>
     <pre>{
   "devices": {
     "system": true,
@@ -126,44 +126,44 @@
 }</pre>
 
     <table>
-      <thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead>
+      <thead><tr><th>键</th><th>类型</th><th>说明</th></tr></thead>
       <tbody>
-        <tr><td><code>devices</code></td><td>Object</td><td>Map of device name to boolean (true = enabled, false = disabled)</td></tr>
-        <tr><td><code>ports</code></td><td>Object</td><td>Map of JACK port name to boolean (true = armed, false = disarmed)</td></tr>
+        <tr><td><code>devices</code></td><td>对象</td><td>设备名到布尔的映射（true = 启用，false = 禁用）</td></tr>
+        <tr><td><code>ports</code></td><td>对象</td><td>JACK 端口名到布尔的映射（true = armed，false = 未 armed）</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Note:</strong> If a device or port is not listed in the config, it defaults to <code>true</code> (enabled/armed).
+      <strong>注意：</strong>如果设备或端口未在配置中列出，则默认为 <code>true</code>（启用/armed）。
     </div>
   </div>
 </section>
 
 <section id="webremote">
   <div class="container">
-    <h2>How the Web Remote Works</h2>
-    <p>The web remote is a Python HTTP server (<code>web_remote.py</code>) that runs on port <code>8080</code>. It serves a single-page HTML interface and provides REST-like endpoints for control.</p>
+    <h2>网页遥控如何运作</h2>
+    <p>网页遥控是一个 Python HTTP 服务器（<code>web_remote.py</code>），运行在端口 <code>8080</code>。它提供单页 HTML 界面，并为控制提供类 REST 端点。</p>
 
-    <h3>HTTP Server</h3>
-    <p>Built on Python's <code>http.server.ThreadingHTTPServer</code>. Listens on <code>0.0.0.0:8080</code>.</p>
+    <h3>HTTP 服务器</h3>
+    <p>基于 Python 的 <code>http.server.ThreadingHTTPServer</code> 构建。监听 <code>0.0.0.0:8080</code>。</p>
 
-    <h3>Endpoints</h3>
+    <h3>端点</h3>
     <table>
-      <thead><tr><th>Endpoint</th><th>Method</th><th>Description</th></tr></thead>
+      <thead><tr><th>端点</th><th>方法</th><th>说明</th></tr></thead>
       <tbody>
-        <tr><td><code>/</code></td><td>GET</td><td>Serves the web remote HTML interface</td></tr>
-        <tr><td><code>/status</code></td><td>GET</td><td>Returns JSON: recording state, JACK ready, device name</td></tr>
-        <tr><td><code>/channels</code></td><td>GET</td><td>Returns JSON: available JACK capture ports grouped by device, plus current config</td></tr>
-        <tr><td><code>/channels</code></td><td>POST</td><td>Saves channel/device arming config to <code>channels.json</code></td></tr>
-        <tr><td><code>/levels</code></td><td>GET</td><td>Returns JSON: live peak levels (dBFS) for all capture ports</td></tr>
-        <tr><td><code>/files</code></td><td>GET</td><td>Returns JSON: list of WAV files in <code>/media/usb0/</code> with sizes</td></tr>
-        <tr><td><code>/download/&lt;filename&gt;</code></td><td>GET</td><td>Downloads individual WAV file</td></tr>
-        <tr><td><code>/download-all</code></td><td>GET</td><td>Downloads all WAVs as a timestamped ZIP archive</td></tr>
-        <tr><td><code>/rec</code></td><td>POST</td><td>Starts recording (runs <code>rec</code> script)</td></tr>
-        <tr><td><code>/stop</code></td><td>POST</td><td>Stops recording (sends SIGTERM to <code>jack_capture</code>)</td></tr>
-        <tr><td><code>/del_last</code></td><td>POST</td><td>Deletes the most recent recording</td></tr>
-        <tr><td><code>/rescan</code></td><td>POST</td><td>Re-scans USB audio devices (runs <code>start_jack</code>)</td></tr>
-        <tr><td><code>/delete/&lt;filename&gt;</code></td><td>POST</td><td>Deletes individual WAV file</td></tr>
+        <tr><td><code>/</code></td><td>GET</td><td>提供网页遥控 HTML 界面</td></tr>
+        <tr><td><code>/status</code></td><td>GET</td><td>返回 JSON：录音状态、JACK 就绪、设备名</td></tr>
+        <tr><td><code>/channels</code></td><td>GET</td><td>返回 JSON：按设备分组的可用 JACK 采集端口，加当前配置</td></tr>
+        <tr><td><code>/channels</code></td><td>POST</td><td>将通道/设备 armed 配置保存到 <code>channels.json</code></td></tr>
+        <tr><td><code>/levels</code></td><td>GET</td><td>返回 JSON：所有采集端口的实时峰值电平（dBFS）</td></tr>
+        <tr><td><code>/files</code></td><td>GET</td><td>返回 JSON：<code>/media/usb0/</code> 中的 WAV 文件列表及大小</td></tr>
+        <tr><td><code>/download/&lt;filename&gt;</code></td><td>GET</td><td>下载单个 WAV 文件</td></tr>
+        <tr><td><code>/download-all</code></td><td>GET</td><td>将所有 WAV 下载为带时间戳的 ZIP 压缩包</td></tr>
+        <tr><td><code>/rec</code></td><td>POST</td><td>开始录音（运行 <code>rec</code> 脚本）</td></tr>
+        <tr><td><code>/stop</code></td><td>POST</td><td>停止录音（向 <code>jack_capture</code> 发送 SIGTERM）</td></tr>
+        <tr><td><code>/del_last</code></td><td>POST</td><td>删除最近的录音</td></tr>
+        <tr><td><code>/rescan</code></td><td>POST</td><td>重新扫描 USB 音频设备（运行 <code>start_jack</code>）</td></tr>
+        <tr><td><code>/delete/&lt;filename&gt;</code></td><td>POST</td><td>删除单个 WAV 文件</td></tr>
       </tbody>
     </table>
   </div>
@@ -171,80 +171,80 @@
 
 <section id="jack">
   <div class="container">
-    <h2>How JACK is Configured</h2>
-    <p>JACK (Jack Audio Connection Kit) is the audio server that manages all audio I/O. ChameleonRecorder configures it automatically via <code>start_jack</code>.</p>
+    <h2>JACK 如何配置</h2>
+    <p>JACK（Jack Audio Connection Kit）是管理所有音频 I/O 的音频服务器。ChameleonRecorder 通过 <code>start_jack</code> 自动配置它。</p>
 
-    <h3>Configuration</h3>
+    <h3>配置</h3>
     <table>
-      <thead><tr><th>Parameter</th><th>Value</th><th>Description</th></tr></thead>
+      <thead><tr><th>参数</th><th>值</th><th>说明</th></tr></thead>
       <tbody>
-        <tr><td>Sample rate</td><td><code>48000</code> Hz (fallback: <code>44100</code> Hz)</td><td>48 kHz is preferred; if it fails, 44.1 kHz is tried</td></tr>
-        <tr><td>Buffer size (period)</td><td><code>2048</code> frames</td><td>Balances latency vs. stability</td></tr>
-        <tr><td>Periods (nperiods)</td><td><code>3</code></td><td>Number of buffers</td></tr>
-        <tr><td>Driver</td><td><code>alsa</code></td><td>Uses ALSA for USB audio interface communication</td></tr>
+        <tr><td>采样率</td><td><code>48000</code> Hz（回退：<code>44100</code> Hz）</td><td>优先 48 kHz；如果失败，则尝试 44.1 kHz</td></tr>
+        <tr><td>缓冲区大小（周期）</td><td><code>2048</code> 帧</td><td>平衡延迟与稳定性</td></tr>
+        <tr><td>周期数（nperiods）</td><td><code>3</code></td><td>缓冲区数量</td></tr>
+        <tr><td>驱动</td><td><code>alsa</code></td><td>使用 ALSA 与 USB 音频接口通信</td></tr>
       </tbody>
     </table>
 
-    <h3>Master device selection</h3>
-    <p>On boot, <code>start_jack</code> scans all USB audio cards via <code>/proc/asound/cards</code> and sorts them by capture channel count (descending). The card with the most channels becomes the JACK master. Additional interfaces are bound via <code>alsa_in</code>.</p>
+    <h3>主设备选择</h3>
+    <p>启动时，<code>start_jack</code> 通过 <code>/proc/asound/cards</code> 扫描所有 USB 音频卡并按采集通道数排序（降序）。通道最多的卡成为 JACK 主设备。其他接口通过 <code>alsa_in</code> 绑定。</p>
 
-    <h3>Multi-device setup</h3>
-    <pre># Primary JACK server (largest interface)
+    <h3>多设备设置</h3>
+    <pre># 主 JACK 服务器（最大接口）
 jackd -dalsa -dhw:1 -r48000 -p2048 -n3
 
-# Additional interfaces via alsa_in
+# 通过 alsa_in 的额外接口
 alsa_in -j "USB_2" -dhw:2 -r48000 -p2048 -n3</pre>
   </div>
 </section>
 
 <section id="adat">
   <div class="container">
-    <h2>How ADAT Clock Sync Detection Works</h2>
-    <p>For Behringer UMC1820 interfaces, ChameleonRecorder automatically detects valid ADAT clock signals and switches to external clock sync.</p>
+    <h2>ADAT 时钟同步检测如何运作</h2>
+    <p>对于 Behringer UMC1820 接口，ChameleonRecorder 自动检测有效的 ADAT 时钟信号并切换为外部时钟同步。</p>
 
-    <h3>Detection process</h3>
+    <h3>检测过程</h3>
     <ol>
-      <li><code>start_jack</code> checks if the card has the <code>UMC1820 Clock Selector Clock Source</code> control (via <code>amixer</code>)</li>
-      <li>If found, it reads the <code>Optical In ADAT/SMUX Validity</code> control</li>
-      <li>If the value is <code>on</code> (valid ADAT signal present), it sets the clock source to <code>2</code> (external ADAT)</li>
-      <li>If the value is not <code>on</code> (no valid signal), it sets the clock source to <code>0</code> (internal)</li>
+      <li><code>start_jack</code> 检查卡是否有 <code>UMC1820 Clock Selector Clock Source</code> 控件（通过 <code>amixer</code>）</li>
+      <li>如果找到，读取 <code>Optical In ADAT/SMUX Validity</code> 控件</li>
+      <li>如果值为 <code>on</code>（存在有效 ADAT 信号），将时钟源设为 <code>2</code>（外部 ADAT）</li>
+      <li>如果值不是 <code>on</code>（无有效信号），将时钟源设为 <code>0</code>（内部）</li>
     </ol>
 
-    <h3>Commands used</h3>
-    <pre># Check if UMC1820 is present
+    <h3>使用的命令</h3>
+    <pre># 检查 UMC1820 是否存在
 amixer -c 1 controls | grep "UMC1820 Clock Selector Clock Source"
 
-# Read ADAT validity
+# 读取 ADAT 有效性
 amixer -c 1 cget name='Optical In ADAT/SMUX Validity'
 
-# Set clock source to external ADAT
+# 将时钟源设为外部 ADAT
 amixer -c 1 cset name='UMC1820 Clock Selector Clock Source' 2
 
-# Set clock source to internal
+# 将时钟源设为内部
 amixer -c 1 cset name='UMC1820 Clock Selector Clock Source' 0</pre>
 
     <div class="note">
-      <strong>Note:</strong> This detection runs automatically on boot and when pressing <strong>Re-Scan USB Audio Device</strong> on the web remote.
+      <strong>注意：</strong>此检测在启动时和按网页遥控上的 <strong>Re-Scan USB Audio Device</strong> 时自动运行。
     </div>
   </div>
 </section>
 
 <section id="hotspot">
   <div class="container">
-    <h2>How the Fallback Hotspot Works</h2>
-    <p>If no known Wi-Fi network is found within 25 seconds of boot, ChameleonRecorder automatically creates a Wi-Fi access point.</p>
+    <h2>备用热点如何运作</h2>
+    <p>如果启动后 25 秒内未找到已知 Wi-Fi 网络，ChameleonRecorder 会自动创建一个 Wi-Fi 接入点。</p>
 
-    <h3>Process</h3>
+    <h3>过程</h3>
     <ol>
-      <li>A systemd service (<code>wifi-fallback.service</code>) runs <code>/usr/local/bin/wifi-fallback.sh</code> on boot</li>
-      <li>The script waits 25 seconds for a Wi-Fi connection</li>
-      <li>If <code>wlan0</code> has no IP address (not connected), it creates a hotspot</li>
-      <li>The hotspot SSID is <code>ChameleonRecorder</code> with password <code>chameleon123</code></li>
-      <li>The web remote is accessible at <code>http://10.42.0.1:8080</code></li>
+      <li>一个 systemd 服务（<code>wifi-fallback.service</code>）在启动时运行 <code>/usr/local/bin/wifi-fallback.sh</code></li>
+      <li>脚本等待 25 秒的 Wi-Fi 连接</li>
+      <li>如果 <code>wlan0</code> 没有 IP 地址（未连接），则创建一个热点</li>
+      <li>热点 SSID 为 <code>ChameleonRecorder</code>，密码为 <code>chameleon123</code></li>
+      <li>网页遥控可通过 <code>http://10.42.0.1:8080</code> 访问</li>
     </ol>
 
-    <h3>Configuration</h3>
-    <pre># wifi-fallback.sh (simplified)
+    <h3>配置</h3>
+    <pre># wifi-fallback.sh（简化）
 sleep 25
 if ! ip -4 addr show wlan0 | grep -q "inet "; then
     nmcli device wifi hotspot ifname wlan0 \
@@ -254,15 +254,15 @@ if ! ip -4 addr show wlan0 | grep -q "inet "; then
 fi</pre>
 
     <div class="note">
-      <strong>Tip:</strong> If the Pi is connected to a known Wi-Fi network, the hotspot will NOT activate. This is by design — the Pi prefers your home/studio Wi-Fi.
+      <strong>提示：</strong>如果 Pi 已连接到已知 Wi-Fi 网络，热点将不会激活。这是设计使然 — Pi 优先使用你的家庭/工作室 Wi-Fi。
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>ChameleonRecorder — Released under the MIT License.</p>
-    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub Repository</a></p>
+    <p>ChameleonRecorder — 根据 MIT 许可证发布。</p>
+    <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub 仓库</a></p>
   </div>
 </footer>
 </body>

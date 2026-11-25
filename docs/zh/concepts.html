@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChameleonRecorder — Audio Recording Concepts</title>
+<title>ChameleonRecorder — 音频录音概念</title>
 <link rel="stylesheet" href="../style.css">
   <style>
 .crossbar {
@@ -47,433 +47,414 @@
 <header>
   <div class="container">
     <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
-    <p class="subtitle">Audio Recording Concepts</p>
+    <p class="subtitle">音频录音概念</p>
     <nav>
       <a href="index.html">首页</a>
       <a href="manual.html">手册</a>
       <a href="concepts.html">概念</a>
       <a href="docs.html">文档</a>
       <a href="download.html">下载</a>
-      <a href="de/index.html">DE</a>
-      <a href="es/index.html">ES</a>
-      <a href="fr/index.html">FR</a>
-      <a href="pt/index.html">PT</a>
-      <a href="ru/index.html">RU</a>
-      <a href="zh/index.html">ZH</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/de/">DE</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/es/">ES</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/fr/">FR</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/pt/">PT</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/ru/">RU</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/zh/">ZH</a>
     </nav>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>Audio Recording Concepts — In Plain Language</h2>
-    <p>This page explains the ideas behind ChameleonRecorder in terms a live sound engineer, rehearsal studio owner, or musician can understand. No programming knowledge required.</p>
+    <h2>音频录音概念 — 用简单语言解释</h2>
+    <p>本页用现场音响工程师、排练室老板或音乐人能理解的方式解释 ChameleonRecorder 背后的理念。无需编程知识。</p>
   </div>
 </section>
 
-<!-- 1. What is Multitrack Recording? -->
 <section>
   <div class="container">
-    <h2>1. What Is Multitrack Recording?</h2>
-    <p>Multitrack recording means capturing every input channel as a <strong>separate WAV file</strong>. If you have 16 microphones on a drum kit, you get 16 individual WAV files — one for kick, one for snare, one for each tom, overheads, room mics, and so on.</p>
+    <h2>1. 什么是多轨录音？</h2>
+    <p>多轨录音意味着将每个输入通道捕获为<strong>单独的 WAV 文件</strong>。如果你在鼓组上有 16 个麦克风，你会得到 16 个单独的 WAV 文件 — 底鼓一个、军鼓一个、每个嗵鼓一个、overhead、房间麦克风等等。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Why Separate Files Matter</h3>
-        <p>Each channel is its own file. You can adjust the level, EQ, compression, and effects on each microphone independently during mixing. If everything were recorded as a single stereo mix, you could never fix a buried snare or a boomy kick without re-recording.</p>
+        <h3>为什么单独文件很重要</h3>
+        <p>每个通道都是自己的文件。你可以在混音时独立调整每个麦克风的电平、EQ、压缩和效果。如果一切都录成单个立体声混音，没有重新录制，你永远无法修复被埋没的军鼓或轰鸣的底鼓。</p>
       </div>
       <div class="feature-card">
-        <h3>What You Get</h3>
-        <p>One WAV file per input channel, all starting at the same instant. Drop them into any DAW (Reaper, Pro Tools, Logic, Ardour, etc.) and they line up perfectly — every track is sample-synced from the first sample.</p>
+        <h3>你得到什么</h3>
+        <p>每个输入通道一个 WAV 文件，全部在同一时刻开始。将它们拖到任何 DAW（Reaper、Pro Tools、Logic、Ardour 等）中，它们完美对齐 — 每个轨道从第一个采样起就采样同步。</p>
       </div>
     </div>
 
-    <blockquote>Think of it like this: a stereo recording is a photograph of your mix. A multitrack recording is the raw ingredients — every instrument on its own plate, ready for the chef to season however they want.</blockquote>
+    <blockquote>这样想：立体声录音是你混音的照片。多轨录音是原始食材 — 每种乐器在自己的盘子里，随时准备厨师随意调味。</blockquote>
 
     <div class="note">
-      <strong>Key point:</strong> ChameleonRecorder records every armed input channel to its own WAV file. You choose which channels to record from the web remote. Unused channels can be left out to save disk space.
+      <strong>关键点：</strong>ChameleonRecorder 将每个 armed 的输入通道录制到自己的 WAV 文件。你通过网页遥控选择要录制的通道。未使用的通道可以省略以节省磁盘空间。
     </div>
   </div>
 </section>
 
-<!-- 2. Why a Dedicated Recorder? -->
 <section>
   <div class="container">
-    <h2>2. Why a Dedicated Recorder?</h2>
-    <p>A dedicated recorder like ChameleonRecorder replaces the laptop-and-DAW setup with a purpose-built appliance. Here's why that matters:</p>
+    <h2>2. 为什么用专用录音器？</h2>
+    <p>像 ChameleonRecorder 这样的专用录音器用一台专用设备取代了笔记本电脑加 DAW 的设置。为什么这很重要：</p>
 
     <table>
       <thead>
-        <tr><th>Problem with a Laptop + DAW</th><th>How ChameleonRecorder Solves It</th></tr>
+        <tr><th>笔记本电脑 + DAW 的问题</th><th>ChameleonRecorder 如何解决</th></tr>
       </thead>
       <tbody>
-        <tr><td>Laptop can crash, freeze, or run out of battery mid-take</td><td>Headless Linux appliance — no desktop, no screensaver, no background updates</td></tr>
-        <tr><td>Driver conflicts, OS updates, and DAW license checks cause dropouts</td><td>No drivers to install, no OS to update, no license to check — it just works</td></tr>
-        <tr><td>High latency from the OS audio stack and DAW plugins</td><td>JACK Audio Server with low-latency ALSA backend — direct hardware path</td></tr>
-        <tr><td>Setup time: open laptop, launch DAW, configure inputs, arm tracks</td><td>Boot and record — the Pi auto-detects your interface and starts recording in seconds</td></tr>
-        <tr><td>Laptop fan noise, heat, and footprint in a live rack</td><td>Raspberry Pi 4 — silent, tiny, sips power, fits in a rack drawer</td></tr>
+        <tr><td>笔记本电脑可能在录音中途崩溃、冻结或没电</td><td>无头 Linux 设备 — 无桌面、无屏保、无后台更新</td></tr>
+        <tr><td>驱动冲突、操作系统更新和 DAW 许可证检查导致丢音</td><td>无需安装驱动、无需更新操作系统、无需检查许可证 — 开箱即用</td></tr>
+        <tr><td>操作系统音频栈和 DAW 插件造成高延迟</td><td>带低延迟 ALSA 后端的 JACK 音频服务器 — 直接硬件路径</td></tr>
+        <tr><td>设置时间：打开笔记本、启动 DAW、配置输入、arm 轨道</td><td>启动即录 — Pi 自动检测你的接口，几秒钟内开始录音</td></tr>
+        <tr><td>笔记本电脑在直播机架中的风扇噪音、热量和体积</td><td>Raspberry Pi 4 — 静音、小巧、省电，可放入机架抽屉</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Bottom line:</strong> A dedicated recorder is like a rack-mounted hardware recorder (think Zoom F8 or Sound Devices MixPre) — but open, affordable, and infinitely configurable. No laptop to babysit.
+      <strong>结论：</strong>专用录音器就像机架式硬件录音器（想想 Zoom F8 或 Sound Devices MixPre）— 但开放、实惠且无限可配置。无需照看笔记本电脑。
     </div>
   </div>
 </section>
 
-<!-- 3. USB Audio Interfaces -->
 <section>
   <div class="container">
-    <h2>3. USB Audio Interfaces</h2>
-    <p>ChameleonRecorder works with USB audio interfaces — the boxes that turn microphones and instruments into digital audio. But not all USB interfaces are the same.</p>
+    <h2>3. USB 音频接口</h2>
+    <p>ChameleonRecorder 与 USB 音频接口配合使用 — 将麦克风和乐器转换为数字音频的盒子。但并非所有 USB 接口都相同。</p>
 
-    <h3>Class-Compliant vs. Proprietary</h3>
+    <h3>类兼容 vs. 专有</h3>
     <table>
       <thead>
-        <tr><th>Type</th><th>What It Means</th><th>Examples</th></tr>
+        <tr><th>类型</th><th>含义</th><th>示例</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Class-Compliant</strong></td>
-          <td>Follows the USB Audio Class standard. Works with any computer or device without installing drivers. Plug it in and it works — like a USB keyboard or mouse.</td>
-          <td>Behringer UMC1820, UMC204HD, XR18, X32, MOTU AVB series, Focusrite Scarlett (most models), RME Babyface, Zoom F-series</td>
+          <td><strong>类兼容</strong></td>
+          <td>遵循 USB Audio Class 标准。无需安装驱动即可与任何计算机或设备配合使用。即插即用 — 就像 USB 键盘或鼠标。</td>
+          <td>Behringer UMC1820、UMC204HD、XR18、X32、MOTU AVB 系列、Focusrite Scarlett（大多数型号）、RME Babyface、Zoom F 系列</td>
         </tr>
         <tr>
-          <td><strong>Proprietary</strong></td>
-          <td>Requires a specific driver from the manufacturer. Only works with that driver on specific operating systems. Will NOT work with ChameleonRecorder.</td>
-          <td>Some older M-Audio, some Presonus, some Lexicon interfaces</td>
+          <td><strong>专有</strong></td>
+          <td>需要制造商的特定驱动。仅在特定操作系统上与该驱动配合使用。将无法与 ChameleonRecorder 配合使用。</td>
+          <td>一些较旧的 M-Audio、一些 Presonus、一些 Lexicon 接口</td>
         </tr>
       </tbody>
     </table>
 
     <div class="warning">
-      <strong>Important:</strong> ChameleonRecorder only supports class-compliant USB audio interfaces. If your interface requires a driver download from the manufacturer's website, it will not work. Check the manufacturer's specs for "USB Audio Class Compliant" or "class compliant."
+      <strong>重要：</strong>ChameleonRecorder 仅支持类兼容的 USB 音频接口。如果你的接口需要从制造商网站下载驱动，它将无法工作。请检查制造商规格中的「USB Audio Class Compliant」或「class compliant」。
     </div>
 
-    <h3>Channel Counts</h3>
-    <p>USB audio interfaces come in various channel counts. The number of inputs determines how many microphones or instruments you can record simultaneously:</p>
+    <h3>通道数</h3>
+    <p>USB 音频接口有各种通道数。输入数量决定你可以同时录制多少个麦克风或乐器：</p>
     <table>
       <thead>
-        <tr><th>Interface</th><th>Inputs</th><th>Typical Use</th></tr>
+        <tr><th>接口</th><th>输入</th><th>典型用途</th></tr>
       </thead>
       <tbody>
-        <tr><td>Behringer UMC204HD</td><td>4 inputs</td><td>Small rehearsal, podcast, singer-songwriter</td></tr>
-        <tr><td>Behringer UMC1820</td><td>20 inputs (8 analog + 8 ADAT + 2 S/PDIF + 2 combo)</td><td>Full band, drum kit, live multitrack</td></tr>
-        <tr><td>Behringer XR18</td><td>18 inputs (16 remote preamps + USB)</td><td>Live sound with digital mixer, full band</td></tr>
-        <tr><td>Behringer X32</td><td>32 inputs (via USB card)</td><td>Large venue, festival, theatre</td></tr>
-        <tr><td>MOTU 8pre-es</td><td>8 analog + 8 ADAT</td><td>Studio, expandable via ADAT</td></tr>
-        <tr><td>Focusrite Scarlett 18i20</td><td>8 analog + 8 ADAT</td><td>Studio, project studio</td></tr>
+        <tr><td>Behringer UMC204HD</td><td>4 输入</td><td>小型排练、播客、创作歌手</td></tr>
+        <tr><td>Behringer UMC1820</td><td>20 输入（8 模拟 + 8 ADAT + 2 S/PDIF + 2 组合）</td><td>完整乐队、鼓组、现场多轨</td></tr>
+        <tr><td>Behringer XR18</td><td>18 输入（16 远程前置放大器 + USB）</td><td>带数字调音台的现场音响、完整乐队</td></tr>
+        <tr><td>Behringer X32</td><td>32 输入（通过 USB 卡）</td><td>大型场地、音乐节、剧院</td></tr>
+        <tr><td>MOTU 8pre-es</td><td>8 模拟 + 8 ADAT</td><td>录音室，可通过 ADAT 扩展</td></tr>
+        <tr><td>Focusrite Scarlett 18i20</td><td>8 模拟 + 8 ADAT</td><td>录音室，项目工作室</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Tip:</strong> You can connect multiple USB interfaces to ChameleonRecorder simultaneously. The interface with the most channels becomes the master clock. Additional interfaces are automatically synced with drift compensation. For sample-accurate sync across multiple units, use ADAT lightpipe or word clock (see Section 4).
+      <strong>提示：</strong>你可以同时连接多个 USB 接口到 ChameleonRecorder。通道最多的接口成为主时钟。其他接口自动同步并进行漂移补偿。若要在多个单元间实现采样精确同步，请使用 ADAT 光导或字时钟（见第 4 节）。
     </div>
   </div>
 </section>
 
-<!-- 4. JACK Audio Server -->
 <section>
   <div class="container">
-    <h2>4. JACK Audio Server</h2>
-    <p>JACK (JACK Audio Connection Kit) is the audio routing engine that ChameleonRecorder uses to move audio from your USB interface to the recording software. Think of it as the nervous system that connects everything together.</p>
+    <h2>4. JACK 音频服务器</h2>
+    <p>JACK（JACK Audio Connection Kit）是 ChameleonRecorder 用来将音频从 USB 接口移动到录音软件的音频路由引擎。把它想成连接一切的中枢神经系统。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>What JACK Does</h3>
-        <p>JACK takes the digital audio stream from your USB interface and routes it to the recording application (jack_capture). It handles all the timing, buffering, and channel routing so that every sample arrives at the right place at the right time.</p>
+        <h3>JACK 做什么</h3>
+        <p>JACK 从你的 USB 接口获取数字音频流并将其路由到录音应用（jack_capture）。它处理所有时序、缓冲和通道路由，确保每个采样在正确的时间到达正确的位置。</p>
       </div>
       <div class="feature-card">
-        <h3>Why Low Latency Matters</h3>
-        <p>Latency is the delay between sound going in and the system processing it. JACK achieves much lower latency than a typical computer's audio stack because it bypasses the operating system's audio mixer and talks directly to the hardware. This means no lag, no dropouts, and reliable recording even under heavy load.</p>
+        <h3>为什么低延迟很重要</h3>
+        <p>延迟是声音输入与系统处理之间的延迟。JACK 比典型计算机音频栈实现低得多的延迟，因为它绕过了操作系统的音频混音器，直接与硬件通信。这意味着没有延迟、没有丢音，即使在重负载下也能可靠录音。</p>
       </div>
     </div>
 
-    <h3>Master / Slave Concept</h3>
-    <p>When you use multiple USB interfaces, one of them must be the timing reference — the "master" clock. All other interfaces become "slaves" and follow the master's timing. ChameleonRecorder automatically picks the interface with the most channels as the master.</p>
+    <h3>主 / 从概念</h3>
+    <p>当你使用多个 USB 接口时，其中一个必须是时序参考 — 「主」时钟。所有其他接口成为「从」，跟随主时钟的时序。ChameleonRecorder 自动选择通道最多的接口作为主设备。</p>
 
     <table>
       <thead>
-        <tr><th>Role</th><th>Interface</th><th>What It Does</th></tr>
+        <tr><th>角色</th><th>接口</th><th>作用</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Master</strong></td><td>Interface with most channels (e.g., UMC1820)</td><td>Sets the sample rate and clock. All other interfaces sync to it.</td></tr>
-        <tr><td><strong>Slave</strong></td><td>Additional interfaces (e.g., second UMC1820, ADA8200)</td><td>Follows the master's clock via ADAT or drift compensation.</td></tr>
+        <tr><td><strong>主</strong></td><td>通道最多的接口（例如 UMC1820）</td><td>设置采样率和时钟。所有其他接口与其同步。</td></tr>
+        <tr><td><strong>从</strong></td><td>其他接口（例如第二个 UMC1820、ADA8200）</td><td>通过 ADAT 或漂移补偿跟随主时钟。</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>How ChameleonRecorder uses JACK:</strong> On boot, the system scans all USB audio cards, picks the one with the most channels as the JACK master, starts the JACK server at 48 kHz, and binds additional interfaces via <code>alsa_in</code> with adaptive drift compensation. The <code>jack_capture</code> application then records all channels to individual WAV files.
+      <strong>ChameleonRecorder 如何使用 JACK：</strong>启动时，系统扫描所有 USB 音频卡，选择通道最多的作为 JACK 主设备，以 48 kHz 启动 JACK 服务器，并通过 <code>alsa_in</code> 绑定其他接口并进行自适应漂移补偿。然后 <code>jack_capture</code> 应用将所有通道录制到单独的 WAV 文件。
     </div>
   </div>
 </section>
 
-<!-- 5. Clock Sync -->
 <section>
   <div class="container">
-    <h2>5. Clock Sync — Keeping Everything in Time</h2>
-    <p>When you record with multiple audio interfaces, each one has its own internal clock. Even if they start at the same time, they will slowly drift apart — just like two watches that are a few seconds different after a month. This drift causes phase problems and timing errors in your multitrack.</p>
+    <h2>5. 时钟同步 — 让一切保持在时间上</h2>
+    <p>当你使用多个音频接口录音时，每个都有自己的内部时钟。即使它们同时开始，也会慢慢分离 — 就像两块表在一个月后相差几秒。这种漂移会在你的多轨录音中造成相位问题和时序错误。</p>
 
-    <h3>Why Interfaces Drift</h3>
-    <p>Every digital audio device has a crystal oscillator that determines its sample rate. No two crystals are exactly the same — one might run at 48,000 Hz and another at 48,003 Hz. Over a 10-minute recording, that tiny difference adds up to several samples of drift, which means your tracks slowly shift out of sync.</p>
+    <h3>为什么接口会漂移</h3>
+    <p>每个数字音频设备都有一个石英振荡器，决定其采样率。没有两个石英完全一样 — 一个可能运行在 48,000 Hz，另一个在 48,003 Hz。在 10 分钟的录音中，这个微小差异累积成几个采样的漂移，意味着你的轨道慢慢失去同步。</p>
 
-    <h3>Solutions for Clock Sync</h3>
+    <h3>时钟同步解决方案</h3>
     <table>
       <thead>
-        <tr><th>Method</th><th>How It Works</th><th>Accuracy</th></tr>
+        <tr><th>方法</th><th>工作原理</th><th>精度</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>ADAT Lightpipe</strong></td>
-          <td>A single optical cable carries both audio and clock signal from one device to another. The receiving device locks to the sending device's clock. Sample-accurate.</td>
-          <td>Sample-accurate (0 samples drift)</td>
+          <td><strong>ADAT 光导</strong></td>
+          <td>单根光缆从一个设备到另一个同时承载音频和时钟信号。接收设备锁定到发送设备的时钟。采样精确。</td>
+          <td>采样精确（0 采样漂移）</td>
         </tr>
         <tr>
-          <td><strong>Word Clock (BNC)</strong></td>
-          <td>A dedicated coax cable carries only the clock signal between devices. Each device locks to the word clock generator. Sample-accurate.</td>
-          <td>Sample-accurate (0 samples drift)</td>
+          <td><strong>字时钟（BNC）</strong></td>
+          <td>专用同轴电缆在设备间仅承载时钟信号。每个设备锁定到字时钟发生器。采样精确。</td>
+          <td>采样精确（0 采样漂移）</td>
         </tr>
         <tr>
-          <td><strong>Drift Compensation</strong></td>
-          <td>When no hardware sync is available, JACK's <code>alsa_in</code> continuously measures the drift between interfaces and adjusts the resampling ratio to compensate. Not sample-accurate, but good enough for most rehearsal and live recording situations.</td>
-          <td>Approximate (a few samples of drift)</td>
+          <td><strong>漂移补偿</strong></td>
+          <td>当没有硬件同步可用时，JACK 的 <code>alsa_in</code> 持续测量接口间的漂移并调整重采样比率来补偿。不是采样精确，但对大多数排练和现场录音情况足够好。</td>
+          <td>近似（几个采样漂移）</td>
         </tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>ChameleonRecorder and ADAT:</strong> When a Behringer UMC1820 is detected with a valid ADAT signal on its optical input, ChameleonRecorder automatically switches it to external ADAT clock sync. This gives you sample-accurate recording across multiple units without any manual configuration.
+      <strong>ChameleonRecorder 和 ADAT：</strong>当检测到带有效 ADAT 信号的 Behringer UMC1820 时，ChameleonRecorder 自动将其切换为外部 ADAT 时钟同步。这为你提供跨多个单元的采样精确录音，无需任何手动配置。
     </div>
 
-    <blockquote>For critical studio work where every sample counts, always use ADAT or word clock. For rehearsal and live demos, drift compensation is usually transparent — you won't hear the difference.</blockquote>
+    <blockquote>对于每个采样都很重要的关键录音室工作，始终使用 ADAT 或字时钟。对于排练和现场演示，漂移补偿通常是透明的 — 你不会听到区别。</blockquote>
   </div>
 </section>
 
-<!-- 6. Recording Format -->
 <section>
   <div class="container">
-    <h2>6. Recording Format — 24-bit / 48 kHz WAV</h2>
-    <p>ChameleonRecorder records uncompressed WAV files at <strong>24-bit resolution</strong> and <strong>48 kHz sample rate</strong>. Here's what that means and why it matters:</p>
+    <h2>6. 录音格式 — 24 位 / 48 kHz WAV</h2>
+    <p>ChameleonRecorder 以 <strong>24 位分辨率</strong>和 <strong>48 kHz 采样率</strong>录制未压缩的 WAV 文件。这意味着什么以及为什么重要：</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>24-Bit — Dynamic Range</h3>
-        <p>Bit depth determines how much dynamic range your recording can capture. 24-bit gives you 144 dB of theoretical dynamic range — far more than any microphone or preamp can actually deliver. This means you can record quietly and still have plenty of headroom. In practice, 24-bit means you never have to worry about noise floor or quantization distortion, even at very low levels.</p>
+        <h3>24 位 — 动态范围</h3>
+        <p>位深决定你的录音能捕获多少动态范围。24 位给你 144 dB 的理论动态范围 — 远超任何麦克风或前置放大器实际能提供的。这意味着你可以安静地录制，仍然有充足的余量。实际上，24 位意味着即使在非常低的电平下，你也永远不必担心噪声底或量化失真。</p>
       </div>
       <div class="feature-card">
-        <h3>48 kHz — The Video Standard</h3>
-        <p>48 kHz is the standard sample rate for video production, film, and television. If your recording will ever be synced to video, 48 kHz is the correct choice. It also captures the full audible frequency range (up to 24 kHz) with plenty of margin. 44.1 kHz is used for CD audio, but 48 kHz is the professional standard for multitrack recording.</p>
+        <h3>48 kHz — 视频标准</h3>
+        <p>48 kHz 是视频制作、电影和电视的标准采样率。如果你的录音将同步视频，48 kHz 是正确选择。它还以充足余量捕获完整的可听频率范围（高达 24 kHz）。44.1 kHz 用于 CD 音频，但 48 kHz 是多轨录音的专业标准。</p>
       </div>
     </div>
 
-    <h3>File Sizes</h3>
-    <p>Uncompressed WAV files are large. Here's roughly how much space you need per minute of recording:</p>
+    <h3>文件大小</h3>
+    <p>未压缩的 WAV 文件很大。以下是每分钟录音大致需要的空间：</p>
     <table>
       <thead>
-        <tr><th>Channels</th><th>Per Minute</th><th>Per Hour</th><th>Example</th></tr>
+        <tr><th>通道</th><th>每分钟</th><th>每小时</th><th>示例</th></tr>
       </thead>
       <tbody>
-        <tr><td>2 (stereo)</td><td>~33 MB</td><td>~2 GB</td><td>Acoustic guitar + vocal</td></tr>
-        <tr><td>8</td><td>~132 MB</td><td>~8 GB</td><td>Full drum kit</td></tr>
-        <tr><td>16</td><td>~264 MB</td><td>~16 GB</td><td>Full band with drum kit</td></tr>
-        <tr><td>32</td><td>~528 MB</td><td>~32 GB</td><td>Large ensemble, orchestra</td></tr>
+        <tr><td>2（立体声）</td><td>~33 MB</td><td>~2 GB</td><td>原声吉他 + 人声</td></tr>
+        <tr><td>8</td><td>~132 MB</td><td>~8 GB</td><td>完整鼓组</td></tr>
+        <tr><td>16</td><td>~264 MB</td><td>~16 GB</td><td>带鼓组的完整乐队</td></tr>
+        <tr><td>32</td><td>~528 MB</td><td>~32 GB</td><td>大型合奏团、管弦乐队</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Storage tip:</strong> A 64 GB USB 3.0 flash drive holds about 4 hours of 16-track recording. For longer sessions, use a larger drive or an SSD. Always use USB 3.0 (blue ports) — USB 2.0 can drop samples during multitrack recording.
+      <strong>存储提示：</strong>一个 64 GB USB 3.0 闪存盘可容纳约 4 小时的 16 轨录音。对于更长的会话，请使用更大的驱动器或 SSD。始终使用 USB 3.0（蓝色端口）— USB 2.0 在多轨录音期间可能丢失采样。
     </div>
 
     <div class="warning">
-      <strong>24-bit vs 16-bit:</strong> 16-bit (CD quality) gives you 96 dB of dynamic range. That sounds like a lot, but in practice, 24-bit gives you about 48 dB more headroom above the noise floor. This means you can set your gain conservatively and never worry about clipping or noise. Always record in 24-bit.
+      <strong>24 位 vs 16 位：</strong>16 位（CD 品质）给你 96 dB 的动态范围。听起来很多，但实际上，24 位给你在噪声底之上多约 48 dB 的余量。这意味着你可以保守地设置增益，永远不必担心削波或噪声。始终以 24 位录制。
     </div>
   </div>
 </section>
 
-<!-- 7. The Fallback Hotspot -->
 <section>
   <div class="container">
-    <h2>7. The Fallback Wi-Fi Hotspot</h2>
-    <p>ChameleonRecorder includes a built-in Wi-Fi hotspot so you can control it from your phone or tablet even when there's no Wi-Fi router available. This is essential for stage use, rehearsal studios, and remote recording locations.</p>
+    <h2>7. 备用 Wi-Fi 热点</h2>
+    <p>ChameleonRecorder 内置 Wi-Fi 热点，即使没有可用的 Wi-Fi 路由器，你也可以从手机或平板控制它。这对于舞台使用、排练室和远程录音地点至关重要。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Why It Matters</h3>
-        <p>Most venues don't have Wi-Fi, or the Wi-Fi is unreliable. The fallback hotspot means ChameleonRecorder is completely self-contained — it creates its own network and serves the web remote from itself. No router, no internet, no IT department required.</p>
+        <h3>为什么重要</h3>
+        <p>大多数场地没有 Wi-Fi，或 Wi-Fi 不可靠。备用热点意味着 ChameleonRecorder 完全自给自足 — 它创建自己的网络并从中提供网页遥控。无需路由器、无需互联网、无需 IT 部门。</p>
       </div>
       <div class="feature-card">
-        <h3>How It Works</h3>
-        <p>On boot, ChameleonRecorder looks for a known Wi-Fi network for 25 seconds. If it doesn't find one, it creates its own access point with SSID <code>ChameleonRecorder</code> and password <code>chameleon123</code>. Connect your phone to this network, then open <code>http://10.42.0.1:8080</code> in any browser.</p>
+        <h3>工作原理</h3>
+        <p>启动时，ChameleonRecorder 寻找已知 Wi-Fi 网络 25 秒。如果找不到，它会创建自己的接入点，SSID 为 <code>ChameleonRecorder</code>，密码为 <code>chameleon123</code>。将手机连接到此网络，然后在任何浏览器中打开 <code>http://10.42.0.1:8080</code>。</p>
       </div>
     </div>
 
     <table>
       <thead>
-        <tr><th>Detail</th><th>Value</th></tr>
+        <tr><th>详情</th><th>值</th></tr>
       </thead>
       <tbody>
-        <tr><td>Network name (SSID)</td><td><code>ChameleonRecorder</code></td></tr>
-        <tr><td>Password</td><td><code>chameleon123</code></td></tr>
-        <tr><td>Web remote URL</td><td><code>http://10.42.0.1:8080</code></td></tr>
-        <tr><td>Trigger</td><td>No known Wi-Fi found within 25 seconds of boot</td></tr>
+        <tr><td>网络名称（SSID）</td><td><code>ChameleonRecorder</code></td></tr>
+        <tr><td>密码</td><td><code>chameleon123</code></td></tr>
+        <tr><td>网页遥控 URL</td><td><code>http://10.42.0.1:8080</code></td></tr>
+        <tr><td>触发器</td><td>启动后 25 秒内未找到已知 Wi-Fi</td></tr>
       </tbody>
     </table>
 
-    <h3>Security Considerations</h3>
+    <h3>安全考虑</h3>
     <ul>
-      <li><strong>Network isolation:</strong> The hotspot is a standalone network — devices connected to it cannot reach the internet or your other networks.</li>
-      <li><strong>Password protection:</strong> The default password is <code>chameleon123</code>. Change it in the configuration if you're in a shared space.</li>
-      <li><strong>No internet access:</strong> The hotspot does not route traffic to the internet. It only serves the web remote control page.</li>
-      <li><strong>Temporary:</strong> The hotspot only activates when no known Wi-Fi is found. Once you connect to a known network, the hotspot shuts down automatically.</li>
+      <li><strong>网络隔离：</strong>热点是一个独立网络 — 连接的设备无法访问互联网或你的其他网络。</li>
+      <li><strong>密码保护：</strong>默认密码为 <code>chameleon123</code>。如果你在共享空间，请在配置中更改它。</li>
+      <li><strong>无互联网访问：</strong>热点不将流量路由到互联网。它仅提供网页遥控页面。</li>
+      <li><strong>临时：</strong>热点仅在未找到已知 Wi-Fi 时激活。一旦你连接到已知网络，热点自动关闭。</li>
     </ul>
 
     <div class="note">
-      <strong>Pro tip:</strong> If you use ChameleonRecorder at a venue with unreliable Wi-Fi, the fallback hotspot is your safety net. You can always control the recorder from your phone, no matter what.
+      <strong>专业提示：</strong>如果你在 Wi-Fi 不可靠的场地使用 ChameleonRecorder，备用热点是你的安全网。无论发生什么，你都可以从手机控制录音器。
     </div>
   </div>
 </section>
 
-<!-- 8. GPIO Controls -->
 <section>
   <div class="container">
-    <h2>8. GPIO Controls — Physical Buttons and LED Status</h2>
-    <p>The Raspberry Pi has general-purpose input/output (GPIO) pins that ChameleonRecorder uses for physical controls. This means you can record, stop, and delete takes without needing a phone, tablet, or computer.</p>
+    <h2>8. GPIO 控制 — 物理按钮和 LED 状态</h2>
+    <p>Raspberry Pi 有通用输入/输出（GPIO）引脚，ChameleonRecorder 用它们进行物理控制。这意味着你可以录制、停止和删除录音，而无需手机、平板或计算机。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>Why Physical Buttons Matter</h3>
-        <p>In a studio or on stage, fumbling with a phone app is slow and unreliable. A physical button you can press without looking is faster, more reliable, and works even when your phone is dead or in another room. It's the difference between a hardware recorder and an app.</p>
+        <h3>为什么物理按钮很重要</h3>
+        <p>在录音室或舞台上，操作手机应用缓慢且不可靠。你可以不看就按的物理按钮更快、更可靠，即使手机没电或在另一个房间也能工作。这是硬件录音器与应用之间的区别。</p>
       </div>
       <div class="feature-card">
-        <h3>LED Status Indicator</h3>
-        <p>A status LED gives you instant visual feedback: solid green means ready, blinking red means recording, and off means powered down. You can glance at the Pi from across the room and know its state without unlocking your phone.</p>
+        <h3>LED 状态指示器</h3>
+        <p>状态 LED 给你即时视觉反馈：绿色常亮表示就绪，红色闪烁表示录音，关闭表示关机。你可以从房间另一头看一眼 Pi 就知道其状态，无需解锁手机。</p>
       </div>
     </div>
 
     <table>
       <thead>
-        <tr><th>Control</th><th>Action</th><th>When to Use</th></tr>
+        <tr><th>控制</th><th>动作</th><th>何时使用</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Record / Stop button</strong></td><td>Starts or stops recording</td><td>Quick takes, live recording, when your phone isn't handy</td></tr>
-        <tr><td><strong>Delete Last button</strong></td><td>Deletes the most recent recording</td><td>When a take is ruined and you want to re-record immediately</td></tr>
-        <tr><td><strong>Both buttons held</strong></td><td>Safe shutdown of the Raspberry Pi</td><td>End of session — safely powers off without corrupting files</td></tr>
-        <tr><td><strong>Status LED (green)</strong></td><td>Solid = ready, Blinking = recording</td><td>Glanceable status from across the room</td></tr>
+        <tr><td><strong>录音 / 停止按钮</strong></td><td>开始或停止录音</td><td>快速录音、现场录音、手机不在手边时</td></tr>
+        <tr><td><strong>删除上一个按钮</strong></td><td>删除最近的录音</td><td>当录音被毁且你想立即重录时</td></tr>
+        <tr><td><strong>同时按住两个按钮</strong></td><td>安全关闭 Raspberry Pi</td><td>会话结束 — 安全关机而不损坏文件</td></tr>
+        <tr><td><strong>状态 LED（绿色）</strong></td><td>常亮 = 就绪，闪烁 = 录音</td><td>从房间另一头可看的 状态</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Setup:</strong> GPIO controls are optional. If you don't connect buttons, ChameleonRecorder works exactly the same — you just use the web remote instead. The GPIO pins are there for convenience, not requirement.
+      <strong>设置：</strong>GPIO 控制是可选的。如果你不连接按钮，ChameleonRecorder 工作完全相同 — 你只需改用网页遥控。GPIO 引脚是为了方便，而非要求。
     </div>
   </div>
 </section>
 
-<!-- Recording Pipeline Diagram -->
 <section>
   <div class="container">
-    <h2>The Recording Pipeline — How It All Fits Together</h2>
-    <p>Here's a visual overview of how audio flows from your microphones to a WAV file on your USB stick:</p>
+    <h2>录音流水线 — 一切如何组合</h2>
+    <p>这是音频从你的麦克风流到 U 盘 WAV 文件的可视化概览：</p>
 
     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0; margin: 30px 0; font-family: 'Segoe UI', sans-serif;">
 
-      <!-- Audio Interface -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 140px; max-width: 180px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">🎤</div>
-        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">Audio Interface</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">USB Mic / Line Inputs</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">(UMC1820, XR18, etc.)</div>
+        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">音频接口</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">USB 麦克风 / 线路输入</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">（UMC1820、XR18 等）</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- USB -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 100px; max-width: 140px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">🔌</div>
         <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">USB</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Class-Compliant</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">Audio Stream</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">类兼容</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">音频流</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- JACK -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 120px; max-width: 160px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">⚙️</div>
-        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">JACK Audio Server</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Low-Latency Routing</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">Master / Slave Sync</div>
+        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">JACK 音频服务器</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">低延迟路由</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">主 / 从同步</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- jack_capture -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 120px; max-width: 160px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">💿</div>
         <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">jack_capture</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">Records Each Channel</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">24-bit / 48 kHz</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">录制每个通道</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">24 位 / 48 kHz</div>
       </div>
 
-      <!-- Arrow -->
       <div style="color: #ff6432; font-size: 1.8em; padding: 0 8px;">→</div>
 
-      <!-- WAV File -->
       <div style="background: #1a1a1a; border: 2px solid #ff6432; border-radius: 8px; padding: 20px 15px; text-align: center; min-width: 120px; max-width: 160px;">
         <div style="font-size: 1.5em; margin-bottom: 5px;">📁</div>
-        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">WAV Files</div>
-        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">One Per Channel</div>
-        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">On USB Stick</div>
+        <div style="color: #ff6432; font-weight: bold; font-size: 0.95em;">WAV 文件</div>
+        <div style="color: #aaa; font-size: 0.8em; margin-top: 5px;">每通道一个</div>
+        <div style="color: #cc8844; font-size: 0.75em; margin-top: 3px;">在 U 盘上</div>
       </div>
 
     </div>
 
     <div class="note">
-      <strong>Reading the diagram:</strong> Your microphones plug into the audio interface. The interface sends digital audio over USB to the Raspberry Pi. JACK receives it, keeps everything in sync, and passes it to jack_capture, which writes each channel to its own WAV file on the USB flash drive. The whole chain is automatic — you just press record.
+      <strong>阅读图表：</strong>你的麦克风插入音频接口。接口通过 USB 将数字音频发送到 Raspberry Pi。JACK 接收它，保持一切同步，并将其传递给 jack_capture，后者将每个通道写入 U 盘上的单独 WAV 文件。整个链条是自动的 — 你只需按录音。
     </div>
 
-    <h3>Step by Step</h3>
+    <h3>分步</h3>
     <ol>
-      <li><strong>Microphone → Audio Interface:</strong> Your mics or instruments connect to the interface's preamps. The interface converts analog sound to digital audio.</li>
-      <li><strong>Audio Interface → USB:</strong> The digital audio travels over USB to the Raspberry Pi. Because the interface is class-compliant, no driver is needed — the Pi recognizes it immediately.</li>
-      <li><strong>USB → JACK:</strong> JACK takes the incoming audio and routes it. If you have multiple interfaces, JACK keeps them all in sync using ADAT, word clock, or drift compensation.</li>
-      <li><strong>JACK → jack_capture:</strong> The jack_capture application receives every channel from JACK and writes each one to a separate WAV file. It runs at 24-bit / 48 kHz.</li>
-      <li><strong>WAV → USB Stick:</strong> The WAV files are saved directly to the USB flash drive at <code>/media/usb0/</code>. Each file is named with a timestamp so you know exactly when it was recorded.</li>
+      <li><strong>麦克风 → 音频接口：</strong>你的麦克风或乐器连接到接口的前置放大器。接口将模拟声音转换为数字音频。</li>
+      <li><strong>音频接口 → USB：</strong>数字音频通过 USB 传输到 Raspberry Pi。由于接口是类兼容的，无需驱动 — Pi 立即识别它。</li>
+      <li><strong>USB → JACK：</strong>JACK 接收传入音频并路由它。如果你有多个接口，JACK 使用 ADAT、字时钟或漂移补偿保持它们全部同步。</li>
+      <li><strong>JACK → jack_capture：</strong>jack_capture 应用从 JACK 接收每个通道并将每个写入单独的 WAV 文件。它以 24 位 / 48 kHz 运行。</li>
+      <li><strong>WAV → U 盘：</strong>WAV 文件直接保存到 U 盘的 <code>/media/usb0/</code>。每个文件以时间戳命名，让你确切知道它何时录制。</li>
     </ol>
   </div>
 </section>
 
-<!-- Summary -->
 <section>
   <div class="container">
-    <h2>Summary</h2>
-    <p>ChameleonRecorder is a purpose-built multitrack recorder that replaces the laptop-and-DAW setup with a reliable, self-contained appliance. It records every input channel as a separate 24-bit/48 kHz WAV file, handles clock sync automatically, and gives you control from any phone, tablet, or physical button.</p>
+    <h2>总结</h2>
+    <p>ChameleonRecorder 是一款专用多轨录音器，用可靠、自主的设备取代了笔记本电脑加 DAW 的设置。它将每个输入通道录制为单独的 24 位/48 kHz WAV 文件，自动处理时钟同步，并让你从任何手机、平板或物理按钮控制。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>For Live Sound Engineers</h3>
-        <p>Record every input on your console as a separate track. No laptop, no DAW, no driver issues. Boot and record. Use the fallback hotspot when there's no Wi-Fi. GPIO buttons for quick control.</p>
+        <h3>对于现场音响工程师</h3>
+        <p>将调音台上的每个输入录制为单独轨道。无笔记本电脑、无 DAW、无驱动问题。启动即录。无 Wi-Fi 时使用备用热点。GPIO 按钮用于快速控制。</p>
       </div>
       <div class="feature-card">
-        <h3>For Rehearsal Studios</h3>
-        <p>Give every band a multitrack recording of their rehearsal. 24-bit WAV files they can take home and mix. No studio time, no engineer needed. Just plug in and press record.</p>
+        <h3>对于排练室</h3>
+        <p>给每支乐队一份排练的多轨录音。24 位 WAV 文件，他们可以带回家混音。无需录音室时间，无需工程师。只需插入并按录音。</p>
       </div>
       <div class="feature-card">
-        <h3>For Musicians</h3>
-        <p>Record your band, your drum kit, or your full ensemble. Every channel is a separate file, ready for mixing. No complicated setup — if you can plug in a USB cable, you can record.</p>
+        <h3>对于音乐人</h3>
+        <p>录制你的乐队、鼓组或完整合奏团。每个通道都是单独文件，准备混音。无需复杂设置 — 如果你能插 USB 线，就能录音。</p>
       </div>
     </div>
 
-    <blockquote>ChameleonRecorder: Plug in. Power on. Press record. Every channel, every take, straight to USB.</blockquote>
+    <blockquote>ChameleonRecorder：插上。开机。按录音。每个通道，每次录音，直接到 USB。</blockquote>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>ChameleonRecorder — Headless Multitrack WAV Recorder OS for Raspberry Pi 4.</p>
-    <p>Home: <a href="index.html">index.html</a> · Manual: <a href="manual.html">manual.html</a> · Docs: <a href="docs.html">docs.html</a> · Download: <a href="download.html">download.html</a></p>
+    <p>ChameleonRecorder — 适用于 Raspberry Pi 4 的无头多轨 WAV 录音操作系统。</p>
+    <p>首页：<a href="index.html">index.html</a> · 手册：<a href="manual.html">manual.html</a> · 文档：<a href="docs.html">docs.html</a> · 下载：<a href="download.html">download.html</a></p>
   </div>
 </footer>
 

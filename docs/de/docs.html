@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChameleonRecorder — Documentation</title>
+<title>ChameleonRecorder — Dokumentation</title>
 <link rel="stylesheet" href="../style.css">
   <style>
 .crossbar {
@@ -46,37 +46,37 @@
 <header>
   <div class="container">
     <h1>CHAMELEON<span class="accent">RECORDER</span></h1>
-    <p class="subtitle">Documentation Hub</p>
+    <p class="subtitle">Dokumentations-Hub</p>
     <nav>
       <a href="index.html">Start</a>
       <a href="manual.html">Handbuch</a>
-      <a href="concepts.html">Concepts</a>
+      <a href="concepts.html">Konzepte</a>
       <a href="docs.html">Doku</a>
       <a href="download.html">Herunterladen</a>
-      <a href="de/index.html">DE</a>
-      <a href="es/index.html">ES</a>
-      <a href="fr/index.html">FR</a>
-      <a href="pt/index.html">PT</a>
-      <a href="ru/index.html">RU</a>
-      <a href="zh/index.html">ZH</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/de/">DE</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/es/">ES</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/fr/">FR</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/pt/">PT</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/ru/">RU</a>
+      <a href="https://smallbutfine.github.io/ChameleonRecorder/zh/">ZH</a>
     </nav>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>Documentation Hub</h2>
-    <p>Welcome to the ChameleonRecorder documentation. Choose a topic below to get started.</p>
+    <h2>Dokumentations-Hub</h2>
+    <p>Willkommen in der ChameleonRecorder-Dokumentation. Wähle unten ein Thema, um zu beginnen.</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>User Manual</h3>
-        <p>Complete user manual covering hardware setup, web remote control, clock sync, GPIO controls, recording format, file management, SSH access, and troubleshooting.</p>
-        <p><a href="manual.html" class="btn">Read Manual</a></p>
+        <h3>Benutzerhandbuch</h3>
+        <p>Vollständiges Benutzerhandbuch zu Hardware-Setup, Web-Fernbedienung, Clock-Sync, GPIO-Steuerung, Aufnahmeformat, Dateiverwaltung, SSH-Zugriff und Fehlerbehebung.</p>
+        <p><a href="manual.html" class="btn">Handbuch lesen</a></p>
       </div>
       <div class="feature-card">
-        <h3>Download &amp; Installation</h3>
-        <p>Download the OS image, flash it with Raspberry Pi Imager, and get your ChameleonRecorder up and running.</p>
+        <h3>Herunterladen & Installation</h3>
+        <p>Lade das OS-Image herunter, flashe es mit Raspberry Pi Imager und bringe deinen ChameleonRecorder zum Laufen.</p>
         <p><a href="download.html" class="btn">Herunterladen</a></p>
       </div>
     </div>
@@ -85,21 +85,21 @@
 
 <section id="scripts">
   <div class="container">
-    <h2>Scripts Reference</h2>
-    <p>All scripts are located in <code>/home/recorder/bin/</code> on the Raspberry Pi.</p>
+    <h2>Skript-Referenz</h2>
+    <p>Alle Skripte befinden sich in <code>/home/recorder/bin/</code> auf dem Raspberry Pi.</p>
 
     <table>
-      <thead><tr><th>Script</th><th>Purpose</th></tr></thead>
+      <thead><tr><th>Skript</th><th>Zweck</th></tr></thead>
       <tbody>
-        <tr><td><code>startcapiture</code></td><td>Main startup script — starts JACK, binds interfaces, launches web remote</td></tr>
-        <tr><td><code>start_jack</code></td><td>Starts the JACK audio server, auto-detects USB audio cards, handles ADAT clock sync</td></tr>
-        <tr><td><code>rec</code></td><td>Record/Stop toggle — starts or stops <code>jack_capture</code></td></tr>
-        <tr><td><code>del_last</code></td><td>Deletes the most recent recording</td></tr>
-        <tr><td><code>web_remote.py</code></td><td>Web remote control server (port 8080)</td></tr>
-        <tr><td><code>jack_meter.py</code></td><td>Live peak level meter daemon</td></tr>
-        <tr><td><code>hotkeys</code></td><td>GPIO button event handler</td></tr>
-        <tr><td><code>steady</code></td><td>Sets status LED to solid ON</td></tr>
-        <tr><td><code>blink</code></td><td>Blinks status LED (recording indicator)</td></tr>
+        <tr><td><code>startcapiture</code></td><td>Haupt-Startskript — startet JACK, bindet Interfaces, startet Web-Fernbedienung</td></tr>
+        <tr><td><code>start_jack</code></td><td>Startet den JACK-Audio-Server, erkennt USB-Audiokarten automatisch, handhabt ADAT-Clock-Sync</td></tr>
+        <tr><td><code>rec</code></td><td>Aufnahme/Stopp-Umschalter — startet oder stoppt <code>jack_capture</code></td></tr>
+        <tr><td><code>del_last</code></td><td>Löscht die letzte Aufnahme</td></tr>
+        <tr><td><code>web_remote.py</code></td><td>Web-Fernbedienungs-Server (Port 8080)</td></tr>
+        <tr><td><code>jack_meter.py</code></td><td>Live-Peak-Meter-Daemon</td></tr>
+        <tr><td><code>hotkeys</code></td><td>GPIO-Taster-Ereignishandler</td></tr>
+        <tr><td><code>steady</code></td><td>Setzt Status-LED auf dauerhaft AN</td></tr>
+        <tr><td><code>blink</code></td><td>Lässt Status-LED blinken (Aufnahmeanzeige)</td></tr>
       </tbody>
     </table>
   </div>
@@ -107,10 +107,10 @@
 
 <section id="config">
   <div class="container">
-    <h2>Configuration Files</h2>
+    <h2>Konfigurationsdateien</h2>
 
     <h3>channels.json</h3>
-    <p>Located at <code>/home/recorder/bin/channels.json</code>. Stores per-device and per-channel arming settings for the web remote.</p>
+    <p>Platziert unter <code>/home/recorder/bin/channels.json</code>. Speichert geräte- und kanalweise Scharfschalt-Einstellungen für die Web-Fernbedienung.</p>
 
     <h4>Format</h4>
     <pre>{
@@ -126,44 +126,44 @@
 }</pre>
 
     <table>
-      <thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead>
+      <thead><tr><th>Schlüssel</th><th>Typ</th><th>Beschreibung</th></tr></thead>
       <tbody>
-        <tr><td><code>devices</code></td><td>Object</td><td>Map of device name to boolean (true = enabled, false = disabled)</td></tr>
-        <tr><td><code>ports</code></td><td>Object</td><td>Map of JACK port name to boolean (true = armed, false = disarmed)</td></tr>
+        <tr><td><code>devices</code></td><td>Objekt</td><td>Zuordnung von Gerätename zu Boolean (true = aktiviert, false = deaktiviert)</td></tr>
+        <tr><td><code>ports</code></td><td>Objekt</td><td>Zuordnung von JACK-Port-Name zu Boolean (true = scharfgeschaltet, false = nicht scharfgeschaltet)</td></tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Note:</strong> If a device or port is not listed in the config, it defaults to <code>true</code> (enabled/armed).
+      <strong>Hinweis:</strong> Wenn ein Gerät oder Port nicht in der Konfig aufgeführt ist, wird standardmäßig <code>true</code> (aktiviert/scharfgeschaltet) verwendet.
     </div>
   </div>
 </section>
 
 <section id="webremote">
   <div class="container">
-    <h2>How the Web Remote Works</h2>
-    <p>The web remote is a Python HTTP server (<code>web_remote.py</code>) that runs on port <code>8080</code>. It serves a single-page HTML interface and provides REST-like endpoints for control.</p>
+    <h2>Wie die Web-Fernbedienung funktioniert</h2>
+    <p>Die Web-Fernbedienung ist ein Python-HTTP-Server (<code>web_remote.py</code>), der auf Port <code>8080</code> läuft. Sie liefert eine Single-Page-HTML-Oberfläche und bietet REST-ähnliche Endpunkte zur Steuerung.</p>
 
-    <h3>HTTP Server</h3>
-    <p>Built on Python's <code>http.server.ThreadingHTTPServer</code>. Listens on <code>0.0.0.0:8080</code>.</p>
+    <h3>HTTP-Server</h3>
+    <p>Basiert auf Pythons <code>http.server.ThreadingHTTPServer</code>. Lauscht auf <code>0.0.0.0:8080</code>.</p>
 
-    <h3>Endpoints</h3>
+    <h3>Endpunkte</h3>
     <table>
-      <thead><tr><th>Endpoint</th><th>Method</th><th>Description</th></tr></thead>
+      <thead><tr><th>Endpunkt</th><th>Methode</th><th>Beschreibung</th></tr></thead>
       <tbody>
-        <tr><td><code>/</code></td><td>GET</td><td>Serves the web remote HTML interface</td></tr>
-        <tr><td><code>/status</code></td><td>GET</td><td>Returns JSON: recording state, JACK ready, device name</td></tr>
-        <tr><td><code>/channels</code></td><td>GET</td><td>Returns JSON: available JACK capture ports grouped by device, plus current config</td></tr>
-        <tr><td><code>/channels</code></td><td>POST</td><td>Saves channel/device arming config to <code>channels.json</code></td></tr>
-        <tr><td><code>/levels</code></td><td>GET</td><td>Returns JSON: live peak levels (dBFS) for all capture ports</td></tr>
-        <tr><td><code>/files</code></td><td>GET</td><td>Returns JSON: list of WAV files in <code>/media/usb0/</code> with sizes</td></tr>
-        <tr><td><code>/download/&lt;filename&gt;</code></td><td>GET</td><td>Downloads individual WAV file</td></tr>
-        <tr><td><code>/download-all</code></td><td>GET</td><td>Downloads all WAVs as a timestamped ZIP archive</td></tr>
-        <tr><td><code>/rec</code></td><td>POST</td><td>Starts recording (runs <code>rec</code> script)</td></tr>
-        <tr><td><code>/stop</code></td><td>POST</td><td>Stops recording (sends SIGTERM to <code>jack_capture</code>)</td></tr>
-        <tr><td><code>/del_last</code></td><td>POST</td><td>Deletes the most recent recording</td></tr>
-        <tr><td><code>/rescan</code></td><td>POST</td><td>Re-scans USB audio devices (runs <code>start_jack</code>)</td></tr>
-        <tr><td><code>/delete/&lt;filename&gt;</code></td><td>POST</td><td>Deletes individual WAV file</td></tr>
+        <tr><td><code>/</code></td><td>GET</td><td>Liefert die Web-Fernbedienungs-HTML-Oberfläche</td></tr>
+        <tr><td><code>/status</code></td><td>GET</td><td>Gibt JSON zurück: Aufnahmestatus, JACK bereit, Gerätename</td></tr>
+        <tr><td><code>/channels</code></td><td>GET</td><td>Gibt JSON zurück: verfügbare JACK-Capture-Ports nach Gerät gruppiert, plus aktuelle Konfig</td></tr>
+        <tr><td><code>/channels</code></td><td>POST</td><td>Speichert Kanal-/Geräte-Scharfschalt-Konfig in <code>channels.json</code></td></tr>
+        <tr><td><code>/levels</code></td><td>GET</td><td>Gibt JSON zurück: Live-Peak-Pegel (dBFS) für alle Capture-Ports</td></tr>
+        <tr><td><code>/files</code></td><td>GET</td><td>Gibt JSON zurück: Liste der WAV-Dateien in <code>/media/usb0/</code> mit Größen</td></tr>
+        <tr><td><code>/download/&lt;filename&gt;</code></td><td>GET</td><td>Lädt einzelne WAV-Datei herunter</td></tr>
+        <tr><td><code>/download-all</code></td><td>GET</td><td>Lädt alle WAVs als zeitgestempeltes ZIP-Archiv herunter</td></tr>
+        <tr><td><code>/rec</code></td><td>POST</td><td>Startet Aufnahme (führt <code>rec</code>-Skript aus)</td></tr>
+        <tr><td><code>/stop</code></td><td>POST</td><td>Stoppt Aufnahme (sendet SIGTERM an <code>jack_capture</code>)</td></tr>
+        <tr><td><code>/del_last</code></td><td>POST</td><td>Löscht die letzte Aufnahme</td></tr>
+        <tr><td><code>/rescan</code></td><td>POST</td><td>Scannt USB-Audiogeräte neu (führt <code>start_jack</code> aus)</td></tr>
+        <tr><td><code>/delete/&lt;filename&gt;</code></td><td>POST</td><td>Löscht einzelne WAV-Datei</td></tr>
       </tbody>
     </table>
   </div>
@@ -171,80 +171,80 @@
 
 <section id="jack">
   <div class="container">
-    <h2>How JACK is Configured</h2>
-    <p>JACK (Jack Audio Connection Kit) is the audio server that manages all audio I/O. ChameleonRecorder configures it automatically via <code>start_jack</code>.</p>
+    <h2>Wie JACK konfiguriert ist</h2>
+    <p>JACK (Jack Audio Connection Kit) ist der Audio-Server, der alle Audio-I/O verwaltet. ChameleonRecorder konfiguriert ihn automatisch über <code>start_jack</code>.</p>
 
     <h3>Konfiguration</h3>
     <table>
-      <thead><tr><th>Parameter</th><th>Value</th><th>Description</th></tr></thead>
+      <thead><tr><th>Parameter</th><th>Wert</th><th>Beschreibung</th></tr></thead>
       <tbody>
-        <tr><td>Sample rate</td><td><code>48000</code> Hz (fallback: <code>44100</code> Hz)</td><td>48 kHz is preferred; if it fails, 44.1 kHz is tried</td></tr>
-        <tr><td>Buffer size (period)</td><td><code>2048</code> frames</td><td>Balances latency vs. stability</td></tr>
-        <tr><td>Periods (nperiods)</td><td><code>3</code></td><td>Number of buffers</td></tr>
-        <tr><td>Driver</td><td><code>alsa</code></td><td>Uses ALSA for USB audio interface communication</td></tr>
+        <tr><td>Sample-Rate</td><td><code>48000</code> Hz (Fallback: <code>44100</code> Hz)</td><td>48 kHz wird bevorzugt; wenn es fehlschlägt, wird 44.1 kHz versucht</td></tr>
+        <tr><td>Puffergröße (Periode)</td><td><code>2048</code> Frames</td><td>Balanciert Latenz vs. Stabilität</td></tr>
+        <tr><td>Perioden (nperiods)</td><td><code>3</code></td><td>Anzahl der Puffer</td></tr>
+        <tr><td>Treiber</td><td><code>alsa</code></td><td>Verwendet ALSA für USB-Audio-Interface-Kommunikation</td></tr>
       </tbody>
     </table>
 
-    <h3>Master device selection</h3>
-    <p>On boot, <code>start_jack</code> scans all USB audio cards via <code>/proc/asound/cards</code> and sorts them by capture channel count (descending). The card with the most channels becomes the JACK master. Additional interfaces are bound via <code>alsa_in</code>.</p>
+    <h3>Master-Geräteauswahl</h3>
+    <p>Beim Boot scannt <code>start_jack</code> alle USB-Audiokarten über <code>/proc/asound/cards</code> und sortiert sie nach Anzahl der Capture-Kanäle (absteigend). Die Karte mit den meisten Kanälen wird der JACK-Master. Zusätzliche Interfaces werden über <code>alsa_in</code> gebunden.</p>
 
-    <h3>Multi-device setup</h3>
-    <pre># Primary JACK server (largest interface)
+    <h3>Multi-Device-Setup</h3>
+    <pre># Primärer JACK-Server (größtes Interface)
 jackd -dalsa -dhw:1 -r48000 -p2048 -n3
 
-# Additional interfaces via alsa_in
+# Zusätzliche Interfaces über alsa_in
 alsa_in -j "USB_2" -dhw:2 -r48000 -p2048 -n3</pre>
   </div>
 </section>
 
 <section id="adat">
   <div class="container">
-    <h2>How ADAT Clock Sync Detection Works</h2>
-    <p>For Behringer UMC1820 interfaces, ChameleonRecorder automatically detects valid ADAT clock signals and switches to external clock sync.</p>
+    <h2>Wie die ADAT-Clock-Sync-Erkennung funktioniert</h2>
+    <p>Für Behringer UMC1820-Interfaces erkennt ChameleonRecorder automatisch gültige ADAT-Clock-Signale und wechselt zur externen Clock-Synchronisation.</p>
 
-    <h3>Detection process</h3>
+    <h3>Erkennungsprozess</h3>
     <ol>
-      <li><code>start_jack</code> checks if the card has the <code>UMC1820 Clock Selector Clock Source</code> control (via <code>amixer</code>)</li>
-      <li>If found, it reads the <code>Optical In ADAT/SMUX Validity</code> control</li>
-      <li>If the value is <code>on</code> (valid ADAT signal present), it sets the clock source to <code>2</code> (external ADAT)</li>
-      <li>If the value is not <code>on</code> (no valid signal), it sets the clock source to <code>0</code> (internal)</li>
+      <li><code>start_jack</code> prüft, ob die Karte die <code>UMC1820 Clock Selector Clock Source</code>-Steuerung hat (via <code>amixer</code>)</li>
+      <li>Wenn gefunden, liest es die <code>Optical In ADAT/SMUX Validity</code>-Steuerung</li>
+      <li>Wenn der Wert <code>on</code> ist (gültiges ADAT-Signal vorhanden), setzt es die Clock-Quelle auf <code>2</code> (externer ADAT)</li>
+      <li>Wenn der Wert nicht <code>on</code> ist (kein gültiges Signal), setzt es die Clock-Quelle auf <code>0</code> (intern)</li>
     </ol>
 
-    <h3>Commands used</h3>
-    <pre># Check if UMC1820 is present
+    <h3>Verwendete Befehle</h3>
+    <pre># Prüfen, ob UMC1820 vorhanden ist
 amixer -c 1 controls | grep "UMC1820 Clock Selector Clock Source"
 
-# Read ADAT validity
+# ADAT-Gültigkeit lesen
 amixer -c 1 cget name='Optical In ADAT/SMUX Validity'
 
-# Set clock source to external ADAT
+# Clock-Quelle auf externen ADAT setzen
 amixer -c 1 cset name='UMC1820 Clock Selector Clock Source' 2
 
-# Set clock source to internal
+# Clock-Quelle auf intern setzen
 amixer -c 1 cset name='UMC1820 Clock Selector Clock Source' 0</pre>
 
     <div class="note">
-      <strong>Note:</strong> This detection runs automatically on boot and when pressing <strong>Re-Scan USB Audio Device</strong> on the web remote.
+      <strong>Hinweis:</strong> Diese Erkennung läuft automatisch beim Boot und beim Drücken von <strong>Re-Scan USB Audio Device</strong> auf der Web-Fernbedienung.
     </div>
   </div>
 </section>
 
 <section id="hotspot">
   <div class="container">
-    <h2>How the Fallback Hotspot Works</h2>
-    <p>If no known Wi-Fi network is found within 25 seconds of boot, ChameleonRecorder automatically creates a Wi-Fi access point.</p>
+    <h2>Wie der Fallback-Hotspot funktioniert</h2>
+    <p>Wenn innerhalb von 25 Sekunden nach dem Boot kein bekanntes WLAN-Netzwerk gefunden wird, erstellt ChameleonRecorder automatisch einen WLAN-Access-Point.</p>
 
-    <h3>Process</h3>
+    <h3>Prozess</h3>
     <ol>
-      <li>A systemd service (<code>wifi-fallback.service</code>) runs <code>/usr/local/bin/wifi-fallback.sh</code> on boot</li>
-      <li>The script waits 25 seconds for a Wi-Fi connection</li>
-      <li>If <code>wlan0</code> has no IP address (not connected), it creates a hotspot</li>
-      <li>The hotspot SSID is <code>ChameleonRecorder</code> with password <code>chameleon123</code></li>
-      <li>The web remote is accessible at <code>http://10.42.0.1:8080</code></li>
+      <li>Ein systemd-Dienst (<code>wifi-fallback.service</code>) führt <code>/usr/local/bin/wifi-fallback.sh</code> beim Boot aus</li>
+      <li>Das Skript wartet 25 Sekunden auf eine WLAN-Verbindung</li>
+      <li>Wenn <code>wlan0</code> keine IP-Adresse hat (nicht verbunden), erstellt es einen Hotspot</li>
+      <li>Die Hotspot-SSID ist <code>ChameleonRecorder</code> mit Passwort <code>chameleon123</code></li>
+      <li>Die Web-Fernbedienung ist erreichbar unter <code>http://10.42.0.1:8080</code></li>
     </ol>
 
     <h3>Konfiguration</h3>
-    <pre># wifi-fallback.sh (simplified)
+    <pre># wifi-fallback.sh (vereinfacht)
 sleep 25
 if ! ip -4 addr show wlan0 | grep -q "inet "; then
     nmcli device wifi hotspot ifname wlan0 \
@@ -254,14 +254,14 @@ if ! ip -4 addr show wlan0 | grep -q "inet "; then
 fi</pre>
 
     <div class="note">
-      <strong>Tip:</strong> If the Pi is connected to a known Wi-Fi network, the hotspot will NOT activate. This is by design — the Pi prefers your home/studio Wi-Fi.
+      <strong>Tipp:</strong> Wenn der Pi mit einem bekannten WLAN-Netzwerk verbunden ist, wird der Hotspot NICHT aktiviert. Das ist so gewollt — der Pi bevorzugt dein WLAN zu Hause/Studio.
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>ChameleonRecorder — Released under the MIT License.</p>
+    <p>ChameleonRecorder — Veröffentlicht unter der MIT-Lizenz.</p>
     <p><a href="https://github.com/smallbutfine/ChameleonRecorder">GitHub Repository</a></p>
   </div>
 </footer>
